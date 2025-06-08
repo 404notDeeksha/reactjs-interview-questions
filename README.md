@@ -28,6 +28,6 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 
 4. ### What is DOM (Document Object Model)?
-    DOM is a *browser* feature. It is a *tree like* representation of a web page. It *allows js* to dynamically access elements, thus allowing dynamic creation & updation of webpage contents & its structure.
+    DOM is a *browser* feature. It is a *tree like* representation of a web page. It *allows js* to dynamically access elements, thus allowing dynamic creation & updation of webpage contents & its structure. <br/> **DOM Updation** converts static webpage into dynamic ones.
 
 5. ### What is Virtual DOM?
