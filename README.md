@@ -7,7 +7,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 | No. | Question |
 |-----|----------|
-| 1   | _Your question here_  | [Answer 1](#answer-1) |
+| 1   | What is React?  | [Answer 1](#answer-1) |
 | 2   | _Your question here_  | [Answer 2](#answer-2) |
 | 3   | _Your question here_  |
 | 4   | _Your question here_  |
@@ -15,6 +15,6 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 | No. | Answer |
 |-----|--------|
-| <a name="answer-1">1</a> | _Your answer here_ |
+| <a name="answer-1">1</a> | React is an open sorce js library, developed by facebook(meta).  |
 | <a name="answer-2">2</a> | _Your answer here_ |
 
