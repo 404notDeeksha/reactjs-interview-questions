@@ -21,5 +21,6 @@ Each question is answered briefly and clearly to help with interview prep and re
 <br/>
 2. One way Data Binding: Data flow in React is unidirectional, it flows from Parent to Child. This makes app predictable & easy to debug. 
 <br/>
- |
+
+|
 
