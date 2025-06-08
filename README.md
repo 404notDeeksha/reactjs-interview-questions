@@ -15,6 +15,6 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 | No. | Answer |
 |-----|--------|
-| <a name="answer-1">1</a> | React is an <u>open sorce<u/> <u>js library</u>, developed by facebook(meta). It is used to build <u>UI interfaces</u> & simplifies creation of <u>SPA(Single Page Applications)</u>, using <u>reusable components</u> & <u>dynamic rendering</u>. It follows <u>Component based architecture</u>.  |
+| <a name="answer-1">1</a> | React is an *open sorce* *js library*, developed by facebook(meta). It is used to build *UI interfaces* & simplifies creation of *SPA(Single Page Applications)*, using *reusable components* & *dynamic rendering*. It follows *Component based architecture*.  |
 | <a name="answer-2">2</a> | _Your answer here_ |
 
