@@ -8,7 +8,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | No. | Question |
 |-----|----------|
 | 1   | What is React?  | [Answer 1](#answer-1) |
-| 2   | _Your question here_  | [Answer 2](#answer-2) |
+| 2   | What is Single Page Application (SPA)?  | [Answer 2](#answer-2) |
 | 3   | _Your question here_  |
 | 4   | _Your question here_  |
 | 5   | _Your question here_  |
