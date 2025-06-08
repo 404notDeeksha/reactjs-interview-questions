@@ -8,7 +8,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | No. | Question                                                       |
 |-----|----------------------------------------------------------------|
 | 1   | [What is React?](#what-is-react)                             |
-| 2   | [What is Single Page Application (SPA)?](#what-is-single-page-application)                                     |
+| 2   | [What is Single Page Application (SPA)?](#what-is-single-page-application-(spa))                                     |
 | 3   | [What are features of React?](#what-are-features-of-react)                                         |
 
 
