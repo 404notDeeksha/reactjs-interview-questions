@@ -8,9 +8,10 @@ Each question is answered briefly and clearly to help with interview prep and re
 | No. | Question                                                                           |
 | --- | ---------------------------------------------------------------------------------- |
 | 1   | [What is React?](#what-is-react)                                                   |
-| 2   | [What is Single Page Application (SPA)?](#what-is-single-page-application-spa) |
-| 3   | [What are features of React?](#what-are-features-of-react)                          |
-| 4   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 2   | [What is Single Page Application (SPA)?](#what-is-single-page-application-spa)     |
+| 3   | [What are features of React?](#what-are-features-of-react)                         |
+| 4   | [What is DOM (Document Object Model)](#what-is-dom-document-object-model)          |
+| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 
 
 1. ### What is React?
@@ -23,6 +24,10 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 3. ### What are features of React?
 
-   1. High Performance: React uses Virtual Dom which ensures only part of webpage where data changes gets updated instead of entire page, leading to faster & smoother app. <br/> 2. One way Data Binding: Data flow in React is unidirectional, it flows from Parent to Child. This makes app predictable & easy to debug. <br/> 3. JSX (js XML): React used js syntax extension which makes code HTML like, thus writing HTML in js, making code more UI friendly & readable. <br/> 4. Component Based Architecture: React uses reusable, independent components for rendering UI & logic, making code resuable & modular. <br/> 5. Server Side Rendering Support: react supports server-side rendering components thus improving performance & SEO optimisation for the web apps. <br/> 6. Dedicated Developer Tools: Chrome has specialised Developer Tools which help in simplifying debugging & performance monitoring.
+   1. **High Performance**: React uses Virtual Dom which ensures only part of webpage where data changes gets updated instead of entire page, leading to faster & smoother app. <br/> 2. **One way Data Binding**: Data flow in React is unidirectional, it flows from Parent to Child. This makes app predictable & easy to debug. <br/> 3. **JSX (js XML)**: React used js syntax extension which makes code HTML like, thus writing HTML in js, making code more UI friendly & readable. <br/> 4. **Component Based Architecture**: React uses reusable, independent components for rendering UI & logic, making code resuable & modular. <br/> 5. **Server Side Rendering Support**: react supports server-side rendering components thus improving performance & SEO optimisation for the web apps. <br/> 6. **Dedicated Developer Tools**: Chrome has specialised Developer Tools which help in simplifying debugging & performance monitoring.
 
-4. ### What is Virtual DOM?
+
+4. ### What is DOM (Document Object Model)?
+    DOM is a *browser* feature. It is a *tree like* representation of a web page. It *allows js* to dynamically access elements, thus allowing dynamic creation & updation of webpage contents & its structure.
+
+5. ### What is Virtual DOM?
