@@ -17,5 +17,5 @@ Each question is answered briefly and clearly to help with interview prep and re
 |-----|--------|
 | <a name="answer-1">1</a> | React is an *open sorce* *js library*, developed by facebook(meta). It is used to build *UI interfaces* & simplifies creation of *SPA(Single Page Applications)*, using *reusable components* & *dynamic rendering*. It follows *Component based architecture*.  |
 | <a name="answer-2">2</a> | Single Page Application has only one web page. Whenever data is updated by user, it gets *dynamically rendered* on page without a *full reload*. <br/> eg: When a page is switched via Navbar section on an app developed by react, page changes without reloading the page. here, `<Link>` doesnt reloads page while `<a>` does. |
-| <a name="answer-3">3</a> |   |
+| <a name="answer-3">3</a> |  1. High Performance: React uses Virtual Dom which ensures only part of webpage where data changes gets updated instead of entire page, leading to faster & smoother app. |
 
