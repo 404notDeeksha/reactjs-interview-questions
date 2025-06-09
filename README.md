@@ -19,6 +19,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 10  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)    |
 | 11  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)    |
 | 12  | [What is role of index.html page in React app?](#what-is-role-of-index.html-page-in-react-app)    |
+| 12  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)    |
+| 12  | [How to create Components in React](#how-to-create-components-in-react)    |
 
 
 1. ### What is React?
@@ -67,5 +69,13 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 12. ### What is role of index.html page in React App?
 
-   It is entry point of React app. It is the first page to be loaded by browser.
+   It is entry point of React app. It is the first page to be loaded by browser for SPAs. It contains 'root' id element wherein entire React app will be rendered directly.
+
+13. ### What is role of App.js in React App?
+
+   It is present inside /src in React app, & is root of main app's component tree.
+
+14. ###  How to create Components in React?
+
+
 
