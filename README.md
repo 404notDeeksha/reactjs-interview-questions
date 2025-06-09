@@ -32,5 +32,5 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 5. ### What is Virtual DOM?
 
-   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is lightweight representation of real DOM, created in memory used by *Browsers* to *render web pages*. <br/> **How it works?** <br/> 1. **Representation** <br/> 2.**Change Detection** <br/> 3. **Diffing** <br/> 4. **Efficient Updates** <br/> 5. **Batching** <br/>All user updations/ changes are reflected in V-DOM which updates Real DOM.
+   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, and is faster to create & update because it lacks overheads of *Real Browser rendering*<br/> 2. **Change Detection** <br/> 3. **Diffing** <br/> 4. **Efficient Updates** <br/> 5. **Batching** <br/>All user updations/ changes are reflected in V-DOM which updates Real DOM.<br/> Note: Overheads of Real Browser Rendering are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layoutthrashing etc.
 
