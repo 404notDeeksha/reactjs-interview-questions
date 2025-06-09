@@ -53,4 +53,4 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 9. ### What is babel?
 
-   Babel is a free & open source Js compiler which converst *new, modern Js code (ECMA Script 2015/ES6 & newer)* to *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*.
+   Babel is a free & open source Js compiler which converts *new, modern Js code (ECMA Script 2015/ES6 & newer)* into *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*. It can transpile modern Js as well as supports Typescript & JSX too.
