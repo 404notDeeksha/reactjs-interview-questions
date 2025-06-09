@@ -16,7 +16,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 7   | [What is npm?](#what-is-npm)                                                       |
 | 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
 | 9   | [What is babel?](#what-is-babel)                                                   |
-| 10  | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 10  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)    |
 
 
 1. ### What is React?
@@ -54,3 +54,16 @@ Each question is answered briefly and clearly to help with interview prep and re
 9. ### What is babel?
 
    Babel is a free & open source Js compiler which converts *new, modern Js code (ECMA Script 2015/ES6 & newer)* into *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*. It can transpile modern Js as well as supports Typescript & JSX too.
+
+10. ### What is role of public folder in React app?
+
+   It contains all *static assets needed by Browser* & not processed by build tools like **Webpack**.  They are directly accessed by URL, & not processed by build system.
+
+11. ###  What is role of src folder in React app?
+
+   It is most important folder in development. It contains all source code & logic of application. It defines structure, behaviour, styling of the app. Only files inside /src are processed by build tools like Webpack.
+
+12. ### What is role of index.html page in React App?
+
+   It is entry point of React app. It is the first page to be loaded by browser.
+
