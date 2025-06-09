@@ -17,6 +17,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
 | 9   | [What is babel?](#what-is-babel)                                                   |
 | 10  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)    |
+| 11  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)    |
+| 12  | [What is role of index.html page in React app?](#what-is-role-of-index-html-page-in-react-app)    |
 
 
 1. ### What is React?
