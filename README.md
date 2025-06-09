@@ -53,7 +53,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 8. ###  What is role of node_modules folder?
 
-    node_modules folder is a directory *automatically created* at root of your project when you *install packages* using npm. It is *storage location* of all *external dependencies* required by your project.
+   node_modules folder is a directory *automatically created* at root of your project when you *install packages* using npm. It is *storage location* of all *external dependencies* required by your project.
 
 9. ### What is babel?
 
@@ -61,21 +61,22 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 10. ### What is role of public folder in React app?
 
-   It contains all *static assets needed by Browser* & not processed by build tools like **Webpack**.  They are directly accessed by URL, & not processed by build system.
+    It contains all *static assets needed by Browser* & not processed by build tools like **Webpack**.  They are directly accessed by URL, & not processed by build system.
 
-11. ###  What is role of src folder in React app?
+11. ### What is role of src folder in React app?
 
-   It is most important folder in development. It contains all source code & logic of application. It defines structure, behaviour, styling of the app. Only files inside /src are processed by build tools like Webpack.
+    It is most important folder in development. It contains all source code & logic of application. It defines structure, behaviour, styling of the app. Only files inside /src are processed by build tools like Webpack.
 
 12. ### What is role of index.html page in React App?
 
-   It is entry point of React app. It is the first page to be loaded by browser for SPAs. It contains 'root' id element wherein entire React app will be rendered directly.
+    It is entry point of React app. It is the first page to be loaded by browser for SPAs. It contains 'root' id element wherein entire React app will be rendered directly.
 
 13. ### What is role of App.js in React App?
 
-   It is present inside /src in React app, & is root of main app's component tree.
+    It is present inside /src in React app, & is root of main app's component tree.
 
 14. ###  How to create Components in React?
 
+   
 
 
