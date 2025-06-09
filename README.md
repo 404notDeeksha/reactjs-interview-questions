@@ -12,9 +12,9 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 3   | [What are features of React?](#what-are-features-of-react)                         |
 | 4   | [What is DOM (Document Object Model)](#what-is-dom-document-object-model)          |
 | 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
-| 6   | [What are React Components?](#what-are-react-components)                                       |
-| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
-| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 6   | [What are React Components?](#what-are-react-components)                           |
+| 7   | [What is npm?](#what-is-npm)                                                       |
+| 8   | [What is role of node_modules folder?](#what-is-role-of-node-modules-folder)       |
 | 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 | 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 
@@ -42,5 +42,11 @@ Each question is answered briefly and clearly to help with interview prep and re
 6. ### What are React Components?
 
    React Components are reusable building blocks for creating UI.
+
+7. ### What is npm? What is role of node_modules folder?
+
+   npm - *node package manager* is standard package manager for NodeJs. It is used to *install, manage & share* **Js packages & dependencies** for NodeJs project. <br/> In react, npm does Project initialisation, Running & Building Apps, Dependencies Management, Script Execution (define & run custom scripts), Efficient Package Installation, Version Control (package.json), & Collaboration & Code Sharing. 
+
+   node_modules folder is a directory *automatically created* at root of your project when you *install packages* using npm. It is *storage location* of all *external dependencies* required by your project.
 
 
