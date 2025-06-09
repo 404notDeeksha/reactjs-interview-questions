@@ -15,8 +15,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 6   | [What are React Components?](#what-are-react-components)                           |
 | 7   | [What is npm?](#what-is-npm)                                                       |
 | 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
-| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
-| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 9   | [What is babel?](#what-is-babel)                                                   |
+| 10  | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 
 
 1. ### What is React?
@@ -50,3 +50,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 8. ###  What is role of node_modules folder?
 
     node_modules folder is a directory *automatically created* at root of your project when you *install packages* using npm. It is *storage location* of all *external dependencies* required by your project.
+
+9. ### What is babel?
+
+   Babel is a free & open source Js compiler which converst *new, modern Js code (ECMA Script 2015/ES6 & newer)* to *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*.
