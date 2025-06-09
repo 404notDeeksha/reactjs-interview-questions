@@ -12,6 +12,11 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 3   | [What are features of React?](#what-are-features-of-react)                         |
 | 4   | [What is DOM (Document Object Model)](#what-is-dom-document-object-model)          |
 | 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 6   | [What are React Components?](#what-are-react-components)                                       |
+| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
+| 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 
 
 1. ### What is React?
@@ -34,5 +39,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 
    Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real Dom are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> Note: <br/>1. Overheads of Real Browser Rendering are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layoutthrashing etc.<br/> 2. React's Diffing Algo has Complexity -  O(n) both Time & space where n - no. of elements in tree.
 
+6. ### What are React Components?
+
+   React Components are reusable building blocks for creating UI.
 
 
