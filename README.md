@@ -127,7 +127,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 19. ### What are Controlled & Uncontrolled Components?
 
-      In react, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where value of Component is managed by state. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves value as prop, any user action may trigger an event which may update state & UI will reflect latest state.<br/>react has full control over data. Components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> ![ControlledComponent](./images/ControlledC.png) <li> **Uncontrolled Components**:  </ol> 
+      In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where value of Component is managed by state. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves value as prop, any user action may trigger an event which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <li> **Uncontrolled Components**:  </ol> 
 
 
 
