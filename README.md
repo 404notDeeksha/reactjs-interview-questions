@@ -19,8 +19,14 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 10  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)    |
 | 11  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)    |
 | 12  | [What is role of index.html page in React app?](#what-is-role-of-index.html-page-in-react-app)    |
-| 12  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)    |
-| 12  | [How to create Components in React](#how-to-create-components-in-react)    |
+| 13  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)    |
+| 14  | [How to create Components in React?](#how-to-create-components-in-react)    |
+| 15  | [When to use Function & Class Components?](#when-to-use-function--class-component)    |
+| 15  | [How to create Components in React](#how-to-create-components-in-react)    |
+| 15  | [How to create Components in React](#how-to-create-components-in-react)    |
+| 15  | [How to create Components in React](#how-to-create-components-in-react)    |
+
+
 
 
 1. ### What is React?
