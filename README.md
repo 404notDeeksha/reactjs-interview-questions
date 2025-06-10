@@ -103,9 +103,9 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 16. ###  What is state & props in React?
 
-      **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. <br/> Note: props are objects which can be *Destructured*. To forward all props, Use Spread opertaor `{...props}` <br/><br/> `function Welcome(props) {` <br/>
-  `return <h1>Hello, {props.name}!</h1>;` <br/>
-`}` <br/>
+      **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. <br/> Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}` <br/><br/> `function Welcome(props) {` <br/>
+      `return <h1>Hello, {props.name}!</h1>;` <br/>
+      `}` <br/>
       `// Usage: <Welcome name="Alice" />` <br/>  <br/>    **State** is a *built-in object* in React components, used to *store data or information of component* which can change over time. They are *mutable*, in reponse to user actions, API responses or other events. It is used for data which needs to be *tracked or updated* within a component. <br/> <br/>`function Counter() {`<br/>
      `const [count, setCount] = React.useState(0);`<br/>
       `return (`<br/>
@@ -116,7 +116,9 @@ Each question is answered briefly and clearly to help with interview prep and re
      `);`<br/>
       `}`<br/><br/> Note: when state changes, React automatically re-renders the componet (& all its child Components) to reflect the new state.
 
+17. ### How is Data sent from Child Component to Parent Component? WHat is Lifting State Up or Callback Props?
 
+      Standard Approach is: <br/> <ol> <li> The parent component defines a *callback function*. <li>The parent *passes* this function to the child component *via props*. <li>The child component *calls this function*, *passing the data as an argument*. <li>The parent *receives the data* and *can update its state* or perform other actions. </ol>
 
 
 
