@@ -101,7 +101,9 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       After addition of Hooks (React v.16.8 onwards) it is recommended to use **Function Components** over **Class** ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too.<br/> So, use Class C. when a React Functionality is needed whose Function C. equivalent is not present yet (like Err Boundaries) or while working in older versions where state or lifecycle methods are needed. <br/> Use Functional C. mostly as they are simple, readable & follow modern code practices like, use of React Hooks for state & side effects.
 
+16. ###  What is state & props in React?
 
+      **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, enabling *dynamic and reusable components*.
 
 
 
