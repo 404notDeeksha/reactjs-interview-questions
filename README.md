@@ -80,8 +80,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       Components are the *building blocks* of *creating User Interfaces(UI)* in React. There are two ways: <br/> <ol> <li> **Function Component**: This is the simplest way to create a component. Those are *pure JavaScript functions* that accept *props object* as the only parameter and *return React elements (in JSX Format)* to *render the output*: <br/> `function Greeting({ message }) {` <br/> `return <h1>{`Hello, ${message}`}</h1>;`<br/> `}` <br/><br/> <li> **Class Component**: ES6 class can be used to define a component. <br/>
        `class Greeting extends React.Component {`<br/>
        `render() {` <br/> 
-       `return <h1>{`Hello, ${this.props.message}`}</h1>;`<br/>
-       `}`<br/>
+         `return <h1>{`Hello, ${this.props.message}`}</h1>;`<br/>
+         `}`<br/>
        `}`<br/>
 
 
