@@ -116,7 +116,7 @@ Each question is answered briefly and clearly to help with interview prep and re
      `);`<br/>
       `}`<br/><br/> Note: when state changes, React automatically re-renders the componet (& all its child Components) to reflect the new state.
 
-17. ### How is Data sent from Child Component to Parent Component? WHat is Lifting State Up or Callback Props?
+17. ### How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?
 
       Standard Approach is: <br/> <ol> <li> The parent component defines a *callback function*. <li>The parent *passes* this function to the child component *via props*. <li>The child component *calls this function*, *passing the data as an argument*. <li>The parent *receives the data* and *can update its state* or perform other actions. </ol> <br/> Note: This pattern is called **lifting state up** or **callback props**. <br/> <br/> **Parent Component** <br/><br/>  ![ParentComponent](./images/ParentCDataTransfer.png) <br/><br/>  **Child Component** <br/><br/>  ![ChildComponent](./images/ChildCDataTransfer.png)
 
