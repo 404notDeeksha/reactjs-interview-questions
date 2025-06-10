@@ -123,7 +123,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 18. ### What is Conditional rendering in JSX?
 
-    It is similiar to syntax in Js but with some changes: <ol><li>**If Statement**: <br/> ![if](./images/IfStatement.png) <li>**Ternary Operator**: <br/> ![if](./images/TernaryOperator.png) <li>**Logical && Operator**: First part of statement has to be true to render second part<br/> ![if](./images/Logical&&Operator.png)  <li>**Switch Statement**: <br/> ![if](./images/SwitchStatement.png) <li>**Element Variables**: <br/> ![if](./images/ElementVariable.png)</ol>  
+    It is similiar to syntax in Js but with some changes: <ol><li>**If Statement**: <br/> ![if](./images/IfStatement.png) <li>**Ternary Operator**: <br/> ![if](./images/TernaryOperator.png) <li>**Logical && Operator**: First part of statement has to be true to render second part.<br/> ![if](./images/Logical&&Operator.png)  <li>**Switch Statement**: <br/> ![if](./images/SwitchStatement.png) <li>**Element Variables**: <br/> ![if](./images/ElementVariable.png)</ol>  
 
 19. ### 
 
