@@ -103,7 +103,22 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 16. ###  What is state & props in React?
 
-      **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, enabling *dynamic and reusable components*.
+      **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. <br/> `function Welcome(props) {` <br/>
+  `return <h1>Hello, {props.name}!</h1>;` <br/>
+`}` <br/>
+      `// Usage: <Welcome name="Alice" />` <br/>      **State** is a *built-in object* in React components, used to *store data or information of component* which can change over time. They are *mutable*, in reponse to user actions, API responses or other events. It is used for data which needs to be *tracked or updated* within a component. <br/> `function Counter() {`<br/>
+     `const [count, setCount] = React.useState(0);`<br/>
+      `return (`<br/>
+       `<div>`<br/>
+         `<p>{count}</p>`<br/>
+         `<button onClick={() => setCount(count + 1)}>Increment</button>`<br/>   
+       `</div>`<br/>
+     `);`<br/>
+      `}`<br/>
+
+      
+
+
 
 
 
