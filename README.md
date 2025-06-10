@@ -125,7 +125,9 @@ Each question is answered briefly and clearly to help with interview prep and re
 
     It is similiar to syntax in Js but with some changes: <ol><li>**If Statement**: <br/> ![if](./images/IfStatement.png) <li>**Ternary Operator**: <br/> ![if](./images/TernaryOperator.png) <li>**Logical && Operator**: First part of statement has to be true to render second part.<br/> ![if](./images/Logical&&Operator.png)  <li>**Switch Statement**: <br/> ![if](./images/SwitchStatement.png) <li>**Element Variables**: <br/> ![if](./images/ElementVariable.png)</ol>  
 
-19. ### 
+19. ### What are Controlled & Uncontrolled Components?
+
+   In raect, the main difference lies in how the values of component are managed.<br/> <ol><li>**Controlled Components**: These are React Components where value of Component is managed by state. React state is *single source of truth* for input's value. e.g.: input in form element. Here, component recieves value as prop, any user action may trigger an event which may update state & UI will reflect latest state.<li>  </ol> <br/> ![ControlledComponent](./images/ControlledC.png)
 
 
 
