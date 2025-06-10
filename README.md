@@ -23,8 +23,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 14  | [How to create Components in React?](#how-to-create-components-in-react)    |
 | 15  | [When to use Function & Class Components?](#when-to-use-function--class-component)    |
 | 16  | [How to create Components in React](#how-to-create-components-in-react)    |
-| 17  | [How to create Components in React](#how-to-create-components-in-react)    |
-| 18  | [How to create Components in React](#how-to-create-components-in-react)    |
+| 17  | [How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?](#how-is-data-sent-from-child-component-to-parent-component-what-is-lifting-state-up-or-callback-props)    |
+| 18  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)    |
 | 19  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)    |
 
 
