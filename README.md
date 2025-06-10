@@ -88,7 +88,7 @@ Each question is answered briefly and clearly to help with interview prep and re
        `render() {` <br/> 
          `return <h1>{`Hello, ${this.props.message}`}</h1>;`<br/>
          `}`<br/>
-       `}`<br/>
+       `}`<br/></ol>
 
 15. ### When to use Function & Class Components?
 
