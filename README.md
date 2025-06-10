@@ -86,7 +86,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 15. ### When to use Function & Class Components?
 
-      After addition of Hooks (React v.16.8 onwards) it is recommended to use **Function Components** over **Class** ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too. So use Class C. when a React Functionality is needed whose Function C. equivalent is not present yet (like Err Boundaries) or In older versions where state or lifecycle methods are needed. <br/> Use Functional C. mostly as they are simple, readable & follow modern code practices like, use of React Hooks for state & side effects.
+      After addition of Hooks (React v.16.8 onwards) it is recommended to use **Function Components** over **Class** ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too.<br/> So, use Class C. when a React Functionality is needed whose Function C. equivalent is not present yet (like Err Boundaries) or while working in older versions where state or lifecycle methods are needed. <br/> Use Functional C. mostly as they are simple, readable & follow modern code practices like, use of React Hooks for state & side effects.
 
 
 
