@@ -114,9 +114,9 @@ Each question is answered briefly and clearly to help with interview prep and re
          `<button onClick={() => setCount(count + 1)}>Increment</button>`<br/>   
        `</div>`<br/>
      `);`<br/>
-      `}`<br/>
+      `}`<br/> Note: when state changes, React automatically re-renders the componet (& all its child Components) to reflect the new state.
 
-      
+
 
 
 
