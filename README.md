@@ -22,10 +22,10 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 13  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)    |
 | 14  | [How to create Components in React?](#how-to-create-components-in-react)    |
 | 15  | [When to use Function & Class Components?](#when-to-use-function--class-component)    |
-| 15  | [How to create Components in React](#how-to-create-components-in-react)    |
-| 15  | [How to create Components in React](#how-to-create-components-in-react)    |
-| 15  | [How to create Components in React](#how-to-create-components-in-react)    |
-
+| 16  | [How to create Components in React](#how-to-create-components-in-react)    |
+| 17  | [How to create Components in React](#how-to-create-components-in-react)    |
+| 18  | [How to create Components in React](#how-to-create-components-in-react)    |
+| 19  | [HWhat are Controlled & Uncontrolled Components](#hwhat-are-controlled--uncontrolled-components)    |
 
 
 
