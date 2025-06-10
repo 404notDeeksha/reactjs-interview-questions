@@ -83,5 +83,9 @@ Each question is answered briefly and clearly to help with interview prep and re
          `return <h1>{`Hello, ${this.props.message}`}</h1>;`<br/>
          `}`<br/>
        `}`<br/>
+15. ### When to use Function & Class Components?
+
+      After addition of Hooks (React v.16.8 onwards) it is recommended to use Function Components over Class ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too.
+
 
 
