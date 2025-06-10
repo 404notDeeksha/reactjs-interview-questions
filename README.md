@@ -25,7 +25,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 16  | [How to create Components in React](#how-to-create-components-in-react)    |
 | 17  | [How to create Components in React](#how-to-create-components-in-react)    |
 | 18  | [How to create Components in React](#how-to-create-components-in-react)    |
-| 19  | [HWhat are Controlled & Uncontrolled Components](#hwhat-are-controlled--uncontrolled-components)    |
+| 19  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)    |
 
 
 
