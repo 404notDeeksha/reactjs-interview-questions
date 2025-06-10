@@ -121,9 +121,11 @@ Each question is answered briefly and clearly to help with interview prep and re
       Standard Approach is: <br/> <ol> <li> The parent component defines a *callback function*. <li>The parent *passes* this function to the child component *via props*. <li>The child component *calls this function*, *passing the data as an argument*. <li>The parent *receives the data* and *can update its state* or perform other actions. </ol> <br/> Note: This pattern is called **lifting state up** or **callback props**. <br/> <br/> **Parent Component** <br/><br/>  ![ParentComponent](./images/ParentCDataTransfer.png) <br/><br/>  **Child Component** <br/><br/>  ![ChildComponent](./images/ChildCDataTransfer.png) <br/> Note: This maintains unidirectional flow of data.
 
 
+18. ### What is Conditional rendering in JSX?
 
+    It is similiar to syntax in Js but with some changes: <ol><li>**If Statement**: <br/> ![if](./images/IfStatement.png) <li>**Ternary Operator**: <br/> ![if](./images/TernaryOperator.png) <li>**Logical && Operator**: <br/> ![if](./images/Logical&&Operator.png)  <li>**Switch Statement**: <br/> ![if](./images/SwitchStatement.png) <li>**Element Variables**: <br/> ![if](./images/ElementVariable.png)</ol>  
 
-
+19. ### 
 
 
 
