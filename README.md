@@ -63,7 +63,14 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 9. ### What is babel?
 
-   Babel is a free & open source Js compiler which converts *new, modern Js code (ECMA Script 2015/ES6 & newer)* into *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*. It can transpile modern Js as well as supports Typescript & JSX too.<br/> In react, since browser cant directly read JSX file, babel converts JSX code into Js. <br/> `function App(){` <br/> `return React.createElement(` <br/> `'div'`, <br/> `{className: 'app'},` <br/> `React.createElement('h1',null,'Hello")` <br/> `)` <br/> `}`
+   Babel is a free & open source Js compiler which converts *new, modern Js code (ECMA Script 2015/ES6 & newer)* into *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*. It can transpile modern Js as well as supports Typescript & JSX too.<br/> In react, since browser cant directly read JSX file, babel transpiles JSX code into Js. <br/> 
+   `function App(){` <br/> 
+   `return React.createElement(` <br/>
+    `'div',` <br/> 
+    `{className: 'app'},` <br/> 
+    `React.createElement('h1',null,'Hello")` <br/> 
+    `)` <br/> 
+    `}` <br/> Note: Transpiler converts source code from one programming language to another.
 
 10. ### What is role of public folder in React app?
 
