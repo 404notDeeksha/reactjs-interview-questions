@@ -26,6 +26,15 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 17  | [How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?](#how-is-data-sent-from-child-component-to-parent-component-what-is-lifting-state-up-or-callback-props)    |
 | 18  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
 | 19  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)    |
+| 20  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
+| 21  | [What is Prop Drilling?](#what-is-prop-drilling)                     |
+| 22  | [What is React Composition?](#what-is-react-composition)                     |
+| 23  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                     |
+| 24  | [What is Bundle?](#what-is-bundle)                     |
+| 25  | [What is Webpack?](#what-is-webpack)                     |
+| 26  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
+
+
 
 
 
@@ -204,9 +213,9 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       Webpack is a powerful traditional **module bundler** for JavaScript applications. Its primary role is to:
       1. **Bundle all your JavaScript files and dependencies** (including CSS, images, fonts, etc.) into one or more optimized files for the browser.
-      2. **Transform code** using loaders (e.g., converting JSX to JS with Babel).
+      2. **Transform code** using **loaders** (e.g., converting JSX to JS with Babel).
       3. **Optimize assets for production**, such as minifying code and splitting bundles for faster loading.<br/>
       Webpack **automates** the process of managing dependencies and assets, ensuring your React app runs efficiently in development and production environments.<br/>
-      **During Developemnt**, webpack uses features like **hot module replacement**, allowing you to see changes instantly without a full page reload.<br/>
+      **During Developemnt**, Webpack uses features like **Hot Module Replacement (HMR)**, allowing you to see changes instantly without a full page reload.<br/>
       **For Production**, It produces optimised bundles, reduce load times, improve performance By minifing code, removing unused code (tree shaking), splitting code( for faster initial loads).<br/>
-      It is **not available in Vite**. Vite has Rollup instead for production buildup.
+      It is **not available in Vite**. Vite has **Rollup** instead for production buildup & very fast HMR using **native ES modules** for Development phase.
