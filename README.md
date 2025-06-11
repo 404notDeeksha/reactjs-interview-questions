@@ -168,11 +168,11 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 22. ### What is React Composition?
 
-      It is a core concept that involves building complex user interfaces by combining smaller, reusable components together.
-      This pattern promotes code reusability, maintainability, and scalability, as each component is responsible for a specific piece of functionality. 
-      Composition is favored over inheritance in React for code reuse and flexibility.
+      It is a core concept that involves building complex user interfaces by combining smaller, reusable components together.<br/>
+      This pattern promotes code reusability, maintainability, and scalability, as each component is responsible for a specific piece of functionality.<br/> 
+      Composition is favored over inheritance in React for code reuse and flexibility.<br/>
       How is it done?
-      1. Children prop - Components can recieve other Components as their Children. It is used when Parent doesnt know what will render inside.
+      1. Children prop: Components can recieve other Components as their Children. It is used when Parent doesnt know what will render inside.
       ```js
       const Card = ({ children }) => <div className="card">{children}</div>;
        // Usage
