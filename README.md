@@ -48,10 +48,13 @@ Each question is answered briefly and clearly to help with interview prep and re
 
    Single Page Application has only one web page. Whenever data is updated by user, it gets _dynamically rendered_ on page without a _full reload_. <br/> Note: Multiple SPAs are SPAs only. eg. react app only has one single HTML file (index.html), whereas multipage apps have multiple HTML files.  <br/> eg: When a page is switched via Navbar section on an app developed by react, page changes without reloading the page. here, `<Link>` doesnt reloads page while `<a>` does.
 
+   **[⬆ Back to Top](#table-of-contents)**
+
 3. ### What are features of React?
 
    1.**High Performance**: React uses Virtual Dom which ensures only part of webpage where data changes gets updated instead of entire page, leading to faster & smoother app. <br/> 2. **One way Data Binding**: Data flow in React is unidirectional, it flows from Parent to Child. This makes app predictable & easy to debug. <br/> 3. **JSX (js XML)**: React used js syntax extension which makes code HTML like, thus writing HTML in js, making code more UI friendly & readable. JSX evaluates everything between `{}`<br/> 4. **Component Based Architecture**: React uses reusable, independent components for rendering UI & logic, making code resuable & modular. <br/> 5. **Server Side Rendering Support**: react supports server-side rendering components thus improving performance & SEO optimisation for the web apps. <br/> 6. **Dedicated Developer Tools**: Chrome has specialised Developer Tools which help in simplifying debugging & performance monitoring.
 
+   **[⬆ Back to Top](#table-of-contents)**
 
 4. ### What is DOM (Document Object Model)?
     DOM is a *browser* feature. It is a *tree like* representation of a web page. It *allows js* to dynamically access elements, thus allowing dynamic creation & updation of webpage contents & its structure. <br/> **DOM Updation** converts static webpage into dynamic ones.
@@ -60,6 +63,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 
    Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real Dom are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> Note: <br/>1. Overheads of Real Browser Rendering are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layoutthrashing etc.<br/> 2. React's Diffing Algo has Complexity -  O(n) both Time & space where n - no. of elements in tree.
 
+   **[⬆ Back to Top](#table-of-contents)**
+
 6. ### What are React Components?
 
    React Components are reusable building blocks for creating UI.
@@ -67,6 +72,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 7. ### What is npm?
 
    npm - *node package manager* is standard package manager for NodeJs. It is used to *install, manage & share* **Js packages & dependencies** for NodeJs project. <br/> In react, npm does Project initialisation, Running & Building Apps, Dependencies Management, Script Execution (define & run custom scripts), Efficient Package Installation, Version Control (package.json), & Collaboration & Code Sharing.  
+
+   **[⬆ Back to Top](#table-of-contents)**
 
 8. ###  What is role of node_modules folder?
 
@@ -82,6 +89,8 @@ Each question is answered briefly and clearly to help with interview prep and re
     `React.createElement('h1',null,'Hello")` <br/> 
     `)` <br/> 
     `}` <br/> Note: Transpiler converts source code from one programming language to another.
+
+    **[⬆ Back to Top](#table-of-contents)**
 
 10. ### What is role of public folder in React app?
 
@@ -109,9 +118,13 @@ Each question is answered briefly and clearly to help with interview prep and re
          `}`<br/>
        `}`<br/></ol>
 
+       **[⬆ Back to Top](#table-of-contents)**
+
 15. ### When to use Function & Class Components?
 
       After addition of Hooks (React v.16.8 onwards) it is recommended to use **Function Components** over **Class** ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too.<br/> So, use Class C. when a React Functionality is needed whose Function C. equivalent is not present yet (like Err Boundaries) or while working in older versions where state or lifecycle methods are needed. <br/> Use Functional C. mostly as they are simple, readable & follow modern code practices like, use of React Hooks for state & side effects.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 16. ###  What is state & props in React?
 
@@ -138,9 +151,13 @@ Each question is answered briefly and clearly to help with interview prep and re
       ``` 
       > When state changes, React automatically re-renders the componet (& all its child Components) to reflect the new state.
 
+      **[⬆ Back to Top](#table-of-contents)**
+
 17. ### How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?
 
       Standard Approach is: <br/> <ol> <li> The parent component defines a *callback function*. <li>The parent *passes* this function to the child component *via props*. <li>The child component *calls this function*, *passing the data as an argument*. <li>The parent *receives the data* and *can update its state* or perform other actions. </ol> <br/> Note: This pattern is called **lifting state up** or **callback props**. <br/> <br/> **Parent Component** <br/><br/>  ![ParentComponent](./images/ParentCDataTransfer.png) <br/><br/>  **Child Component** <br/><br/>  ![ChildComponent](./images/ChildCDataTransfer.png) <br/> Note: This maintains unidirectional flow of data.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 18. ### What is Conditional rendering in JSX?
 
@@ -149,6 +166,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 19. ### What are Controlled & Uncontrolled Components?
 
       In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where *value* is managed by *state*. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves *value* & an *Event Handler* as *prop*, which gets trigerred by user action,which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> It can cause more re-renders, especially with many inputs or frequent updates. <br/>  <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <br/>                       <li> **Uncontrolled Components**: These are React Components where React does not directly control the input's value. These manage its own state internally, with the DOM maintaining the current value. <br/> Here, the input's value is not tied to React state, but can be accessed directly from the DOM, typically using a *ref*. It uses *defaultValue* to set the *initial value of an input field* when the component is *first rendered*. Any further changes are tracked by **DOM** & not by **React**.<br/>   <br/> ![UnControlledComponent](./images/UncontrolledC.png)   </ol> <br/> Note: This needs fewer re-renders for high frequency inputs. But, it is harder to validate & synchronize with other components. It is also less predictable & state can be changed outside React's knowledge.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 20. ### What is State, Stateful, Stateless terms?
 
@@ -171,11 +190,15 @@ Each question is answered briefly and clearly to help with interview prep and re
       setCount(prev=> prev+1);
       ```
 
+      **[⬆ Back to Top](#table-of-contents)**
+
 21. ### What is Prop Drilling?
 
       Prop drilling in React is the process of *passing data (props)* from a parent component down through multiple layers of nested components *until it reaches* the component that actually needs it. It means intermediary components *receive and forward props* even if they don't use them themselves.
       It is an issue because it leads to *Code Duplication*, Difficulty in tracking components, props & decreased Maintainability.
       It can be avoided using Global/Shared States.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 22. ### What is React Composition?
 
@@ -197,6 +220,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       3. Compound Components: A pattern where a parent component manages state and shares it with nested child components, via Global States.
       4. Higher-Order Components (HOCs) and Render Props: Advanced composition techniques for sharing logic between components without repeating code.
 
+      **[⬆ Back to Top](#table-of-contents)**
+
 23. ### What dependencies are essential for creating a React app?
 
       1. Node.js & npm/yarn: Node.js is the JavaScript runtime needed to run development tools, while npm or yarn are package managers for installing dependencies.
@@ -206,10 +231,14 @@ Each question is answered briefly and clearly to help with interview prep and re
       5. Create React App (CRA): A popular tool that sets up a React project with sensible defaults, including Webpack and Babel configurations. Other ways are using Vite.
       6. Development Tools: Tools like ESLint (for code linting), React Developer Tools (for debugging), and testing libraries (e.g., Jest, React Testing Library).
 
+      **[⬆ Back to Top](#table-of-contents)**
+
 24. ### What is Bundle?
 
       A bundle is the output file (or files) **generated by Webpack** or similar bundlers. It contains all the code and assets your application needs, **combined and optimized** for the browser. <br/>
       Role: The bundle ensures that the browser can **load your React app quickly and efficiently**, with all dependencies resolved.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 25. ### What is Webpack?
 
@@ -221,3 +250,5 @@ Each question is answered briefly and clearly to help with interview prep and re
       **During Developemnt**, Webpack uses features like **Hot Module Replacement (HMR)**, allowing you to see changes instantly without a full page reload.<br/>
       **For Production**, It produces optimised bundles, reduce load times, improve performance By minifing code, removing unused code (tree shaking), splitting code( for faster initial loads).<br/><br/>
       It is **not available in Vite**. Vite has **Rollup** instead for production buildup & very fast HMR using **native ES modules** for Development phase.
+
+      **[⬆ Back to Top](#table-of-contents)**
