@@ -139,7 +139,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where *value* is managed by *state*. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves *value* & an *Event Handler* as *prop*, which gets trigerred by user action,which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> It can cause more re-renders, especially with many inputs or frequent updates. <br/>  <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <br/>                       <li> **Uncontrolled Components**: These are React Components where React does not directly control the input's value. These manage its own state internally, with the DOM maintaining the current value. <br/> Here, the input's value is not tied to React state, but can be accessed directly from the DOM, typically using a *ref*. It uses *defaultValue* to set the *initial value of an input field* when the component is *first rendered*. Any further changes are tracked by **DOM** & not by **React**.<br/>   <br/> ![UnControlledComponent](./images/UncontrolledC.png)   </ol> <br/> Note: This needs fewer re-renders for high frequency inputs. But, it is harder to validate & synchronize with other components. It is also less predictable & state can be changed outside React's knowledge.
 
-20. ### What is State, Steateful, Stateless terms?
+20. ### What is State, Stateful, Stateless terms?
 
       **StateFul Component**: It manages its own state. This means it *holds data* that can *change over time* and *affect the component’s output*. When the *state changes (using setState in class components* or *hooks like useState in functional components)*, the *component re-renders* to reflect the new state.
 
@@ -159,13 +159,32 @@ Each question is answered briefly and clearly to help with interview prep and re
       }));
       setCount(prev=> prev+1);
       ```
-      
+
 21. ### What is Prop Drilling?
 
       Prop drilling in React is the process of *passing data (props)* from a parent component down through multiple layers of nested components *until it reaches* the component that actually needs it. It means intermediary components *receive and forward props* even if they don't use them themselves.
       It is an issue because it leads to *Code Duplication*, Difficulty in tracking components, props & decreased Maintainability.
       It can be avoided using Global/Shared States.
 
-22. ###       
+22. ### What is React Composition?
+
+      It is a core concept that involves building complex user interfaces by combining smaller, reusable components together.
+      This pattern promotes code reusability, maintainability, and scalability, as each component is responsible for a specific piece of functionality. 
+      Composition is favored over inheritance in React for code reuse and flexibility.
+      How is it done?
+      1. Children prop - Components can recieve other Components as their Children. It is used when Parent doesnt know what will render inside.
+      ```js
+      const Card = ({ children }) => <div className="card">{children}</div>;
+       // Usage
+         <Card>
+            <h2>Title</h2>
+            <p>Description</p>
+         </Card>
+      ```
+      2. Passing Components as Props: You can pass entire components as props to other components, enabling dynamic rendering and customization.
+      3. Compound Components: A pattern where a parent component manages state and shares it with nested child components, via Global States.
+      4. Higher-Order Components (HOCs) and Render Props: Advanced composition techniques for sharing logic between components without repeating code.
+
+23. ###
 
 
