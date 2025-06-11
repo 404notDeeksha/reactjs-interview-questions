@@ -159,5 +159,13 @@ Each question is answered briefly and clearly to help with interview prep and re
       }));
       setCount(prev=> prev+1);
       ```
+      
+21. ### What is Prop Drilling?
+
+      Prop drilling in React is the process of *passing data (props)* from a parent component down through multiple layers of nested components *until it reaches* the component that actually needs it. It means intermediary components *receive and forward props* even if they don't use them themselves.
+      It is an issue because it leads to *Code Duplication*, Difficulty in tracking components, props & decreased Maintainability.
+      It can be avoided using Global/Shared States.
+
+22. ###       
 
 
