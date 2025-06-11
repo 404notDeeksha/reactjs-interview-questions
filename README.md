@@ -207,6 +207,6 @@ Each question is answered briefly and clearly to help with interview prep and re
       2. **Transform code** using loaders (e.g., converting JSX to JS with Babel).
       3. **Optimize assets for production**, such as minifying code and splitting bundles for faster loading.<br/>
       Webpack **automates** the process of managing dependencies and assets, ensuring your React app runs efficiently in development and production environments.<br/>
-      **During Developemnt**, webpack uses features like **hot module replacement**, allowing you to see changes instantly without a full page reload.
-      **For Production**, It produces optimised bundles, reduce load times, improve performance By minifing code, removing unused code (tree shaking), splitting code( for faster initial loads).
+      **During Developemnt**, webpack uses features like **hot module replacement**, allowing you to see changes instantly without a full page reload.<br/>
+      **For Production**, It produces optimised bundles, reduce load times, improve performance By minifing code, removing unused code (tree shaking), splitting code( for faster initial loads).<br/>
       It is **not available in Vite**. Vite has Rollup instead for production buildup.
