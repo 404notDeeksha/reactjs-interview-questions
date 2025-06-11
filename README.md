@@ -149,7 +149,15 @@ Each question is answered briefly and clearly to help with interview prep and re
       1. Local State: Managed within a single component using useState or this.setState.
       2. Shared/Global State: Shared between multiple components, managed via Context API or state management libraries like Redux, MobX, or Recoil.
       3. UI State: Controls UI-specific data (e.g., modal visibility, input values). 
-      4. Fetch State: Manages data from asynchronous operations like API calls.
+      4. Fetch State: Manages data from asynchronous operations like API calls.<br/> <br/>
 
+      > States are modified using updater functions. If new value is relevant to prev Value, It must be modified using prevState to yield up to date values as state updates are usually batched & asynchronous.
+      ```js
+      setState(prevState => ({
+       ...prevState,
+      userName: newValue
+      }));
+      setCount(prev=> prev+1);
+      ```
 
 
