@@ -3,7 +3,7 @@
 This repo is my personal collection of ReactJS interview Q&A.  
 Each question is answered briefly and clearly to help with interview prep and revision.
 
----
+### Table of Contents
 
 | No. | Question                                                                           |
 | --- | ---------------------------------------------------------------------------------- |
@@ -41,6 +41,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 1. ### What is React?
 
    React is an _open sorce_ _js library_, developed by facebook(meta). It is used to build _UI interfaces_ & simplifies creation of _SPA(Single Page Applications)_, using _reusable components_ & _dynamic rendering_. It follows _Component based architecture_.
+
+   **[⬆ Back to Top](#table-of-contents)**
 
 2. ### What is Single Page Application (SPA)?
 
