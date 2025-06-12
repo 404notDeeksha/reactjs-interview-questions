@@ -33,6 +33,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 24  | [What is Bundle?](#what-is-bundle)                     |
 | 25  | [What is Webpack?](#what-is-webpack)                     |
 | 26  | [What are Class Components in React? What are different ways to define them?](#what-is-conditional-rendering-in-jsx)                     |
+| 27 | [ What is difference between Class & Functional Component?](#) |
 
 
 
@@ -261,6 +262,76 @@ Each question is answered briefly and clearly to help with interview prep and re
       1. Is a **JavaScript class*** that *extends React.Component* (or Component if imported directly).
       2. Must include a *render() method*, which **returns the JSX** to display.
       3. Can **manage its own state** and *respond to lifecycle events* like *mounting, updating, and unmounting*.
+      >React.Component is a parent class featured by React lib & class ("Car") inherits its features. 
 
+      **Defining Class Component:**
+
+      ```js
+      //ES6 Class Syntax
+      class Car extends React.Component {
+            render() {
+              return <h2>Hi, I am a Car!</h2>;
+            }
+      }
+      //Usage: <Car/>
+
+      //Directly importing Component
+      import { Component } from 'react';
+      class Greeting extends Component {
+         render() {
+            return <h1>Hello, {this.props.name}!</h1>;
+         }
+      }
+
+      // With a Constructor (for State or Binding)
+      // if state or bind methods are to be used
+      class Car extends React.Component {
+         constructor(props) {
+            super(props);
+            this.state = { color: "red" };
+         }
+      render() {
+         return <h2>I am a {this.state.color} Car!</h2>;
+            }
+      }
+
+      // With Static Properties: features like context
+      class Button extends React.Component {
+         static contextType = ThemeContext;
+            render() {
+            const theme = this.context;
+      return <button className={'button-' + theme}>{this.props.children}</button>;
+            }
+      }
+      ```
       **[⬆ Back to Top](#table-of-contents)**
+
+27. #### What is difference between Class & Functional Component?
+
+      | Aspect                | Class Component                                           | Functional Component                                         |
+      |-----------------------|----------------------------------------------------------|--------------------------------------------------------------|
+      | **Definition**        | Uses ES6 class syntax, extends `React.Component`         | Plain JavaScript function that returns JSX                   |
+      | **Syntax**            | More verbose, requires `render()` method                 | Simpler, less boilerplate                                    |
+      | **State Management**  | Uses `this.state` and `this.setState`                    | Uses React Hooks (e.g., `useState`) for state                |
+      | **Lifecycle Methods** | Has built-in lifecycle methods (e.g., `componentDidMount`) | Uses `useEffect` hook to handle lifecycle events             |
+      | **`this` Keyword**    | Must use `this` to access props, state, methods          | No need for `this`                                           |
+      | **Performance**       | Slightly less efficient due to more overhead             | Generally more efficient and lightweight                     |
+      | **Best Use Case**     | Legacy codebases, Error Boundaries, complex lifecycle    | Modern React apps, most use cases                            |
+      | **Composition**       | Supports inheritance                                     | Encourages composition (preferred in modern React)           |
+
+
+28. ### What is difference between Inheritance & Composition in React?
+
+      **Composition** and **inheritance** are two *approaches* for **structuring and reusing code**, but React strongly favors composition for building user interfaces.
+
+      **Composition** is the practice of building complex UIs by combining smaller, reusable components. Components are nested, and data or behavior is shared via props and children.  
+
+      **Inheritance**: It is when one class component extends another, *inheriting its properties and methods*—an approach borrowed from object-oriented programming. It creates a base component & extend it for specialized components.
+      ```js
+      class Button extends React.Component { /* ... */ }
+      class SubmitButton extends Button { /* ... */ }
+      ```
+      It leads to **tightly coupled, hard-to-maintain code** which is **less flexible** for UI composition and code reuse.
+      Better Alternatives are **composition, HOCs, render props**.
+
 
