@@ -16,10 +16,10 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 7   | [What is npm?](#what-is-npm)                                                       |
 | 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
 | 9   | [What is babel?](#what-is-babel)                                                   |
-| 10  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)    |
-| 11  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)    |
+| 10  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)        |
+| 11  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)              |
 | 12  | [What is role of index.html page in React app?](#what-is-role-of-index.html-page-in-react-app)    |
-| 13  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)    |
+| 13  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)                      |
 | 14  | [How to create Components in React?](#how-to-create-components-in-react)    |
 | 15  | [When to use Function & Class Components?](#when-to-use-function--class-component)    |
 | 16  | [What is state & props in React?](#what-is-state--props-in-react)                                  |
@@ -32,7 +32,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 23  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                     |
 | 24  | [What is Bundle?](#what-is-bundle)                     |
 | 25  | [What is Webpack?](#what-is-webpack)                     |
-| 26  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
+| 26  | [What are Class Components in React? What are different ways to define them?](#what-is-conditional-rendering-in-jsx)                     |
 
 
 
@@ -204,7 +204,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       It is a core concept that involves building complex user interfaces by combining smaller, reusable components together.<br/>
       This pattern promotes code reusability, maintainability, and scalability, as each component is responsible for a specific piece of functionality.<br/> 
-      Composition is favored over inheritance in React for code reuse and flexibility.<br/>
+      **Composition is favored over inheritance** in React for *code reuse and flexibility*.<br/>
       How is it done?
       1. Children prop: Components can recieve other Components as their Children. It is used when Parent doesnt know what will render inside.
          ```js
@@ -252,3 +252,15 @@ Each question is answered briefly and clearly to help with interview prep and re
       It is **not available in Vite**. Vite has **Rollup** instead for production buildup & very fast HMR using **native ES modules** for Development phase.
 
       **[⬆ Back to Top](#table-of-contents)**
+
+26. ### What are Class Components in React? What are different ways to define them?
+
+      **Class components** are one of the main ways to define components in React (the other being function components). Before React v16.8 and the *introduction of Hooks*, class components were the primary way to *manage state* and use *lifecycle methods* in React apps.
+
+      A class component
+      1. Is a **JavaScript class*** that *extends React.Component* (or Component if imported directly).
+      2. Must include a *render() method*, which **returns the JSX** to display.
+      3. Can **manage its own state** and *respond to lifecycle events* like *mounting, updating, and unmounting*.
+
+      **[⬆ Back to Top](#table-of-contents)**
+
