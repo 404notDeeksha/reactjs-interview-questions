@@ -367,4 +367,91 @@ Each question is answered briefly and clearly to help with interview prep and re
       }
       ```     
 
-30. ### 
+30. ### What is role of this keyword in React? **
+
+      In React, the `this` keyword is used to refer to the *current instance* of a **component class**. It allows you to *access the component's props, state, event handlers and methods* within its class definition. <br/> e.g. using `this.state`(to get or set C.'s state),<br/> `this.props`(accessing properties passed from parent C.), <br/> `this.handleClick`(passing as *callback functions*) or <br/> `this.methodName()`(call other methods in same class) inside Class Component.<br/>
+      > C - Component
+
+      While passing class methods as **event handlers**  (e.g., onClick={this.handleClick}), it must be ensured that `this` refers to the **correct component instance**. Otherwise, this may be *undefined* or refer to the *global object*, leading to errors (Losing `this` Context).
+      1. It can be fixed by **binding the method** in constructor
+
+            ```js
+            constructor(props) {
+            super(props);
+            this.handleClick = this.handleClick.bind(this);
+            }
+            ```
+      2. Also. **Arrow functions** automatically bind this to the class instance.
+
+            ```js
+            class Counter extends Component {
+            constructor(props) {
+                  super(props);
+                  this.state = { count: 0 };
+            }
+
+            // Arrow function ensures 'this' refers to the component instance
+            increment = () => {
+              this.setState({ count: this.state.count + 1 });
+            };
+
+            render() {
+              return (
+                  <div>
+                     <p>Count: {this.state.count}</p>
+                     <button onClick={this.increment}>Increment</button>
+                  </div>
+                  );
+                }
+            }
+            ```
+
+      In **Functional Components**:
+      1. In React functional components, `this` is not used. State and props are accessed directly via **hooks** and **function parameters**, not through this.<br/>
+
+      2. If you use `this` in a functional component, it refers to the **global object (or is undefined in strict mode)**, not the component instance.
+       > An instance is a specific, live version of your class component, created and managed by React, with its own state and behavior. **Arrow functions** help make sure that when you use this inside your component methods, it always refers to the correct instance.
+
+31. ### What are Component Life Cycle Methods in React?
+
+      React components have a **"lifecycle"** (a series of stages from creation to removal) that you can tap into using special methods called **lifecycle methods**. These are most relevant for **Class-based Components**, as **functional components use hooks** for similar behavior. <br/> React mostly has 3 methods:
+      1. **Mounting**: Component is **created** and **inserted** into the DOM.
+      2. **Updating**: Component is **re-rendered** due to changes in props or state.
+      3. **Unmounting**: Component is removed from the DOM.
+
+      1. **Mounting Methods**: These methods are called when a component is being inserted into the DOM:
+
+            1. **constructor(props)**: Initializes state and binds methods. Not strictly required unless you need to set up state or bindings.
+
+            2. static **getDerivedStateFromProps(props, state)**: Rarely used, allows state updates based on props before rendering.
+
+            3. **render()**: The only required method; returns the JSX to render.
+
+            4. **componentDidMount()**: Runs after the component is mounted. Used for side effects like data fetching or subscriptions.<br/>
+
+            > The initial render in React occurs during the Mounting phase of the component lifecycle.
+            When a component is first created and inserted into the DOM, React triggers the **initial render** by calling the component’s **render() method**, which determines what should appear on the screen. 
+            This process happens after any initialization (like setting up state in the constructor) and before the component is fully mounted and componentDidMount() is called. So, sequence is Initialization (e.g., constructor runs), Mounting (initial render occurs here, using render()) ,componentDidMount (runs after the initial render and DOM insertion)
+
+      2. **Updating Methods**: Called whenever the component is re-rendered due to state or prop changes:
+
+            1. static getDerivedStateFromProps(props, state): Also called during updates.
+
+            2. shouldComponentUpdate(nextProps, nextState): Lets you optimize performance by preventing unnecessary renders.
+
+            3. render(): Called again to update the UI.
+
+            4. getSnapshotBeforeUpdate(prevProps, prevState): Lets you capture information (like scroll position) before the DOM is updated.
+
+            5. componentDidUpdate(prevProps, prevState, snapshot): Runs after updates are flushed to the DOM, good for side effects that depend on the DOM.
+
+      3. **Unmounting Method**: Called just before the component is removed from the DOM:
+
+            componentWillUnmount(): Used for cleanup, such as cancelling timers or unsubscribing from services.
+
+
+
+
+
+
+
