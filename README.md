@@ -32,8 +32,10 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 23  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                     |
 | 24  | [What is Bundle?](#what-is-bundle)                     |
 | 25  | [What is Webpack?](#what-is-webpack)                     |
-| 26  | [What are Class Components in React? What are different ways to define them?](#what-is-conditional-rendering-in-jsx)                     |
-| 27 | [ What is difference between Class & Functional Component?](#) |
+| 26  | [What are Class Components in React? What are different ways to define them?](#what-are-class-components-in-react-what-are-different-ways-to-define-them)            |
+| 27 | [ What is difference between Class & Functional Component?](#what-is-difference-between-class--functional-component) |
+| 28 | [What is difference between Inheritance & Composition in React?](#what-is-difference-between-inheritance--composition-in-react) |
+| 29 | [What is constructor & super keywords in React?](#what-is-constructor--super-keywords-in-react) |
 
 
 
@@ -300,10 +302,12 @@ Each question is answered briefly and clearly to help with interview prep and re
          static contextType = ThemeContext;
             render() {
             const theme = this.context;
-      return <button className={'button-' + theme}>{this.props.children}</button>;
+            return <button className={'button-' + theme}>{this.props.children}</button>;
             }
       }
       ```
+      >`static` means `contextType` is a property that `belongs to the class itself`, not to instances of the class.
+
       **[⬆ Back to Top](#table-of-contents)**
 
 27. #### What is difference between Class & Functional Component?
@@ -334,4 +338,33 @@ Each question is answered briefly and clearly to help with interview prep and re
       It leads to **tightly coupled, hard-to-maintain code** which is **less flexible** for UI composition and code reuse.
       Better Alternatives are **composition, HOCs, render props**.
 
+29. ### What is constructor & super keywords in React?
 
+      **constructor**: It is a special *method in JavaScript classes* that is called when a new instance of the class is created. It is used to *initialize the object’s properties*. 
+      ```js
+      class Car {
+            constructor(brand) {
+            this.brand = brand;
+            }
+      }
+      ```
+
+      **super**: It is used in a *subclass (a class that extends another class)* to call the constructor of its parent class. 
+      `super()` is to be called in the **constructor of a derived class** before using `this`.<br/>This ensures the **parent’s properties and methods** are initialized before the child adds its own.<br/> 
+      `super` can also be used to call methods from the parent class inside child class methods.
+      ```js
+      class Vehicle {
+      constructor(type) {
+            this.type = type;
+      }
+      }
+
+      class Car extends Vehicle {
+      constructor(type, brand) {
+            super(type); // Calls the parent (Vehicle) constructor
+            this.brand = brand;
+        }
+      }
+      ```     
+
+30. ### 
