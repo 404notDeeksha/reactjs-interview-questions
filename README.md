@@ -36,6 +36,19 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 27 | [ What is difference between Class & Functional Component?](#what-is-difference-between-class--functional-component) |
 | 28 | [What is difference between Inheritance & Composition in React?](#what-is-difference-between-inheritance--composition-in-react) |
 | 29 | [What is constructor & super keywords in React?](#what-is-constructor--super-keywords-in-react) |
+| 30 | [What is role of this keyword in React?](#what-is-role-of-this-keyword-in-react) |
+| 31 | [What are different types of Render in React?](#what-are-different-types-of-render-in-react) |
+| 32 | [What types of rendering output does React Components support?](#what-types-of-rendering-output-does-react-components-support) |
+| 33 | [How rendering happens when a React Component is created?](#how-rendering-happens-when-a-react-component-is-created) |
+| 34 | [What are side effects in React?](#what-are-side-effects-in-react) |
+| 35 | [What are Component Life Cycle Methods in React?](#what-are-component-life-cycle-methods-in-react) |
+| 36 | [](#) |
+| 37 | [](#) |
+| 38 | [](#) |
+| 39 | [](#) |
+| 40 | [](#) |
+
+
 
 
 
@@ -332,6 +345,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       | **Best Use Case**     | Legacy codebases, Error Boundaries, complex lifecycle    | Modern React apps, most use cases                            |
       | **Composition**       | Supports inheritance                                     | Encourages composition (preferred in modern React)           |
 
+      **[⬆ Back to Top](#table-of-contents)**
 
 28. ### What is difference between Inheritance & Composition in React?
 
@@ -346,6 +360,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       ```
       It leads to **tightly coupled, hard-to-maintain code** which is **less flexible** for UI composition and code reuse.
       Better Alternatives are **composition, HOCs, render props**.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 29. ### What is constructor & super keywords in React?
 
@@ -374,7 +390,8 @@ Each question is answered briefly and clearly to help with interview prep and re
             this.brand = brand;
         }
       }
-      ```     
+      ```   
+      **[⬆ Back to Top](#table-of-contents)**  
 
 30. ### What is role of this keyword in React? **
 
@@ -421,12 +438,16 @@ Each question is answered briefly and clearly to help with interview prep and re
       2. If you use `this` in a functional component, it refers to the **global object (or is undefined in strict mode)**, not the component instance.
        > An instance is a specific, live version of your class component, created and managed by React, with its own state and behavior. **Arrow functions** help make sure that when you use this inside your component methods, it always refers to the correct instance.
 
+       **[⬆ Back to Top](#table-of-contents)**
+
 31. ### What are different types of Render in React?
 
       1. Client-Side Rendering (CSR): The most common approach, where React renders components in the browser using JavaScript. The initial HTML is minimal, and the full UI is built and updated on the client side.
       2. Server-Side Rendering (SSR): React components are rendered on the server, and the resulting HTML is sent to the client. This improves SEO and initial load performance because the user receives a fully rendered page from the start.
       3. **Static Site Generation (SSG)**: The React app is *pre-rendered* into static HTML at build time. This approach is used for content that doesn’t change often and offers excellent performance.
       4. **Component Re-rendering**: Whenever state or props change, React may re-render only the affected components, not the whole app. This is optimized using techniques like **shouldComponentUpdate()** and the **virtual DOM** diffing algorithm.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 32. ###  What types of rendering output does React Components support?
 
@@ -435,6 +456,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       3. Portals (rendering into a different DOM subtree).
       4. Strings, numbers (as text nodes).
       4. Null/undefined/booleans (render nothing).
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 33. ### How rendering happens when a React Component is created?
 
@@ -467,6 +490,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       5. Component Lifecycle and Side Effects: 
             After the DOM update, React may run lifecycle methods or effects (like componentDidMount, useEffect, etc.), allowing you to perform side effects such as data fetching or subscriptions.
 
+      **[⬆ Back to Top](#table-of-contents)**      
+
 34. ### What are side effects in React?
 
       The primary responsibility of a React component is to *render the UI* based on its current state and props. This means:
@@ -481,6 +506,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       > If data fetching was done directly inside the render function, it would break the predictable, pure nature of rendering and could lead to bugs or performance issues.
       Also, In case of Side Effects, React first renders the component and updates the DOM.
       After the render is complete, React runs the **side effects** (managed via useEffect). 
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 
 35. ### What are Component Life Cycle Methods in React?
@@ -544,6 +571,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       **useState**
       Used for *managing local state* within *functional components*, replacing *this.state* and *this.setState* from *class components*.
       > Custom hooks that start with use & can encapsulate & reuse stateful logic or side effects across multiple components.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 36. ### What are hooks in React?
 
