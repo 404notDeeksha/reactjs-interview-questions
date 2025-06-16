@@ -69,7 +69,9 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 5. ### What is Virtual DOM? **
 
-   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render dynamic web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real Dom are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> Note: <br/>1. Overheads of Real Browser Rendering are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layoutthrashing etc.<br/> 2. React's Diffing Algo has Complexity -  O(n) both Time & space where n - no. of elements in tree.
+   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render dynamic web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real Dom are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> 
+   > Overheads of Real Browser Rendering are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layoutthrashing etc.
+   React's Diffing Algo has Complexity -  O(n) both Time & space where n - no. of elements in tree.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -90,13 +92,15 @@ Each question is answered briefly and clearly to help with interview prep and re
 9. ### What is babel?
 
    Babel is a free & open source Js compiler which converts *new, modern Js code (ECMA Script 2015/ES6 & newer)* into *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*. It can transpile modern Js as well as supports Typescript & JSX too.<br/> In react, since browser cant directly read JSX file, babel transpiles JSX code into Js. <br/> 
-   `function App(){` <br/> 
-   `return React.createElement(` <br/>
-    `'div',` <br/> 
-    `{className: 'app'},` <br/> 
-    `React.createElement('h1',null,'Hello")` <br/> 
-    `)` <br/> 
-    `}` <br/> Note: Transpiler converts source code from one programming language to another.
+   ```js
+   function App(){ 
+     return React.createElement(
+     'div', 
+      {className: 'app'}, 
+      React.createElement('h1',null,"Hello"), 
+    )}
+    ```
+    > Transpiler converts source code from one programming language to another.
 
     **[⬆ Back to Top](#table-of-contents)**
 
@@ -452,7 +456,32 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       3. **Unmounting Method**: Called just before the component is removed from the DOM:
 
-            componentWillUnmount(): Used for cleanup, such as cancelling timers or unsubscribing from services.
+            componentWillUnmount(): Used for cleanup, such as cancelling timers or unsubscribing from services.<br/><br/> 
+
+      **Functional Components**: Hooks:
+      After React 16.8v, lifecycle features can be accessed using specific hooks, `useEffect`. <br/>
+
+      1. It is the primary hook for *handling side effects* and *lifecycle events* in functional components.
+      2. It can mimic all three main lifecycle methods from class components:
+            1. **componentDidMount**: Run code once after the component mounts by providing an empty dependency array ([]) to useEffect.
+            2. **componentDidUpdate**: Run code after state or props update by specifying dependencies ([dependencies]) in the array. 
+            3. **componentWillUnmount**: Cleanup logic (like removing event listeners or cancelling timers) by returning a function from useEffect.
+                  ```js
+                  import { useEffect } from 'react';
+
+                  function Example() {
+                      useEffect(() => {
+                  // Code to run on mount
+
+                  return () => {
+                        // Cleanup code runs on unmount
+                        };
+                  }, []); // Empty array = run once on mount
+                  }
+                  ```
+      **useState**
+      Used for *managing local state* within *functional components*, replacing *this.state* and *this.setState* from *class components*.
+      > Custom hooks that start with use & can encapsulate & reuse stateful logic or side effects across multiple components.
 
 
 
