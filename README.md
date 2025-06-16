@@ -43,7 +43,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 1. ### What is React?
 
-   React is an _open sorce_ _js library_, developed by facebook(meta). It is used to build _UI interfaces_ & simplifies creation of _SPA(Single Page Applications)_, using _reusable components_ & _dynamic rendering_. It follows _Component based architecture_.
+   React is an _open source_ _js library_, developed by facebook(meta). It is used to build _UI interfaces_ & simplifies creation of _SPA(Single Page Applications)_, using _reusable components_ & _dynamic rendering_. It follows _Component based architecture_.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -54,8 +54,13 @@ Each question is answered briefly and clearly to help with interview prep and re
    **[⬆ Back to Top](#table-of-contents)**
 
 3. ### What are features of React?
-
-   1.**High Performance**: React uses Virtual Dom which ensures only part of webpage where data changes gets updated instead of entire page, leading to faster & smoother app. <br/> 2. **One way Data Binding**: Data flow in React is unidirectional, it flows from Parent to Child. This makes app predictable & easy to debug. <br/> 3. **JSX (js XML)**: React used js syntax extension which makes code HTML like, thus writing HTML in js, making code more UI friendly & readable. JSX evaluates everything between `{}`<br/> 4. **Component Based Architecture**: React uses reusable, independent components for rendering UI & logic, making code resuable & modular. <br/> 5. **Server Side Rendering Support**: react supports server-side rendering components thus improving performance & SEO optimisation for the web apps. <br/> 6. **Dedicated Developer Tools**: Chrome has specialised Developer Tools which help in simplifying debugging & performance monitoring.
+   They are:    
+      1.**High Performance**: React uses Virtual Dom which ensures only part of webpage where data changes gets updated instead of entire page, leading to faster & smoother app. <br/> 
+      2.**One way Data Binding**: Data flow in React is unidirectional, it flows from Parent to Child. This makes app predictable & easy to debug. <br/> 
+      3. **JSX (js XML)**: React used js syntax extension which makes code HTML like, thus writing HTML in js, making code more UI friendly & readable. JSX evaluates everything between `{}`<br/> 
+      4.**Component Based Architecture**: React uses reusable, independent components for rendering UI & logic, making code resuable & modular. <br/> 
+      5.**Server Side Rendering Support**: react supports server-side rendering components thus improving performance & SEO optimisation for the web apps. <br/> 
+      6.**Dedicated Developer Tools**: Chrome has specialised Developer Tools which help in simplifying debugging & performance monitoring.
 
    **[⬆ Back to Top](#table-of-contents)**
 
