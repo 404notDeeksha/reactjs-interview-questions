@@ -69,7 +69,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 5. ### What is Virtual DOM? **
 
-   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render dynamic web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real Dom are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> 
+   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render dynamic web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React (during the commit phase) instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real Dom are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> 
    > Overheads of Real Browser Rendering are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layoutthrashing etc.
    React's Diffing Algo has Complexity -  O(n) both Time & space where n - no. of elements in tree.
 
@@ -421,7 +421,69 @@ Each question is answered briefly and clearly to help with interview prep and re
       2. If you use `this` in a functional component, it refers to the **global object (or is undefined in strict mode)**, not the component instance.
        > An instance is a specific, live version of your class component, created and managed by React, with its own state and behavior. **Arrow functions** help make sure that when you use this inside your component methods, it always refers to the correct instance.
 
-31. ### What are Component Life Cycle Methods in React?
+31. ### What are different types of Render in React?
+
+      1. Client-Side Rendering (CSR): The most common approach, where React renders components in the browser using JavaScript. The initial HTML is minimal, and the full UI is built and updated on the client side.
+      2. Server-Side Rendering (SSR): React components are rendered on the server, and the resulting HTML is sent to the client. This improves SEO and initial load performance because the user receives a fully rendered page from the start.
+      3. **Static Site Generation (SSG)**: The React app is *pre-rendered* into static HTML at build time. This approach is used for content that doesn’t change often and offers excellent performance.
+      4. **Component Re-rendering**: Whenever state or props change, React may re-render only the affected components, not the whole app. This is optimized using techniques like **shouldComponentUpdate()** and the **virtual DOM** diffing algorithm.
+
+32. ###  What types of rendering output does React Components support?
+
+      1. React elements (JSX).
+      2. Arrays or fragments (multiple elements).
+      3. Portals (rendering into a different DOM subtree).
+      4. Strings, numbers (as text nodes).
+      4. Null/undefined/booleans (render nothing).
+
+33. ### How rendering happens when a React Component is created?
+
+      1. Triggers a Render:
+            a. **Initial Render**: When your app starts, you call createRoot and then root.render(<App />) (or similar). This triggers the first render of your root component.
+            ```js
+              import { createRoot } from 'react-dom/client';
+              import App from './App';
+
+              const root = createRoot(document.getElementById('root'));
+              root.render(<App />);
+            ```
+
+            b. **re-render**: Any update to state or props triggers a re-render of the affected component and its descendants.<br/>
+      2. Rendering the Component:
+            a. React calls your component function (for function components) or the render() method (for class components) to determine what UI should be displayed.
+
+            ```js
+            function App(){
+                  return <h1>Hello</h1>
+            }
+            ```
+
+            b. If your component returns other components, React recursively renders those as well, building a tree of UI elements.
+      3. Virtual DOM Diffing: 
+            a. React creates a virtual DOM representation of the UI and compares it to the previous version to determine what has changed. Only the minimal necessary changes are identified for updating the actual DOM (the reconciliation process).
+      4. Committing to the DOM. 
+            React applies the calculated changes to the real DOM in a process called the "commit phase".
+            This is when the user actually sees updates on the screen.
+      5. Component Lifecycle and Side Effects: 
+            After the DOM update, React may run lifecycle methods or effects (like componentDidMount, useEffect, etc.), allowing you to perform side effects such as data fetching or subscriptions.
+
+34. ### What are side effects in React?
+
+      The primary responsibility of a React component is to *render the UI* based on its current state and props. This means:
+      1. Receiving inputs (props, state).
+      2. Returning what should be displayed (JSX or React elements). 
+      3. Not causing changes to the outside world during rendering. 
+      
+      <br/> **Side effects** are anything that goes beyond this core responsibility. e.g. Fetching data from an API (getting information from a server), Setting up a timer or interval (like updating a clock), Manually changing the DOM (for example, focusing an input), Subscribing or unsubscribing to events (like listening for window resize), Logging data to the console. <br/> <br/> **Fetching data** is a side effect because: 
+      1. It communicates with a server (outside React). 
+      2. It may cause changes elsewhere (network traffic, server logs). 
+      3. It’s asynchronous and can’t be completed during the synchronous render process. <br/>
+      > If data fetching was done directly inside the render function, it would break the predictable, pure nature of rendering and could lead to bugs or performance issues.
+      Also, In case of Side Effects, React first renders the component and updates the DOM.
+      After the render is complete, React runs the **side effects** (managed via useEffect). 
+
+
+35. ### What are Component Life Cycle Methods in React?
 
       React components have a **"lifecycle"** (a series of stages from creation to removal) that you can tap into using special methods called **lifecycle methods**. These are most relevant for **Class-based Components**, as **functional components use hooks** for similar behavior. <br/> React mostly has 3 methods:
       1. **Mounting**: Component is **created** and **inserted** into the DOM.
@@ -440,23 +502,23 @@ Each question is answered briefly and clearly to help with interview prep and re
 
             > The initial render in React occurs during the Mounting phase of the component lifecycle.
             When a component is first created and inserted into the DOM, React triggers the **initial render** by calling the component’s **render() method**, which determines what should appear on the screen. 
-            This process happens after any initialization (like setting up state in the constructor) and before the component is fully mounted and componentDidMount() is called. So, sequence is Initialization (e.g., constructor runs), Mounting (initial render occurs here, using render()) ,componentDidMount (runs after the initial render and DOM insertion)
+            This process happens after any initialization (like setting up state in the constructor) and before the component is fully mounted and componentDidMount() is called. So, sequence is **Initialization** (e.g., constructor runs)--> **Mounting** (initial render occurs here, using render()) --> **componentDidMount** (runs after the initial render and DOM insertion)
 
       2. **Updating Methods**: Called whenever the component is re-rendered due to state or prop changes:
 
-            1. static getDerivedStateFromProps(props, state): Also called during updates.
+            1. static **getDerivedStateFromProps(props, state)**: Also called during updates.
 
-            2. shouldComponentUpdate(nextProps, nextState): Lets you optimize performance by preventing unnecessary renders.
+            2. **shouldComponentUpdate(nextProps, nextState)**: Lets you optimize performance by preventing unnecessary renders.
 
-            3. render(): Called again to update the UI.
+            3. **render()**: Called again to update the UI.
 
-            4. getSnapshotBeforeUpdate(prevProps, prevState): Lets you capture information (like scroll position) before the DOM is updated.
+            4. **getSnapshotBeforeUpdate(prevProps, prevState)**: Lets you capture information (like scroll position) before the DOM is updated.
 
-            5. componentDidUpdate(prevProps, prevState, snapshot): Runs after updates are flushed to the DOM, good for side effects that depend on the DOM.
+            5. **componentDidUpdate(prevProps, prevState, snapshot)**: Runs after updates are flushed to the DOM, good for side effects that depend on the DOM.
 
       3. **Unmounting Method**: Called just before the component is removed from the DOM:
 
-            componentWillUnmount(): Used for cleanup, such as cancelling timers or unsubscribing from services.<br/><br/> 
+            **componentWillUnmount()**: Used for cleanup, such as cancelling timers or unsubscribing from services.<br/><br/> 
 
       **Functional Components**: Hooks:
       After React 16.8v, lifecycle features can be accessed using specific hooks, `useEffect`. <br/>
@@ -483,7 +545,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       Used for *managing local state* within *functional components*, replacing *this.state* and *this.setState* from *class components*.
       > Custom hooks that start with use & can encapsulate & reuse stateful logic or side effects across multiple components.
 
-
+36. ### What are hooks in React?
 
 
 
