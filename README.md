@@ -582,7 +582,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       React provides a set of *built-in hooks* that allow functional components to *access features* like **state, context, refs, side effects, and performance optimizations** without needing class components.
       
-      1. **State Hooks**:
+      1. **State Hooks**: <br/>
             a. **useState**: Adds local state to functional components.           
             ```js
             import React, { useState } from "react";
@@ -635,16 +635,48 @@ Each question is answered briefly and clearly to help with interview prep and re
             ```
 
       3. **Ref Hooks**:
-            a. **useRef**: Creates a mutable object that persists for the lifetime of the component, often used to reference DOM elements or store values that don’t trigger re-renders.
+            a. **useRef**: Creates a mutable object that persists for the lifetime of the component, often used to reference DOM elements or store values that don’t trigger re-renders. 
+            > Such Components are called Uncontrolled C.
             ```js
+            import React, { useRef } from "react";
+
+            function FocusInput() {
+              const inputRef = useRef();
+
+              return (
+                <>
+                  <input ref={inputRef} />
+                  <button onClick={() => inputRef.current.focus()}>Focus Input</button>
+                </>
+              );
+            }
             ```
 
             b. **useImperativeHandle**: Customizes the instance value that is exposed when using ref with forwardRef.
             ```js
+            import React, { useRef, forwardRef, useImperativeHandle } from "react";
+
+            const FancyInput = forwardRef((props, ref) => {
+              const inputRef = useRef();
+              useImperativeHandle(ref, () => ({
+                focus: () => inputRef.current.focus()
+              }));
+              return <input ref={inputRef} />;
+            });
+
+            function Parent() {
+              const ref = useRef();
+              return (
+               <>
+                  <FancyInput ref={ref} />
+                  <button onClick={() => ref.current.focus()}>Focus Fancy Input</button>
+                </>
+              );
+            }
             ```
 
       4. **Effect Hooks**:
-useEffect: Performs side effects in components, such as data fetching, subscriptions, or manually changing the DOM. Runs after the render is committed to the screen.
+            a. **useEffect**: Performs side effects in components, such as data fetching, subscriptions, or manually changing the DOM. Runs after the render is committed to the screen.
 
 useLayoutEffect: Similar to useEffect, but fires synchronously after all DOM mutations. Useful for reading layout and synchronously re-rendering.
 
