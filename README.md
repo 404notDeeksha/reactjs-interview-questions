@@ -193,7 +193,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 19. ### What are Controlled & Uncontrolled Components? **
 
-      In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where *value* is managed by *state*. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves *value* & an *Event Handler* as *prop*, which gets trigerred by user action,which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> It can cause more re-renders, especially with many inputs or frequent updates. <br/>  <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <br/>                       <li> **Uncontrolled Components**: Here, React does not directly control the input's value. These manage its own state internally, with the DOM maintaining the current value. <br/> Here, the input's value can be accessed directly from the DOM, typically using a *ref*. It uses *defaultValue* to set the *initial value of an input field* when the component is *first rendered*. Any further changes are tracked by **DOM** & not by **React**.It has no Involvament of React state.<br/>   <br/> ![UnControlledComponent](./images/UncontrolledC.png)   </ol> 
+      In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where *value* is managed by *state*. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves *value* & an *Event Handler* as *prop*, which gets trigerred by user action,which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> It can cause more re-renders, especially with many inputs or frequent updates. <br/>  <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <br/>                       <li> **Uncontrolled Components**: Here, React does not directly control the input's value. These manage its own state internally, with the DOM maintaining the current value. <br/> Here, the input's value can be accessed directly from the DOM, typically using a *ref*. It uses *defaultValue* to set the *initial value of an input field* when the component is *first rendered*. Any further changes are tracked by **DOM** & not by **React**. It has no involvement of React state.<br/>   <br/> ![UnControlledComponent](./images/UncontrolledC.png)   </ol> 
       > This needs fewer re-renders for high frequency inputs. But, it is harder to validate & synchronize with other components. It is also less predictable & state can be changed outside React's knowledge.
 
       **[⬆ Back to Top](#table-of-contents)**
@@ -204,7 +204,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **Stateless Component**: It is called a "presentational" component, *does not manage its own state*. It *receives all necessary data via props* and renders output based solely on those props. Stateless components are *easier to test and reuse*, as they do not have internal state dependencies.
 
-      some types of States are:
+      Some types of States are:
       1. Local State: Managed within a single component using useState or this.setState.
       2. Shared/Global State: Shared between multiple components, managed via Context API or state management libraries like Redux, MobX, or Recoil.
       3. UI State: Controls UI-specific data (e.g., modal visibility, input values). 
@@ -580,7 +580,62 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 36. ### What are hooks in React?
 
+      React provides a set of *built-in hooks* that allow functional components to *access features* like **state, context, refs, side effects, and performance optimizations** without needing class components.
+      
+      1. State Hooks:
+            a. useState: Adds local state to functional components.
+            b. useReducer: Manages more complex state logic using a reducer function, similar to Redux.
 
+            ```js
+            import React, { useState } from "react";
+
+            function Counter() {
+              const [count, setCount] = useState(0);
+              return (
+                <button onClick={() => setCount(prev => prev + 1)}>
+                  Count: {count}
+                </button>
+              );
+            }
+            ```
+            ```js
+            import React, { useContext } from "react";
+
+            const ThemeContext = React.createContext("light");
+
+            function ThemedButton() {
+              const theme = useContext(ThemeContext);
+              return <button style={{ background: theme === "dark" ? "#333" : "#fff" }}>Theme: {theme}</button>;
+            }            
+            ```
+
+      2. Context Hooks:
+            a. useContext: Accesses values from React’s context API, allowing components to consume context values without prop drilling.
+      
+      3. Ref Hooks:
+            a. useRef: Creates a mutable object that persists for the lifetime of the component, often used to reference DOM elements or store values that don’t trigger re-renders.
+
+useImperativeHandle: Customizes the instance value that is exposed when using ref with forwardRef.
+
+Effect Hooks
+useEffect: Performs side effects in components, such as data fetching, subscriptions, or manually changing the DOM. Runs after the render is committed to the screen.
+
+useLayoutEffect: Similar to useEffect, but fires synchronously after all DOM mutations. Useful for reading layout and synchronously re-rendering.
+
+Performance Hooks
+useMemo: Memoizes expensive calculations, only recomputing when dependencies change, to optimize performance.
+
+useCallback: Memoizes callback functions so they aren’t recreated on every render, helping to prevent unnecessary re-renders of child components.
+
+Other Built-in Hooks
+useDebugValue: Used to display a label for custom hooks in React DevTools.
+
+useDeferredValue, useTransition: For concurrent rendering and managing transitions (advanced performance optimizations).
+
+Custom Hooks
+You can create your own custom hooks by combining built-in hooks to encapsulate reusable logic. Custom hooks are simply functions that start with use
+
+      >Hooks can only be used *inside React functional components* and must be called at the **top level of the component**, not inside loops, conditions, or nested functions.
 
 
 
