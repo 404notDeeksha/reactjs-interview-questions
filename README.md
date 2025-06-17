@@ -766,9 +766,9 @@ Each question is answered briefly and clearly to help with interview prep and re
                   3. Warning about legacy string ref API usage, improper use of refs.<br/>
                   4. Double-invoking certain functions and effects to catch bugs caused by impure rendering or missing cleanup.<br/>
             3. Benefits:<br/>
-                  1. Finds common bugs early.<br/>
-                  2. Keeps code up-to-date.<br/>
-                  3. No impact on production.   <br/>
+                  - Finds common bugs early.<br/>
+                  - Keeps code up-to-date.<br/>
+                  - No impact on production.   <br/>
       ```js
       import { StrictMode } from 'react';
       import { createRoot } from 'react-dom/client';
