@@ -27,14 +27,14 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 18  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
 | 19  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)    |
 | 20  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
-| 21  | [What is Prop Drilling?](#what-is-prop-drilling)                     |
-| 22  | [What is React Composition?](#what-is-react-composition)                     |
-| 23  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                     |
-| 24  | [What is Bundle?](#what-is-bundle)                     |
-| 25  | [What is Webpack?](#what-is-webpack)                     |
-| 26  | [What are Class Components in React? What are different ways to define them?](#what-are-class-components-in-react-what-are-different-ways-to-define-them)            |
+| 21  | [What is Prop Drilling?](#what-is-prop-drilling)                                                   |
+| 22  | [What is React Composition?](#what-is-react-composition)                                        |
+| 23  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                                        |
+| 24  | [What is Bundle?](#what-is-bundle)                                                                              |
+| 25  | [What is Webpack?](#what-is-webpack)                                                           |
+| 26  | [What are Class Components in React? What are different ways to define them?](#what-are-class-components-in-react-what-are-different-ways-to-define-them)                               |
 | 27 | [ What is difference between Class & Functional Component?](#what-is-difference-between-class--functional-component) |
-| 28 | [What is difference between Inheritance & Composition in React?](#what-is-difference-between-inheritance--composition-in-react) |
+| 28 | [What is difference between Inheritance & Composition in React?](#what-is-difference-between-inheritance--composition-in-react)                                                          |
 | 29 | [What is constructor & super keywords in React?](#what-is-constructor--super-keywords-in-react) |
 | 30 | [What is role of this keyword in React?](#what-is-role-of-this-keyword-in-react) |
 | 31 | [What are different types of Render in React?](#what-are-different-types-of-render-in-react) |
@@ -127,7 +127,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 12. ### What is role of index.html page in React App?
 
-    It is entry point of React app. It is the first page to be loaded by browser for SPAs. It contains 'root' id element wherein entire React app will be rendered directly.
+    It is *entry point* of React app. It is the *first page to be loaded* by browser for SPAs. It contains 'root' id element wherein entire React app will be rendered directly.
 
 13. ### What is role of App.js in React App?
 
@@ -147,7 +147,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 15. ### When to use Function & Class Components?
 
-      After addition of Hooks (React v.16.8 onwards) it is recommended to use **Function Components** over **Class** ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too.<br/> So, use Class C. when a React Functionality is needed whose Function C. equivalent is not present yet (like Err Boundaries) or while working in older versions where state or lifecycle methods are needed. <br/> Use Functional C. mostly as they are simple, readable & follow modern code practices like, use of React Hooks for state & side effects.
+      After addition of Hooks (React v.16.8 onwards) it is recommended to use **Function Components** over **Class** ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too.<br/> So, use Class Components where a Function Component equivalent is not present yet (like Err Boundaries) or while working in older versions where state or lifecycle methods are needed. <br/> Use Functional C. mostly as they are simple, readable & follow modern code practices like, use of React Hooks for state & side effects.
 
       **[⬆ Back to Top](#table-of-contents)**
 
