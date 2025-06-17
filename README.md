@@ -44,8 +44,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 35 | [What are Component Life Cycle Methods in React?](#what-are-component-life-cycle-methods-in-react) |
 | 36 | [What are Hooks in React?](#what-are-hooks-in-react) |
 | 37 | [What is Strict mode in React?](#what-is-strict-mode-in-react) |
-| 38 | [What is Code Splitting in React? ](#) |
-| 39 | [](#) |
+| 38 | [What is Code Splitting in React?](#what-is-code-splitting-in-react) |
+| 39 | [How to manage Cons of Code Splitting?](#how-to-manage-cons-of-code-splitting) |
 | 40 | [](#) |
 
 <!-- React Router -->
