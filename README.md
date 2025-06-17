@@ -42,7 +42,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 33 | [How rendering happens when a React Component is created?](#how-rendering-happens-when-a-react-component-is-created) |
 | 34 | [What are side effects in React?](#what-are-side-effects-in-react) |
 | 35 | [What are Component Life Cycle Methods in React?](#what-are-component-life-cycle-methods-in-react) |
-| 36 | [](#) |
+| 36 | [What are hooks in React?](#what-are-hooks-in-react) |
 | 37 | [](#) |
 | 38 | [](#) |
 | 39 | [](#) |
@@ -707,7 +707,7 @@ Each question is answered briefly and clearly to help with interview prep and re
             }
             ```
 
-      5. **Performance Hooks**: **
+      5. **Performance Hooks**: ** <br/>
             a. **useMemo**: Memoizes expensive calculations, only recomputing when dependencies change, to optimize performance..
             ```js
             import React, { useState, useMemo } from "react";
@@ -741,7 +741,7 @@ Each question is answered briefly and clearly to help with interview prep and re
             }
             ```
 
-      6. Other Built-in Hooks:
+      6. Other Built-in Hooks: <br/>
             a. **useDebugValue**: Used to display a label for custom hooks in React DevTools.
             b. **useDeferredValue**, **useTransition**: For concurrent rendering and managing transitions (advanced performance optimizations).
 
