@@ -621,12 +621,12 @@ Each question is answered briefly and clearly to help with interview prep and re
             ```
       
       2. **Context Hooks**:
-            **useContext**: Accesses values from React’s context API, allowing components to consume context values without prop drilling.
+            **useContext**: Accesses values from React’s context API, allowing components to consume context values without prop drilling. Used for Deeply nested Components.
             
             ```js
             import React, { useContext } from "react";
 
-            const ThemeContext = React.createContext("light");
+            const ThemeContext = React.createContext("light");    //returns object
 
             function ThemedButton() {
               const theme = useContext(ThemeContext);
@@ -677,6 +677,11 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       4. **Effect Hooks**:
             a. **useEffect**: Performs side effects in components, such as data fetching, subscriptions, or manually changing the DOM. Runs after the render is committed to the screen.
+            > `useEffect(callbackFn, dependencyArray)`
+               callbackFn: runs when useEffect is called
+               dependencyArray: optional, triggers useEffect(). With change in dependencies, callbackFn runs.
+               Refer Q.35(1)(4), Q.35(2), Q.35(3).
+
             ```js
             import React, { useState, useEffect } from "react";
 
@@ -749,5 +754,18 @@ Each question is answered briefly and clearly to help with interview prep and re
 
             >Hooks can only be used *inside React functional components* and must be called at the **top level of the component**, not inside loops, conditions, or nested functions.
 
+       **[⬆ Back to Top](#table-of-contents)**
 
+37. ### What is Strict mode in React?
 
+      Strict Mode in React is a *development-only* tool that helps you identify potential problems in your application. It *does not render* any visible UI and has *no impact on the production build*. <br/>
+            1. Done by wrapping your component tree (or part of it) in <StrictMode>.
+            2. It checks problems like:
+                  1. Detecting side effects and ensuring they are properly cleaned up.
+                  2. Warning about usage of deprecated or unsafe lifecycle methods.
+                  3. Warning about legacy string ref API usage, improper use of refs.
+                  4. Double-invoking certain functions and effects to catch bugs caused by impure rendering or missing cleanup.
+            3. Benefits:
+                  1. Finds common bugs early.
+                  2. Keeps code up-to-date.
+                  3. No impact on production.      
