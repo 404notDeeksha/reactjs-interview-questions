@@ -677,23 +677,77 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       4. **Effect Hooks**:
             a. **useEffect**: Performs side effects in components, such as data fetching, subscriptions, or manually changing the DOM. Runs after the render is committed to the screen.
+            ```js
+            import React, { useState, useEffect } from "react";
 
-useLayoutEffect: Similar to useEffect, but fires synchronously after all DOM mutations. Useful for reading layout and synchronously re-rendering.
+            function Timer() {
+              const [seconds, setSeconds] = useState(0);
 
-Performance Hooks
-useMemo: Memoizes expensive calculations, only recomputing when dependencies change, to optimize performance.
+              useEffect(() => {
+                const interval = setInterval(() => setSeconds(s => s + 1), 1000);
+                return () => clearInterval(interval); // Cleanup
+              }, []);
 
-useCallback: Memoizes callback functions so they aren’t recreated on every render, helping to prevent unnecessary re-renders of child components.
+              return <div>Seconds: {seconds}</div>;
+            }
+            ```
 
-Other Built-in Hooks
-useDebugValue: Used to display a label for custom hooks in React DevTools.
+            b. **useLayoutEffect**: Similar to useEffect, but fires synchronously after all DOM mutations. Useful for reading layout and synchronously re-rendering.
+            ```js
+            import React, { useLayoutEffect, useRef } from "react";
 
-useDeferredValue, useTransition: For concurrent rendering and managing transitions (advanced performance optimizations).
+            function LayoutExample() {
+              const divRef = useRef();
 
-Custom Hooks
-You can create your own custom hooks by combining built-in hooks to encapsulate reusable logic. Custom hooks are simply functions that start with use
+              useLayoutEffect(() => {
+                divRef.current.style.background = "yellow";
+              }, []);
 
-      >Hooks can only be used *inside React functional components* and must be called at the **top level of the component**, not inside loops, conditions, or nested functions.
+              return <div ref={divRef}>This div turns yellow on mount!</div>;
+            }
+            ```
+
+      5. **Performance Hooks**: **
+            a. **useMemo**: Memoizes expensive calculations, only recomputing when dependencies change, to optimize performance..
+            ```js
+            import React, { useState, useMemo } from "react";
+
+            function ExpensiveCalculation({ num }) {
+              const result = useMemo(() => {
+                let sum = 0;
+                for (let i = 0; i < 1000000; i++) sum += num;
+                return sum;
+              }, [num]);
+              return <div>Result: {result}</div>;
+            }
+            ```
+            b. **useCallback**: Memoizes callback functions so they aren’t recreated on every render, helping to prevent unnecessary re-renders of child components.
+            ```js
+            import React, { useState, useCallback } from "react";
+
+            function Button({ onClick }) {
+              return <button onClick={onClick}>Click me</button>;
+            }
+
+            function Parent() {
+              const [count, setCount] = useState(0);
+              const handleClick = useCallback(() => setCount(c => c + 1), []);
+              return (
+                <>
+                  <Button onClick={handleClick} />
+                  <div>Count: {count}</div>
+                </>
+              );
+            }
+            ```
+
+      6. Other Built-in Hooks:
+            a. **useDebugValue**: Used to display a label for custom hooks in React DevTools.
+            b. **useDeferredValue**, **useTransition**: For concurrent rendering and managing transitions (advanced performance optimizations).
+
+      7. Custom Hooks: You can create your own custom hooks by combining built-in hooks to **encapsulate reusable logic**. Custom hooks are simply functions that start with `use`.<br/>
+
+            >Hooks can only be used *inside React functional components* and must be called at the **top level of the component**, not inside loops, conditions, or nested functions.
 
 
 
