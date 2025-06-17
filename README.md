@@ -46,7 +46,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 37 | [What is Strict mode in React?](#what-is-strict-mode-in-react) |
 | 38 | [What is Code Splitting in React?](#what-is-code-splitting-in-react) |
 | 39 | [How to manage Cons of Code Splitting?](#how-to-manage-cons-of-code-splitting) |
-| 40 | [](#) |
+<!-- | 40 | [](#) | -->
 
 <!-- React Router -->
 <!-- Redux -->
@@ -871,4 +871,5 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **[⬆ Back to Top](#table-of-contents)**
 
-40. ###       
+40. ### What are Higher Order Components in React?
+
