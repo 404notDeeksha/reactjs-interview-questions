@@ -582,10 +582,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       React provides a set of *built-in hooks* that allow functional components to *access features* like **state, context, refs, side effects, and performance optimizations** without needing class components.
       
-      1. State Hooks:
-            a. useState: Adds local state to functional components.
-            b. useReducer: Manages more complex state logic using a reducer function, similar to Redux.
-
+      1. **State Hooks**:
+            a. **useState**: Adds local state to functional components.           
             ```js
             import React, { useState } from "react";
 
@@ -598,6 +596,33 @@ Each question is answered briefly and clearly to help with interview prep and re
               );
             }
             ```
+            b. **useReducer**: Manages more complex state logic using a reducer function, similar to Redux.
+
+            ```js
+            import React, { useReducer } from "react";
+
+            function reducer(state, action) {
+              switch (action.type) {
+                case "increment":
+                  return { count: state.count + 1 };
+                default:
+                  return state;
+              }
+            }
+
+            function Counter() {
+              const [state, dispatch] = useReducer(reducer, { count: 0 });
+              return (
+                <button onClick={() => dispatch({ type: "increment" })}>
+                  Count: {state.count}
+                </button>
+              );  
+            }
+            ```
+      
+      2. **Context Hooks**:
+            **useContext**: Accesses values from React’s context API, allowing components to consume context values without prop drilling.
+            
             ```js
             import React, { useContext } from "react";
 
@@ -609,15 +634,16 @@ Each question is answered briefly and clearly to help with interview prep and re
             }            
             ```
 
-      2. Context Hooks:
-            a. useContext: Accesses values from React’s context API, allowing components to consume context values without prop drilling.
-      
-      3. Ref Hooks:
-            a. useRef: Creates a mutable object that persists for the lifetime of the component, often used to reference DOM elements or store values that don’t trigger re-renders.
+      3. **Ref Hooks**:
+            a. **useRef**: Creates a mutable object that persists for the lifetime of the component, often used to reference DOM elements or store values that don’t trigger re-renders.
+            ```js
+            ```
 
-useImperativeHandle: Customizes the instance value that is exposed when using ref with forwardRef.
+            b. **useImperativeHandle**: Customizes the instance value that is exposed when using ref with forwardRef.
+            ```js
+            ```
 
-Effect Hooks
+      4. **Effect Hooks**:
 useEffect: Performs side effects in components, such as data fetching, subscriptions, or manually changing the DOM. Runs after the render is committed to the screen.
 
 useLayoutEffect: Similar to useEffect, but fires synchronously after all DOM mutations. Useful for reading layout and synchronously re-rendering.
