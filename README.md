@@ -168,7 +168,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       ``` 
       > When state changes, React automatically re-renders the component (& all its child Components) to reflect the new state.
 
-      **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. <br/> Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}`  
+      **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. 
+      > Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}`  
       
       ```js 
      function Welcome(props) {
@@ -176,9 +177,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       }
       // Usage: <Welcome name="Alice" />
       ```
-
-    
-
+ 
       **[⬆ Back to Top](#table-of-contents)**
 
 17. ### How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?
