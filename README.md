@@ -768,4 +768,15 @@ Each question is answered briefly and clearly to help with interview prep and re
             3. Benefits:
                   1. Finds common bugs early.
                   2. Keeps code up-to-date.
-                  3. No impact on production.      
+                  3. No impact on production.   
+      ```js
+      import { StrictMode } from 'react';
+      import { createRoot } from 'react-dom/client';
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(
+        <StrictMode>
+          <App />
+        </StrictMode>
+      );
+      ```               
