@@ -42,13 +42,14 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 33 | [How rendering happens when a React Component is created?](#how-rendering-happens-when-a-react-component-is-created) |
 | 34 | [What are side effects in React?](#what-are-side-effects-in-react) |
 | 35 | [What are Component Life Cycle Methods in React?](#what-are-component-life-cycle-methods-in-react) |
-| 36 | [What are hooks in React?](#what-are-hooks-in-react) |
-| 37 | [](#) |
-| 38 | [](#) |
+| 36 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 37 | [What is Strict mode in React?](#what-is-strict-mode-in-react) |
+| 38 | [What is Code Splitting in React? ](#) |
 | 39 | [](#) |
 | 40 | [](#) |
 
-
+<!-- React Router -->
+<!-- Redux -->
 
 
 
@@ -578,7 +579,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **[⬆ Back to Top](#table-of-contents)**
 
-36. ### What are hooks in React?
+36. ### What are Hooks in React?
 
       React provides a set of *built-in hooks* that allow functional components to *access features* like **state, context, refs, side effects, and performance optimizations** without needing class components.
       
@@ -761,10 +762,10 @@ Each question is answered briefly and clearly to help with interview prep and re
       Strict Mode in React is a *development-only* tool that helps you identify potential problems in your application. It *does not render* any visible UI and has *no impact on the production build*. <br/>
             1. Done by wrapping your component tree (or part of it) in `<StrictMode>`.<br/>
             2. It checks problems like:<br/>
-                  1. Detecting side effects and ensuring they are properly cleaned up.<br/>
-                  2. Warning about usage of deprecated or unsafe lifecycle methods.<br/>
-                  3. Warning about legacy string ref API usage, improper use of refs.<br/>
-                  4. Double-invoking certain functions and effects to catch bugs caused by impure rendering or missing cleanup.<br/>
+                  - Detecting side effects and ensuring they are properly cleaned up.<br/>
+                  - Warning about usage of deprecated or unsafe lifecycle methods.<br/>
+                  - Warning about legacy string ref API usage, improper use of refs.<br/>
+                  - Double-invoking certain functions and effects to catch bugs caused by impure rendering or missing cleanup.<br/>
             3. Benefits:<br/>
                   - Finds common bugs early.<br/>
                   - Keeps code up-to-date.<br/>
@@ -779,4 +780,95 @@ Each question is answered briefly and clearly to help with interview prep and re
           <App />
         </StrictMode>
       );
-      ```               
+      ``` 
+
+       **[⬆ Back to Top](#table-of-contents)**              
+
+38. ### What is Code Splitting in React?      
+
+     It is a performance optimization technique in React, where your *application’s JavaScript code* is divided into *smaller chunks or bundles*.<br/> Instead of loading the entire app’s code at once, React loads only the necessary parts when they are needed, such as *when a user navigates to a new page or interacts with a specific feature*.
+
+      **Advantages:**
+      - **Faster Initial Load:** Only essential code is loaded up front, so the app starts faster.
+      - **Reduced Bundle Size:** Non-essential code is loaded on demand, keeping the main bundle small.
+      - **Improved User Experience:** Users see the UI sooner and interact with it without waiting for everything to load.
+      - **Resource Optimization:** Browser memory and network usage are minimized by loading code only when needed.
+
+      **Implementation:**
+      - **Dynamic Imports:** Using the `import()` syntax to *load modules* only when required.
+      - **React.lazy:** Allows you to *render a dynamic import* as a regular component, enabling lazy loading of components.
+      - **Suspense:** Lets you show a fallback (like a loading spinner) while the lazy-loaded component is being fetched.
+      
+      ```jsx
+      import React, { Suspense } from 'react';
+
+      //OtherComponent will only be loaded when it’s actually needed, not in the initial bundle
+      const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+      function MyComponent() {
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <OtherComponent /> 
+          </Suspense>
+        );
+      }
+      ```
+      **Types of Code Splitting**
+      - **Route-based Code Splitting:** Load code for different routes/pages only when the user navigates to them.
+      - **Component-based Code Splitting:** Load large or rarely used components only when they are rendered.
+      **Cons**:
+      - Bundle management complexity: Harder to manage dependencies and loading order.
+      - Loading delays:	Users may see loading states for code that isn't yet fetched.
+      - Deployment issues: Old chunks may be unavailable after a new deployment, breaking the app.
+      - CSS unpredictability:	Dynamic loading can affect CSS selector order and styling consistency, if not properly managed.
+      - Limited benefit for small apps.
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+39. ### How to manage Cons of Code Splitting?
+      
+      There are several best practices and strategies to effectively manage the drawbacks:
+      1. **Use Route-Based and Component-Based Splitting Thoughtfully**:
+      - **Route-based code splitting** is often the best starting point, as it naturally divides your app into logical chunks loaded as users navigate between pages.
+      - **Component-based code splitting** should be reserved for large, rarely used, or non-critical components. Avoid splitting essential UI parts (like headers or navigation) to prevent unnecessary loading delays.
+      2. **Provide Fallback UI with Suspense**
+      - Always wrap lazy-loaded components with `<Suspense>` and provide a clear, user-friendly fallback (like a spinner or skeleton loader) to handle loading delays gracefully.
+
+      ```jsx
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />     
+      </Suspense>
+      ```
+
+      3. **Use Error Boundaries**
+      - Wrap lazy-loaded components in error boundaries to catch and handle loading or chunk errors, especially after deployments when old chunks might be missing.
+      ```jsx
+        <ErrorBoundary>
+        <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+        </Suspense>
+        </ErrorBoundary>
+      ```
+      4. Avoid Over-Splitting:
+      - Don’t split every small component; too many tiny chunks can increase HTTP requests and overhead, negating performance benefits.
+      - Focus on splitting large, infrequently used, or third-party-heavy components.
+
+      5. Manage CSS and Assets Carefully
+      - When splitting components that import CSS, ensure style order and dependencies are preserved to avoid inconsistent styling.
+      - Consider critical CSS inlining for above-the-fold content.
+
+      6. Preload or Prefetch Important Chunks:
+      - Use techniques like preloading or prefetching for routes or components likely to be needed soon, reducing perceived delays.
+      
+      7. Test Deployment and Chunk Loading
+      - After deploying updates, test that all chunks load correctly and handle scenarios where users might have outdated bundles cached.
+      >Above the fold content - the portion of a web page that is visible to a user immediately after the page loads, without any scrolling. 
+      Below the fold = Content that appears only after the user scrolls down.
+      Preloading ensures critical resources for above the fold content are loaded as soon as possible.
+      `<link rel="preload" href="/main.css" as="style">`
+      Prefetching prepares resources for upcoming navigation or interactions(needed in near future), improving future load times.
+      `<link rel="prefetch" href="/next-page.js" as="script">`
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+40. ###       
