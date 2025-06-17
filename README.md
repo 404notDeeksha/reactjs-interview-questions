@@ -153,6 +153,21 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 16. ###  What is state & props in React?
 
+      **State** is a *built-in object* in React components, used to *store data or information of component* which can change over time. They are *mutable*, in reponse to user actions, API responses or other events. It is used for data which needs to be *tracked or updated* within a component. <br/>
+      
+      ```js 
+      function Counter() {
+     const [count, setCount] = React.useState(0);
+      return (
+       <div>
+         <p>{count}</p>
+         <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment</button>
+         //This ensures you always get the latest state value, even if multiple updates are batched together.
+       </div>);
+      } 
+      ``` 
+      > When state changes, React automatically re-renders the component (& all its child Components) to reflect the new state.
+
       **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. <br/> Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}`  
       
       ```js 
@@ -162,19 +177,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       // Usage: <Welcome name="Alice" />
       ```
 
-      **State** is a *built-in object* in React components, used to *store data or information of component* which can change over time. They are *mutable*, in reponse to user actions, API responses or other events. It is used for data which needs to be *tracked or updated* within a component. <br/>
-      
-      ```js 
-      function Counter() {
-     const [count, setCount] = React.useState(0);
-      return (
-       <div>
-         <p>{count}</p>
-         <button onClick={() => setCount(count + 1)}>Increment</button>
-       </div>);
-      } 
-      ``` 
-      > When state changes, React automatically re-renders the componet (& all its child Components) to reflect the new state.
+    
 
       **[⬆ Back to Top](#table-of-contents)**
 
