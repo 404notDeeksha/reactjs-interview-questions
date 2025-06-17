@@ -759,12 +759,12 @@ Each question is answered briefly and clearly to help with interview prep and re
 37. ### What is Strict mode in React?
 
       Strict Mode in React is a *development-only* tool that helps you identify potential problems in your application. It *does not render* any visible UI and has *no impact on the production build*. <br/>
-            1. Done by wrapping your component tree (or part of it) in <StrictMode>.
-            2. It checks problems like:
-                  1. Detecting side effects and ensuring they are properly cleaned up.
-                  2. Warning about usage of deprecated or unsafe lifecycle methods.
-                  3. Warning about legacy string ref API usage, improper use of refs.
-                  4. Double-invoking certain functions and effects to catch bugs caused by impure rendering or missing cleanup.
+            1. Done by wrapping your component tree (or part of it) in `<StrictMode>`.
+            2. It checks problems like:<br/>
+                  a. Detecting side effects and ensuring they are properly cleaned up.
+                  b. Warning about usage of deprecated or unsafe lifecycle methods.
+                  c. Warning about legacy string ref API usage, improper use of refs.
+                  d. Double-invoking certain functions and effects to catch bugs caused by impure rendering or missing cleanup.
             3. Benefits:
                   1. Finds common bugs early.
                   2. Keeps code up-to-date.
