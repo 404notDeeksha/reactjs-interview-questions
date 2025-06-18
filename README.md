@@ -258,7 +258,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       2. React & ReactDOM: The core libraries for building user interfaces (react) and rendering them to the DOM (react-dom).
       3. Babel: A JavaScript compiler that transforms modern JavaScript (including JSX) into browser-compatible code.
       4. Webpack: A module bundler that compiles JavaScript, CSS, images, and other assets into optimized bundles for the browser (explained in detail below).
-      5. Create React App (CRA): A popular tool that sets up a React project with sensible defaults, including Webpack and Babel configurations. Other ways are using Vite.
+      5. Create React App (CRA): A popular tool that sets up a React project with sensible defaults, including Webpack and Babel configurations. Other ways of creating react app is by using Vite.
       6. Development Tools: Tools like ESLint (for code linting), React Developer Tools (for debugging), and testing libraries (e.g., Jest, React Testing Library).
 
       **[⬆ Back to Top](#table-of-contents)**
@@ -277,7 +277,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       2. **Transform code** using **loaders** (e.g., converting JSX to JS with Babel).
       3. **Optimize assets for production**, such as minifying code and splitting bundles for faster loading.<br/><br/>
       Webpack **automates** the process of managing dependencies and assets, ensuring your React app runs efficiently in development and production environments.<br/>
-      **During Developemnt**, Webpack uses features like **Hot Module Replacement (HMR)**, allowing you to see changes instantly without a full page reload.<br/>
+      **During Development**, Webpack uses features like **Hot Module Replacement (HMR)**, allowing you to see changes instantly without a full page reload.<br/>
       **For Production**, It produces optimised bundles, reduce load times, improve performance By minifing code, removing unused code (tree shaking), splitting code( for faster initial loads).<br/><br/>
       It is **not available in Vite**. Vite has **Rollup** instead for production buildup & very fast HMR using **native ES modules** for Development phase.
 
