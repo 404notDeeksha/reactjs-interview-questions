@@ -46,7 +46,12 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 37 | [What is Strict mode in React?](#what-is-strict-mode-in-react) |
 | 38 | [What is Code Splitting in React?](#what-is-code-splitting-in-react) |
 | 39 | [How to manage Cons of Code Splitting?](#how-to-manage-cons-of-code-splitting) |
-<!-- | 40 | [](#) | -->
+| 40 | [What are Higher Order Components in React?](#what-are-higher-order-components-in-react) |
+| 41 | [What is the React API?](#what-is-the-react-api) |
+| 42 | [What are Design Patterns in React & Javascript?](#what-are-design-patterns-in-react--javascript) |
+| 43 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 44 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
 
 <!-- React Router -->
 <!-- Redux -->
@@ -887,10 +892,10 @@ Each question is answered briefly and clearly to help with interview prep and re
       - Popular in libraries like Redux (with connect).
       - Now-a-days hooks are being used.
 
-42. ### What is the React API?
+41. ### What is the React API?
 
      It refers to the *set of functions, hooks, components, and utilities* provided by the React library to *build user interfaces*. These APIs allow you to *define components, manage their lifecycle, state and effects, handle context, optimize performance, and interact with the DOM or server*.<br/>
-     Examples:
+     Examples:<br/>
      - Hooks: useState, useEffect, useContext, etc.
      - Component Utilities: memo, lazy, Suspense, Fragment.
      - Context: createContext, useContext.
@@ -899,7 +904,7 @@ Each question is answered briefly and clearly to help with interview prep and re
      - Transitions: startTransition, useTransition.
      - Resource APIs: use for reading promises or context in components.
 
-43. ### What are Design Patterns in React & Javascript?
+42. ### What are Design Patterns in React & Javascript?
 
      Both JavaScript and React support a variety of design patterns to help structure and organize code for *maintainability, reusability, and scalability*.
 
@@ -908,13 +913,16 @@ Each question is answered briefly and clearly to help with interview prep and re
       - Factory Pattern: Creates objects without specifying the exact class.
       - Singleton Pattern: Ensures only one instance of an object exists.
       - Observer Pattern: Allows objects to subscribe to and react to events or changes.
-      - Decorator Pattern: Adds new behavior to objects dynamically.
-      - Common React Design Patterns.
+      - Decorator Pattern: Adds new behavior to objects dynamically.<br/><br/>
+
+      **Common React Design Patterns**
       - Higher Order Components (HOC): Functions that take a component and return a new component with enhanced behavior.
       - Render Props: Components that use a function as a child to share code between components.
       - Hooks: Custom hooks encapsulate reusable logic across components.
       - Compound Components: Components that work together and share implicit state.
       - Controlled/Uncontrolled Components: Patterns for managing form inputs and state.
       - Provider Pattern: Using React Context to share data across the component tree.
-      - Container-Presenter Pattern: Separates logic (container) from UI (presenter), promoting separation of concerns.  
+      - Container-Presenter Pattern: Separates logic (container) from UI (presenter), promoting separation of concerns.
+
+43. ###        
 
