@@ -874,3 +874,47 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 40. ### What are Higher Order Components in React?
 
+     It is a function that takes a component as input and returns a *new component* with *enhanced or additional functionality*. HOCs are not a part of the official React API, but a **design pattern** that emerges from *React’s compositional nature*.
+     ```js
+      const withExtraProps = (WrappedComponent) => {
+        return (props) => <WrappedComponent {...props} extraProp="value" />;
+      };
+      // withExtraProps is a HOC that adds an extraProp to any component you wrap with it
+      ```
+
+      **Use Cases**:<br/>
+      - Code reuse and abstraction (e.g., authentication, logging, theming, data fetching).
+      - Popular in libraries like Redux (with connect).
+      - Now-a-days hooks are being used.
+
+42. ### What is the React API?
+
+     It refers to the *set of functions, hooks, components, and utilities* provided by the React library to *build user interfaces*. These APIs allow you to *define components, manage their lifecycle, state and effects, handle context, optimize performance, and interact with the DOM or server*.<br/>
+     Examples:
+     - Hooks: useState, useEffect, useContext, etc.
+     - Component Utilities: memo, lazy, Suspense, Fragment.
+     - Context: createContext, useContext.
+     - DOM Methods: ReactDOM.render, ReactDOM.createPortal.
+     - Testing: act.
+     - Transitions: startTransition, useTransition.
+     - Resource APIs: use for reading promises or context in components.
+
+43. ### What are Design Patterns in React & Javascript?
+
+     Both JavaScript and React support a variety of design patterns to help structure and organize code for *maintainability, reusability, and scalability*.
+
+     **Common JavaScript Design Patterns**
+      - Module Pattern: Encapsulates related code, exposing only what’s necessary.
+      - Factory Pattern: Creates objects without specifying the exact class.
+      - Singleton Pattern: Ensures only one instance of an object exists.
+      - Observer Pattern: Allows objects to subscribe to and react to events or changes.
+      - Decorator Pattern: Adds new behavior to objects dynamically.
+      - Common React Design Patterns.
+      - Higher Order Components (HOC): Functions that take a component and return a new component with enhanced behavior.
+      - Render Props: Components that use a function as a child to share code between components.
+      - Hooks: Custom hooks encapsulate reusable logic across components.
+      - Compound Components: Components that work together and share implicit state.
+      - Controlled/Uncontrolled Components: Patterns for managing form inputs and state.
+      - Provider Pattern: Using React Context to share data across the component tree.
+      - Container-Presenter Pattern: Separates logic (container) from UI (presenter), promoting separation of concerns.  
+
