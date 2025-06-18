@@ -1,10 +1,13 @@
+---
 # 📘 ReactJS Interview Questions & Answers
 
 This repo is my personal collection of ReactJS interview Q&A.  
 Each question is answered briefly and clearly to help with interview prep and revision.
+---
 
 ### Table of Contents
 
+---
 | No. | Question                                                                           |
 | --- | ---------------------------------------------------------------------------------- |
 | 1   | [What is React?](#what-is-react)                                                   |
@@ -46,19 +49,16 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 37 | [What is Strict mode in React?](#what-is-strict-mode-in-react) |
 | 38 | [What is Code Splitting in React?](#what-is-code-splitting-in-react) |
 | 39 | [How to manage Cons of Code Splitting?](#how-to-manage-cons-of-code-splitting) |
-| 40 | [What are Higher Order Components in React?](#what-are-higher-order-components-in-react) |
+| 40 | [What are Higher Order Components(HOCs) in React?](#what-are-higher-order-components-hocs-in-react) |
 | 41 | [What is the React API?](#what-is-the-react-api) |
 | 42 | [What are Design Patterns in React & Javascript?](#what-are-design-patterns-in-react--javascript) |
-| 43 | [What are Hooks in React?](#what-are-hooks-in-react) |
-| 44 | [What are Hooks in React?](#what-are-hooks-in-react) |
-| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 43 | [How can Hooks be used instead of HOCs in modern React?](#how-can-hooks-be-used-instead-of-hocs-in-modern-react) |
+| 44 | [What are ways to style React components?](#what-are-ways-to-style-react-components) |
+<!-- | 45 | [What are Hooks in React?](#what-are-hooks-in-react) | -->
 
 <!-- React Router -->
 <!-- Redux -->
-
-
-
-
+-----
 
 1. ### What is React?
 
@@ -877,7 +877,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **[⬆ Back to Top](#table-of-contents)**
 
-40. ### What are Higher Order Components in React?
+40. ### What are Higher Order Components(HOCs) in React?
 
      It is a function that takes a component as input and returns a *new component* with *enhanced or additional functionality*. HOCs are not a part of the official React API, but a **design pattern** that emerges from *React’s compositional nature*.
      ```js
@@ -924,5 +924,56 @@ Each question is answered briefly and clearly to help with interview prep and re
       - Provider Pattern: Using React Context to share data across the component tree.
       - Container-Presenter Pattern: Separates logic (container) from UI (presenter), promoting separation of concerns.
 
-43. ###        
+43. ### How can Hooks be used instead of HOCs in modern React?
 
+      With React 16.8+, hooks allow you to reuse stateful logic directly inside functional components, making many HOC use cases simpler and more readable.<br/>
+      **How Hooks Replace HOCs**:
+      
+      1. **Logic Reuse**:
+      - HOCs: Wrap a component to inject props, state, or side effects.
+      - Hooks: Extract the reusable logic into a custom hook, then call it directly in any functional component.
+      2. **Example: Data Fetching**:
+
+      ```js
+      //With HOCs
+      function withUserData(WrappedComponent) {
+         return function EnhancedComponent(props) {
+            const [user, setUser] = React.useState(null);
+               React.useEffect(() => {
+                  fetch('/api/user').then(res => res.json()).then(setUser);
+                 }, []);
+            return <WrappedComponent {...props} user={user} />;
+        };
+      }
+      //Usage:
+      const UserProfile = ({ user }) => <div>{user?.name}</div>;
+      export default withUserData(UserProfile);
+
+      //With Hook:
+      function useUserData() {
+        const [user, setUser] = React.useState(null);
+        React.useEffect(() => {
+          fetch('/api/user').then(res => res.json()).then(setUser);
+        }, []);
+        return user;
+      }
+      //Usage:
+      function UserProfile() {
+        const user = useUserData();
+        return <div>{user?.name}</div>;
+      }
+      ```
+      > Hooks can replace HOCs and render props for most logic reuse scenarios, such as state, effects, context, and data fetching.
+      Hooks cannot directly wrap or alter JSX/props of a component from the outside—so for cross-cutting concerns that require JSX manipulation or when you don’t control the component source, HOCs may still be needed.
+
+44. ### What are ways to style React components? 
+
+      | Method               | File Type         | Scope           | Use Case                                   | Example Usage                                                                                 |
+      |----------------------|------------------|-----------------|--------------------------------------------|----------------------------------------------------------------------------------------------|
+      | CSS Stylesheet       | `.css`           | Global        | Traditional, global styles                 | `import './App.css';`<br>`<h1 className="header">Hello Style!</h1>`                          |
+      | Inline Styling       | JS object        | Component     | Dynamic, conditional styles                | `<h1 style={{ color: 'red', backgroundColor: 'lightblue' }}>Hello Style!</h1>`               |
+      | CSS Modules          | `.module.css`    | Component     | Scoped styles, avoid conflicts             | `import styles from './mystyle.module.css';`<br>`<h1 className={styles.bigblue}>Hello!</h1>` |
+      | Styled Components    | JS (template)    | Component     | Dynamic, encapsulated, themeable styles    | `import styled from 'styled-components';`<br>`const Box = styled.div\`margin: 40px;\`;`      |
+      | Utility Frameworks   | JSX class names  | Component/ Global| Rapid, utility-driven styling              | `<h1 className="text-blue-500 text-2xl">Hello Tailwind!</h1>`                               |
+
+---
