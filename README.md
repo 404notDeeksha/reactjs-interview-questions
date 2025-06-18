@@ -822,6 +822,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       - Deployment issues: Old chunks may be unavailable after a new deployment, breaking the app.
       - CSS unpredictability:	Dynamic loading can affect CSS selector order and styling consistency, if not properly managed.
       - Limited benefit for small apps.
+      > Webpack works on basis of this Code Splitting to run optimised apps.
 
       **[⬆ Back to Top](#table-of-contents)**
 
