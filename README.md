@@ -892,6 +892,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       - Popular in libraries like Redux (with connect).
       - Now-a-days hooks are being used.
 
+     **[⬆ Back to Top](#table-of-contents)**       
+
 41. ### What is the React API?
 
      It refers to the *set of functions, hooks, components, and utilities* provided by the React library to *build user interfaces*. These APIs allow you to *define components, manage their lifecycle, state and effects, handle context, optimize performance, and interact with the DOM or server*.<br/>
@@ -903,6 +905,8 @@ Each question is answered briefly and clearly to help with interview prep and re
      - Testing: act.
      - Transitions: startTransition, useTransition.
      - Resource APIs: use for reading promises or context in components.
+
+     **[⬆ Back to Top](#table-of-contents)**
 
 42. ### What are Design Patterns in React & Javascript?
 
@@ -923,6 +927,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       - Controlled/Uncontrolled Components: Patterns for managing form inputs and state.
       - Provider Pattern: Using React Context to share data across the component tree.
       - Container-Presenter Pattern: Separates logic (container) from UI (presenter), promoting separation of concerns.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 43. ### How can Hooks be used instead of HOCs in modern React?
 
@@ -966,6 +972,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       > Hooks can replace HOCs and render props for most logic reuse scenarios, such as state, effects, context, and data fetching.
       Hooks cannot directly wrap or alter JSX/props of a component from the outside—so for cross-cutting concerns that require JSX manipulation or when you don’t control the component source, HOCs may still be needed.
 
+      **[⬆ Back to Top](#table-of-contents)**
+
 44. ### What are ways to style React components? 
 
       | Method               | File Type         | Scope           | Use Case                                   | Example Usage                                                                                 |
@@ -975,5 +983,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       | CSS Modules          | `.module.css`    | Component     | Scoped styles, avoid conflicts             | `import styles from './mystyle.module.css';`<br>`<h1 className={styles.bigblue}>Hello!</h1>` |
       | Styled Components    | JS (template)    | Component     | Dynamic, encapsulated, themeable styles    | `import styled from 'styled-components';`<br>`const Box = styled.div\`margin: 40px;\`;`      |
       | Utility Frameworks   | JSX class names  | Component/ Global| Rapid, utility-driven styling              | `<h1 className="text-blue-500 text-2xl">Hello Tailwind!</h1>`                               |
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 ---
