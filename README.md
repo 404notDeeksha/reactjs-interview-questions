@@ -345,7 +345,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       | Aspect                | Class Component                                           | Functional Component                                         |
       |-----------------------|----------------------------------------------------------|--------------------------------------------------------------|
-      | **Definition**        | Uses ES6 class syntax, extends `React.Component`         | Plain JavaScript function that returns JSX                   |
+      | **Definition** **        | Uses ES6 class syntax, extends `React.Component`         | Plain JavaScript function that accept props as arguments & returns JSX                   |
       | **Syntax**            | More verbose, requires `render()` method                 | Simpler, less boilerplate                                    |
       | **State Management**  | Uses `this.state` and `this.setState`                    | Uses React Hooks (e.g., `useState`) for state                |
       | **Lifecycle Methods** | Has built-in lifecycle methods (e.g., `componentDidMount`) | Uses `useEffect` hook to handle lifecycle events             |
