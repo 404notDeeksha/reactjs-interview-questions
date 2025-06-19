@@ -296,7 +296,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       1. Is a **JavaScript class*** that *extends React.Component* (or Component if imported directly).
       2. Must include a *render() method*, which **returns the JSX** to display.
       3. Can **manage its own state** and *respond to lifecycle events* like *mounting, updating, and unmounting*.
-      <br/>
+      
       **Defining Class Component:**
       ```js
       //ES6 Class Syntax
