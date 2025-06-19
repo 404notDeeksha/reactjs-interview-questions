@@ -1064,4 +1064,87 @@ Each question is answered briefly and clearly to help with interview prep and re
       }
       ```
 
+48. ### What is React API Calls?
+
+      **React API calls** refer to *making HTTP requests* from a React application to *external web APIs* (such as REST or GraphQL endpoints) to *fetch or send data*.
+
+      This process is not specific to React, but is commonly done within React apps using JavaScript methods like *fetch, XMLHttpRequest, or libraries like Axios*.
+
+      API calls allow your React app to interact with backend services, retrieve dynamic data, and update the UI based on responses.   
+      >  The React API is about the tools React gives you to build UI.
+      React API calls are about how your React app communicates with external services to get or send data.
+
+49. ###  What are ways & tools to Optimise React app?
+
+      Optimizing React applications involves both strategic **use of tools** and following established **performance patterns** that improve efficiency and user experience.
+
+      **Key Techniques & Performance Patterns**
+      - **Code Splitting & Lazy Loading**
+      - Use `React.lazy` and `Suspense` to load components only when needed, reducing initial load time.
+      - Dynamic imports and bundlers like Webpack help split bundles efficiently.
+
+      - **Virtualize Long Lists**
+      - Render only visible items in large lists with libraries like `react-window` or `react-virtualized` to minimize DOM nodes and speed up rendering.
+
+      - **Memoization (Performance Pattern)**
+      - Use `React.memo` for functional components and `PureComponent` for class components to prevent unnecessary re-renders when props haven’t changed.
+      - Use `useMemo` and `useCallback` hooks to memoize expensive calculations and stable function references.
+
+      - **Component Splitting (Performance Pattern)**
+      - Break large components into smaller, focused components to minimize the impact of state changes and re-renders.
+
+      - **Optimize State Management (Performance Pattern)**
+      - Lift state up only when necessary and avoid prop drilling.
+      - Use selectors to compute derived data efficiently.
+      - Use context and state management libraries wisely to prevent excessive re-renders.
+
+      - **Reduce Bundle Size**
+      - Remove unused code with tree-shaking and minimize with tools like Webpack or Rollup.
+      - Minify and compress JavaScript files.
+
+      - **Efficient List Rendering**
+      - Always provide unique `key` props in lists to help React identify elements efficiently during reconciliation.
+
+      **Using Performance Patterns**:
+      - **Avoid Inline Functions and Objects in Render**
+      - Define event handlers and static objects/arrays outside the render method or use memoized callbacks/values to avoid creating new references on every render.
+
+      - **Debounce/Throttle Expensive Operations**
+      - Debounce or throttle functions that are triggered frequently (like scroll or input events) to reduce unnecessary renders and computations.
+
+      - **Lazy Load and Optimize Assets**
+      - Compress and lazy-load images, videos, and other heavy assets.
+      - Use a CDN for faster delivery and solutions like Cloudinary for on-the-fly optimization.
+
+      - **Server-Side Rendering (SSR)**
+      - Use SSR for faster initial load and better SEO, especially for public-facing apps.<br/>
+
+      **Tools for Optimization**
+
+      | Tool/Library            | Purpose                                                   |
+      |-------------------------|-----------------------------------------------------------|
+      | React DevTools Profiler | Analyze component render times and identify bottlenecks   |
+      | Chrome DevTools         | Profile JS performance, memory usage, and network speed   |
+      | Webpack/Rollup          | Bundle, split, and minify JavaScript code                 |
+      | react-window            | Virtualize large lists for efficient rendering            |
+      | react-virtualized       | Another library for list/window virtualization            |
+      | Cloudinary              | Optimize and lazy-load images and videos                  |
+
+      **Summary Table**
+
+      | Optimization Technique/Pattern      | Example/Tool                        |
+      |-------------------------------------|--------------------------------------|
+      | Code splitting                     | React.lazy, Webpack                  |
+      | Virtualize lists                    | react-window, react-virtualized      |
+      | Memoization                         | React.memo, useMemo, useCallback     |
+      | Component splitting                 | Smaller, focused components          |
+      | State management                    | React Context, Redux, React Query    |
+      | Selectors for derived data          | Reselect, custom selectors           |
+      | Bundle size reduction               | Webpack, Rollup, tree-shaking        |
+      | Avoid inline functions/objects      | Memoized handlers/values             |
+      | Debounce/throttle expensive ops     | Lodash debounce/throttle             |
+      | Asset optimization                  | Lazy loading, CDN, Cloudinary        |
+      | Performance profiling               | React DevTools Profiler, Chrome DevTools |
+
+
 ---
