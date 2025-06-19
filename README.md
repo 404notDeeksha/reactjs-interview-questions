@@ -39,7 +39,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 27 | [ What is difference between Class & Functional Component?](#what-is-difference-between-class--functional-component) |
 | 28 | [What is difference between Inheritance & Composition in React?](#what-is-difference-between-inheritance--composition-in-react)                                                          |
 | 29 | [What is constructor & super keywords in React?](#what-is-constructor--super-keywords-in-react) |
-| 30 | [What is role of this keyword in React?](#what-is-role-of-this-keyword-in-react) |
+| 30 | [What is role of this keyword in React?](#what-is-role-of--this--keyword-in-react) |
 | 31 | [What are different types of Render in React?](#what-are-different-types-of-render-in-react) |
 | 32 | [What types of rendering output does React Components support?](#what-types-of-rendering-output-does-react-components-support) |
 | 33 | [How rendering happens when a React Component is created?](#how-rendering-happens-when-a-react-component-is-created) |
