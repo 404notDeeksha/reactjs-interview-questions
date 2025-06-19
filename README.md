@@ -57,11 +57,12 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 45 | [What is difference between React & React native?](#what-is-difference-between-react--react-native) |
 | 46 | [What is GraphQl?](#what-is-graphql) |
 | 47 | [What is React Profiler?](#what-is-react-profiler) |
-| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
-| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
-| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
-| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 48 | [What is React API Calls?](#what-is-react-api-calls) |
+| 49 | [What are ways & tools to Optimise React app?](#what-are-ways--tools-to-optimise-react-app) |
+<!-- | 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 45 | [What are Hooks in React?](#what-are-hooks-in-react) | -->
 
+<!-- fetch, axios diiefrence -->
 <!-- React Router -->
 <!-- Redux -->
 -----
