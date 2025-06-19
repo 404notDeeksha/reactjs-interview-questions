@@ -54,7 +54,13 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 42 | [What are Design Patterns in React & Javascript?](#what-are-design-patterns-in-react--javascript) |
 | 43 | [How can Hooks be used instead of HOCs in modern React?](#how-can-hooks-be-used-instead-of-hocs-in-modern-react) |
 | 44 | [What are ways to style React components?](#what-are-ways-to-style-react-components) |
-<!-- | 45 | [What are Hooks in React?](#what-are-hooks-in-react) | -->
+| 45 | [What is difference between React & React native?](#what-is-difference-between-react--react-native) |
+| 46 | [What is GraphQl?](#what-is-graphql) |
+| 47 | [What is React Profiler?](#what-is-react-profiler) |
+| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
+| 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
 
 <!-- React Router -->
 <!-- Redux -->
@@ -984,5 +990,78 @@ Each question is answered briefly and clearly to help with interview prep and re
       | Utility Frameworks   | JSX class names  | Component/ Global| Rapid, utility-driven styling              | `<h1 className="text-blue-500 text-2xl">Hello Tailwind!</h1>`                               |
 
       **[⬆ Back to Top](#table-of-contents)**
+
+45. ### What is difference between React & React native?
+
+      | Aspect                | Native Mobile Apps                                   | Mobile Apps (General)                          |
+      |-----------------------|-----------------------------------------------------|------------------------------------------------|
+      | Definition            | Apps built specifically for a single platform (iOS or Android) using platform-specific languages (Swift, Kotlin, Java) | All apps designed for mobile devices, including native, hybrid, and web apps |
+      | Platform              | Platform-specific (one app for iOS, another for Android) | Can be platform-specific (native), cross-platform (hybrid), or web-based |
+      | Technologies Used     | Swift/Objective-C (iOS), Kotlin/Java (Android)      | Native languages, or web technologies (HTML, CSS, JavaScript), or hybrid frameworks |
+      | Performance           | High performance, optimized for the platform        | Varies: native apps are fastest, hybrid/web apps may have some lag or limitations |
+      | User Experience       | Seamless, follows platform UI/UX guidelines         | Varies: native is best, hybrid/web may feel less integrated |
+      | Access to Device Features | Full, direct access to all device APIs and hardware | Hybrid/web apps may have limited or indirect access via plugins or browser APIs |
+      | Codebase              | Separate codebase for each platform                 | Hybrid/cross-platform apps can share a single codebase across platforms |
+      | Cost & Development Time | Higher (due to separate development for each platform) | Lower for hybrid/cross-platform, as code is reused |
+      
+46. ### What is GraphQl?
+
+     GraphQL is an *open-source query language* and *server-side runtime for APIs* that allows clients to request exactly the data they need from multiple data sources with a single API call. Unlike traditional REST APIs, which often require multiple endpoints and can return unnecessary data, GraphQL enables clients to specify the exact structure and fields they want, reducing over-fetching and under-fetching of data.<br/>
+
+     With GraphQL, APIs are organized around *types and fields* rather than endpoints, and all queries are *sent to a single endpoint*. The server uses a *type system (schema)* to define what data can be queried, and resolvers to fetch the actual data. GraphQL supports not just *reading data (queries), but also writing (mutations) and real-time updates (subscriptions)*.
+     ```js
+      //GraphQl
+      {
+       user(id: "1") {
+         name
+         email
+       }
+      }
+
+      //Expected JSON response
+      {
+        "data": {
+          "user": {
+            "name": "Alice",
+            "email": "alice@example.com"
+          }
+        }
+      }
+    
+     ```
+
+47. ### What is React Profiler?
+
+      React Profiler is a **performance monitoring tool** built into React and available through the React Developer Tools extension. It helps developers analyze how their React application renders by measuring the *time each component takes to render* and *how often components re-render*. This enables developers to *identify performance bottlenecks, unnecessary re-renders, and optimize the app* for a smoother user experience.<br/>
+      
+      - You can use the Profiler tab in React DevTools to record and inspect the rendering performance of components.
+      - The Profiler provides visualizations like flame charts, which show which components rendered, how long each render took, and why a render happened (such as state or prop changes).
+      - This information is crucial for *improving application performance* by *targeting and fixing inefficient components*.<br/>
+
+      Additionally, React provides a `<Profiler>` component that can be added to the code to gather measurements programmatically.
+
+      ```js
+      import React, { Profiler } from "react";
+
+      function MyComponent() {
+        return <h1>Hello, world!</h1>;
+      }
+
+      function onRenderCallback(
+        id, // the "id" prop of the Profiler tree
+        phase, // "mount" or "update"
+        actualDuration // time spent rendering
+      ) {
+        console.log(`${id} rendered in ${actualDuration}ms during ${phase}`);
+      }
+
+      export default function App() {
+        return (
+        <Profiler id="MyComponent" onRender={onRenderCallback}>
+              <MyComponent />
+        </Profiler>
+       );
+      }
+      ```
 
 ---
