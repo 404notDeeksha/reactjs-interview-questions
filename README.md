@@ -1079,44 +1079,43 @@ Each question is answered briefly and clearly to help with interview prep and re
       Optimizing React applications involves both strategic **use of tools** and following established **performance patterns** that improve efficiency and user experience.
 
       **Key Techniques & Performance Patterns**
-      - **Code Splitting & Lazy Loading**
+      1. **Code Splitting & Lazy Loading**
       - Use `React.lazy` and `Suspense` to load components only when needed, reducing initial load time.
       - Dynamic imports and bundlers like Webpack help split bundles efficiently.
 
-      - **Virtualize Long Lists**
+      2. **Virtualize Long Lists**
       - Render only visible items in large lists with libraries like `react-window` or `react-virtualized` to minimize DOM nodes and speed up rendering.
 
-      - **Memoization (Performance Pattern)**
+      3. **Memoization (Performance Pattern)**
       - Use `React.memo` for functional components and `PureComponent` for class components to prevent unnecessary re-renders when props haven’t changed.
       - Use `useMemo` and `useCallback` hooks to memoize expensive calculations and stable function references.
 
-      - **Component Splitting (Performance Pattern)**
+      4. **Component Splitting (Performance Pattern)**
       - Break large components into smaller, focused components to minimize the impact of state changes and re-renders.
 
-      - **Optimize State Management (Performance Pattern)**
+      5. **Optimize State Management (Performance Pattern)**
       - Lift state up only when necessary and avoid prop drilling.
       - Use selectors to compute derived data efficiently.
       - Use context and state management libraries wisely to prevent excessive re-renders.
 
-      - **Reduce Bundle Size**
+      6. **Reduce Bundle Size**
       - Remove unused code with tree-shaking and minimize with tools like Webpack or Rollup.
       - Minify and compress JavaScript files.
 
-      - **Efficient List Rendering**
+      7. **Efficient List Rendering**
       - Always provide unique `key` props in lists to help React identify elements efficiently during reconciliation.
 
-      **Using Performance Patterns**:
-      - **Avoid Inline Functions and Objects in Render**
+      8. **Avoid Inline Functions and Objects in Render (Performance Pattern)**
       - Define event handlers and static objects/arrays outside the render method or use memoized callbacks/values to avoid creating new references on every render.
 
-      - **Debounce/Throttle Expensive Operations**
+      9. **Debounce/Throttle Expensive Operations (Performance Pattern)**
       - Debounce or throttle functions that are triggered frequently (like scroll or input events) to reduce unnecessary renders and computations.
 
-      - **Lazy Load and Optimize Assets**
+      10. **Lazy Load and Optimize Assets**
       - Compress and lazy-load images, videos, and other heavy assets.
       - Use a CDN for faster delivery and solutions like Cloudinary for on-the-fly optimization.
 
-      - **Server-Side Rendering (SSR)**
+      11. **Server-Side Rendering (SSR)**
       - Use SSR for faster initial load and better SEO, especially for public-facing apps.<br/>
 
       **Tools for Optimization**
