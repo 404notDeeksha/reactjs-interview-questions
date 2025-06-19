@@ -296,10 +296,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       1. Is a **JavaScript class*** that *extends React.Component* (or Component if imported directly).
       2. Must include a *render() method*, which **returns the JSX** to display.
       3. Can **manage its own state** and *respond to lifecycle events* like *mounting, updating, and unmounting*.
-      >React.Component is a parent class featured by React lib & class ("Car") inherits its features. 
-
+      <br/>
       **Defining Class Component:**
-
       ```js
       //ES6 Class Syntax
       class Car extends React.Component {
@@ -338,7 +336,8 @@ Each question is answered briefly and clearly to help with interview prep and re
             }
       }
       ```
-      >`static` means `contextType` is a property that `belongs to the class itself`, not to instances of the class.
+      >React.Component is a parent class featured by React lib & class ("Car") inherits its features.
+      `static` means `contextType` is a property that `belongs to the class itself`, not to instances of the class.
 
       **[⬆ Back to Top](#table-of-contents)**
 
