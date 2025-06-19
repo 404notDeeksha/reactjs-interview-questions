@@ -367,7 +367,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       class Button extends React.Component { /* ... */ }
       class SubmitButton extends Button { /* ... */ }
       ```
-      It leads to **tightly coupled, hard-to-maintain code** which is **less flexible** for UI composition and code reuse.
+      > It leads to **tightly coupled, hard-to-maintain code** which is **less flexible** for UI composition and code reuse.
       Better Alternatives are **composition, HOCs, render props**.
 
       **[⬆ Back to Top](#table-of-contents)**
