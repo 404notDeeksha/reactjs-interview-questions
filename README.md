@@ -402,7 +402,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       ```   
       **[⬆ Back to Top](#table-of-contents)**  
 
-30. ### What is role of this keyword in React? **
+30. ### What is role of 'this' keyword in React? **
 
       In React, the `this` keyword is used to refer to the *current instance* of a **component class**. It allows you to *access the component's props, state, event handlers and methods* within its class definition. <br/> e.g. using `this.state`(to get or set C.'s state),<br/> `this.props`(accessing properties passed from parent C.), <br/> `this.handleClick`(passing as *callback functions*) or <br/> `this.methodName()`(call other methods in same class) inside Class Component.<br/>
       > C - Component
