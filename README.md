@@ -1004,6 +1004,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       | Access to Device Features | Full, direct access to all device APIs and hardware | Hybrid/web apps may have limited or indirect access via plugins or browser APIs |
       | Codebase              | Separate codebase for each platform                 | Hybrid/cross-platform apps can share a single codebase across platforms |
       | Cost & Development Time | Higher (due to separate development for each platform) | Lower for hybrid/cross-platform, as code is reused |
+
+      **[⬆ Back to Top](#table-of-contents)**
       
 46. ### What is GraphQl?
 
@@ -1030,6 +1032,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       }
     
      ```
+
+     **[⬆ Back to Top](#table-of-contents)**
 
 47. ### What is React Profiler?
 
@@ -1065,6 +1069,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       }
       ```
 
+      **[⬆ Back to Top](#table-of-contents)**
+
 48. ### What is React API Calls?
 
       **React API calls** refer to *making HTTP requests* from a React application to *external web APIs* (such as REST or GraphQL endpoints) to *fetch or send data*.
@@ -1074,6 +1080,8 @@ Each question is answered briefly and clearly to help with interview prep and re
       API calls allow your React app to interact with backend services, retrieve dynamic data, and update the UI based on responses.   
       >  The React API is about the tools React gives you to build UI.
       React API calls are about how your React app communicates with external services to get or send data.
+
+      **[⬆ Back to Top](#table-of-contents)**
 
 49. ###  What are ways & tools to Optimise React app?
 
@@ -1145,6 +1153,10 @@ Each question is answered briefly and clearly to help with interview prep and re
       | Debounce/throttle expensive ops     | Lodash debounce/throttle             |
       | Asset optimization                  | Lazy loading, CDN, Cloudinary        |
       | Performance profiling               | React DevTools Profiler, Chrome DevTools |
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+      
 
 
 ---
