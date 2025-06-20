@@ -1156,7 +1156,23 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **[⬆ Back to Top](#table-of-contents)**
 
-      
+50. ###  What is difference between fetch & axios in React?
 
+      | Feature                | Fetch API                                         | Axios                                    |
+      |------------------------|---------------------------------------------------|------------------------------------------|
+      | Native/Third-party     | Native browser API                                | Third-party library                      |
+       Installation           | None (in Node.js v18+)                                              | `npm install axios`                      |
+      | JSON Handling          | Manual (`JSON.stringify`, `response.json()`)      | Automatic                                |
+      | Error Handling         | Only network errors trigger `catch`               | HTTP errors (404) and network errors (500) in `catch`|
+      | Timeout Support        | Manual (with `AbortController`)                   | Built-in                                 |
+      | Progress Tracking      | Manual (with streams)                             | Built-in                                 |
+      | Interceptors           | Not available                                     | Built-in                                 |
+      | Request Cancellation   | With `AbortController`                            | Built-in (uses `AbortController`)        |
+      | Browser Support        | Modern browsers, not IE 11                        | All major browsers, including IE         |
+      | Response Data Access   | Must call `response.json()`                       | Directly in `response.data`              |
 
+      > - fetch needs manual conversion of JSON data.
+      for sending data (request body) - `JSON.stringify`
+      for recieving data (response parsing) - `response.json()`
+            - Error Handling doesnt account for HTTP errors. manually checking response.ok or the status code is needed. 
 ---
