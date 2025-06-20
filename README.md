@@ -59,10 +59,13 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 47 | [What is React Profiler?](#what-is-react-profiler) |
 | 48 | [What is React API Calls?](#what-is-react-api-calls) |
 | 49 | [What are ways & tools to Optimise React app?](#what-are-ways--tools-to-optimise-react-app) |
+| 50 | [What is difference between fetch & axios in React?](#what-is-difference-between-fetch--axios-in-react) |
+| 51 | [Give e.g. of fetch & axios usage for API calls?](#give-eg-of-fetch--axios-usage-for-api-calls) |
 <!-- | 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
-| 45 | [What are Hooks in React?](#what-are-hooks-in-react) | -->
+ | 45 | [What are Hooks in React?](#what-are-hooks-in-react) |  -->
 
-<!-- fetch, axios diiefrence -->
+ <!-- fiber reconcilliation -->
+<!-- fetch, axios diffrence,  -->
 <!-- React Router -->
 <!-- Redux -->
 -----
@@ -1175,9 +1178,11 @@ Each question is answered briefly and clearly to help with interview prep and re
       for sending data (request body) - `JSON.stringify`
       for recieving data (response parsing) - `response.json()`
       > - Error Handling doesnt account for HTTP errors. manually checking response.ok or the status code is needed.
-      > - *Polyfills* are pieces of code (usually JavaScript) that provide modern functionality on older browsers that do not natively support it
+      > - *Polyfills* are pieces of code (usually JavaScript) that provide modern functionality on older browsers that do not natively support it.
 
-51. ### Give eg. of fetch & axios usage for API calls?
+      **[⬆ Back to Top](#table-of-contents)**
+
+51. ### Give e.g. of fetch & axios usage for API calls?
 
       1. **fetch**:
       ```js
@@ -1246,5 +1251,20 @@ Each question is answered briefly and clearly to help with interview prep and re
       export default MyComponent;
 
       ```
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+<!-- 52. ### What is workflow of a Browser for React SPA?
+
+      | Step           --         | What Happens                                                              |
+      |---------------------------|---------------------------------------------------------------------------|
+      | 1. Initial Load       | Browser loads `index.html` and JS bundle                                     |
+      | 2. Bootstrapping      | JS runs, React attaches to `<div id="root">`                                 |
+      | 3. Rendering          | React calls components, builds virtual DOM                                   |
+      | 4. Commit             | React updates real DOM with minimal changes                                  |
+      | 5. Routing            | Client-side navigation handled by React Router (no full page reload)         |
+      | 6. Data/API Calls     | App fetches data, updates state                                              |
+      | 7. Re-rendering       | State/prop changes trigger efficient re-renders                              |
+      | 8. Error Handling     | Errors are caught, UI updated, resources cleaned up                          | -->
 
 ---
