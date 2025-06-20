@@ -1174,6 +1174,6 @@ Each question is answered briefly and clearly to help with interview prep and re
       > - fetch needs manual conversion of JSON data.
       for sending data (request body) - `JSON.stringify`
       for recieving data (response parsing) - `response.json()`
-      - Error Handling doesnt account for HTTP errors. manually checking response.ok or the status code is needed.
-      - *Polyfills* are pieces of code (usually JavaScript) that provide modern functionality on older browsers that do not natively support it
+      > - Error Handling doesnt account for HTTP errors. manually checking response.ok or the status code is needed.
+      > - *Polyfills* are pieces of code (usually JavaScript) that provide modern functionality on older browsers that do not natively support it
 ---
