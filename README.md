@@ -1176,4 +1176,75 @@ Each question is answered briefly and clearly to help with interview prep and re
       for recieving data (response parsing) - `response.json()`
       > - Error Handling doesnt account for HTTP errors. manually checking response.ok or the status code is needed.
       > - *Polyfills* are pieces of code (usually JavaScript) that provide modern functionality on older browsers that do not natively support it
+
+51. ### Give eg. of fetch & axios usage for API calls?
+
+      1. **fetch**:
+      ```js
+      import React, { useEffect, useState } from 'react';
+
+      function MyComponent() {
+        const [data, setData] = useState(null);
+
+        useEffect(() => {
+        // Define the async function inside useEffect
+        const fetchData = async () => {
+        try {
+        const response = await fetch('https://api.example.com/data');
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+        const result = await response.json();
+        setData(result);
+        } catch (error) {
+        console.error('Fetch error:', error.message);
+        }
+      };
+
+      fetchData();
+      }, []);
+
+       return (
+        <div>
+         <h1>React Fetch Example</h1>
+         {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>Loading...</p>}
+         </div>
+       );
+      }
+
+      export default MyComponent;
+      ```
+
+      2. **axios**:
+
+      ```js
+      import React, { useEffect, useState } from 'react';
+      import axios from 'axios';
+
+      function MyComponent() {
+        const [data, setData] = useState(null);
+
+        useEffect(() => {
+          // Axios handles JSON parsing and errors more simply
+          axios.get('https://api.example.com/data')
+            .then(response => {
+              setData(response.data);
+            })
+            .catch(error => {
+              console.error('Axios error:', error.message);
+            });
+        }, []);
+
+        return (
+          <div>
+            <h1>React Axios Example</h1>
+            {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>Loading...</p>}
+          </div>
+        );
+      }
+
+      export default MyComponent;
+
+      ```
+
 ---
