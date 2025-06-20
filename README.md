@@ -1164,7 +1164,7 @@ Each question is answered briefly and clearly to help with interview prep and re
        Installation           | None (in Node.js v18+)                                              | `npm install axios`                      |
       | JSON Handling          | Manual (`JSON.stringify`, `response.json()`)      | Automatic                                |
       | Error Handling         | Only network errors trigger `catch`               | HTTP errors (404) and network errors (500) in `catch`|
-      | Timeout Support        | Manual (with `AbortController`)                   | Built-in                                 |
+      | Timeout Support        | Manual (with `AbortController` or setTimeout )                   | Built-in                                 |
       | Progress Tracking      | Manual (with streams)                             | Built-in                                 |
       | Interceptors           | Not available                                     | Built-in                                 |
       | Request Cancellation   | With `AbortController`                            | Built-in (uses `AbortController`)        |
@@ -1174,5 +1174,5 @@ Each question is answered briefly and clearly to help with interview prep and re
       > - fetch needs manual conversion of JSON data.
       for sending data (request body) - `JSON.stringify`
       for recieving data (response parsing) - `response.json()`
-            - Error Handling doesnt account for HTTP errors. manually checking response.ok or the status code is needed. 
+        - Error Handling doesnt account for HTTP errors. manually checking response.ok or the status code is needed. 
 ---
