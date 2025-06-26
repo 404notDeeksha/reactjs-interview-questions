@@ -163,7 +163,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       <li>Class Component: ES6 class can be used to define a component.</ol>
       
       ```js
-       class Greeting extends React.Component {
+      class Greeting extends React.Component {
         render() { 
          return <h1>{`Hello, ${this.props.message}`}</h1>;
          }
