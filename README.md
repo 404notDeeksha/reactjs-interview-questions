@@ -16,7 +16,6 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 4   | [What is DOM (Document Object Model)](#what-is-dom-document-object-model)          |
 | 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 | 6   | [What are React Components?](#what-are-react-components)                           |
-<!-- What is React Element? -->
 | 7   | [What is npm?](#what-is-npm)                                                       |
 | 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
 | 9   | [What is babel?](#what-is-babel)                                                   |
@@ -65,6 +64,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 <!-- | 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
  | 45 | [What are Hooks in React?](#what-are-hooks-in-react) |  -->
  <!-- what are pure components -->
+
+<!-- What is React Element? -->
 
  <!-- fiber reconcilliation -->
 <!-- fetch, axios diffrence,  -->
