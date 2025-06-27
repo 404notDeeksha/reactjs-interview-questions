@@ -16,6 +16,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 4   | [What is DOM (Document Object Model)](#what-is-dom-document-object-model)          |
 | 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 | 6   | [What are React Components?](#what-are-react-components)                           |
+<!-- What is React Element? -->
 | 7   | [What is npm?](#what-is-npm)                                                       |
 | 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
 | 9   | [What is babel?](#what-is-babel)                                                   |
@@ -24,7 +25,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 12  | [What is role of index.html page in React app?](#what-is-role-of-index.html-page-in-react-app)    |
 | 13  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)                      |
 | 14  | [How to create Components in React?](#how-to-create-components-in-react)    |
-| 15  | [When to use Function & Class Components?](#when-to-use-function--class-component)    |
+| 15  | [When to use Function & Class Components?](#when-to-use-function--class-components)    |
 | 16  | [What is state & props in React?](#what-is-state--props-in-react)                                  |
 | 17  | [How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?](#how-is-data-sent-from-child-component-to-parent-component-what-is-lifting-state-up-or-callback-props)    |
 | 18  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
@@ -63,6 +64,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 51 | [Give e.g. of fetch & axios usage for API calls?](#give-eg-of-fetch--axios-usage-for-api-calls) |
 <!-- | 45 | [What are Hooks in React?](#what-are-hooks-in-react) |
  | 45 | [What are Hooks in React?](#what-are-hooks-in-react) |  -->
+ <!-- what are pure components -->
 
  <!-- fiber reconcilliation -->
 <!-- fetch, axios diffrence,  -->
@@ -73,7 +75,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 1. ### What is React?
 
-   React is an _open source_ _js library_, developed by facebook(meta). It is used to build _UI interfaces_ & simplifies creation of _SPA(Single Page Applications)_, using _reusable components_ & _dynamic rendering_. It follows _Component based architecture_.
+   React is an _open source_ _js library_, developed by facebook(meta). It's used for handling the view layer in web and mobile applications. It is used to build _UI interfaces_ & simplifies creation of _SPA(Single Page Applications)_, using _reusable components_ & _dynamic rendering_. It follows _Component based architecture_.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -107,7 +109,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 6. ### What are React Components?
 
-   React Components are reusable building blocks for creating UI.
+   React Components are reusable building blocks for creating UI. It is a function or class that returns an element (or a tree of elements) to describe part of the UI. Components can accept inputs (called props) and manage their own state (in case of class or function components with hooks).
 
 7. ### What is npm?
 
@@ -222,6 +224,12 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where *value* is managed by *state*. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves *value* & an *Event Handler* as *prop*, which gets trigerred by user action,which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> It can cause more re-renders, especially with many inputs or frequent updates. <br/>  <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <br/>                       <li> **Uncontrolled Components**: Here, React does not directly control the input's value. These manage its own state internally, with the DOM maintaining the current value. <br/> Here, the input's value can be accessed directly from the DOM, typically using a *ref*. It uses *defaultValue* to set the *initial value of an input field* when the component is *first rendered*. Any further changes are tracked by **DOM** & not by **React**. It has no involvement of React state.<br/>   <br/> ![UnControlledComponent](./images/UncontrolledC.png)   </ol> 
       > This needs fewer re-renders for high frequency inputs. But, it is harder to validate & synchronize with other components. It is also less predictable & state can be changed outside React's knowledge.
+      //Usecases: 
+      1. accessing DOM elements for autofocus, scrolling, measuring size/position, animations.
+      2. storing prev values while comparing between current and previous props/state, analytics tracking.
+      3. avoiding re-renders while using timers, intervals, WebSocket refs, caching API response IDs.
+      4. integrating with 3rd party libraries like canvas drawings, charts, or video/audio players.
+      5. handling forms like uncontrolled forms, temporary form states.
 
       **[⬆ Back to Top](#table-of-contents)**
 
