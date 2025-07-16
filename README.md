@@ -195,15 +195,16 @@ Each question is answered briefly and clearly to help with interview prep and re
          //This ensures you always get the latest state value, even if multiple updates are batched together.
        </div>);
       } 
-      ``` 
-      > When state changes, React automatically re-renders the component (& all its child Components) to reflect the new state.
-      Event Handler Functions expects a callbackFn for setterFn.
+      ```
       
       **state async** means state updates are asynchronous in React.
       -when setterFn are called, the state does not update immediately. It is done because,
       - To batch multiple updates together.
       - To avoid unnecessary re-renders.
       - For performance optimization.
+
+      > When state changes, React automatically re-renders the component (& all its child Components) to reflect the new state.
+      Event Handler Functions expects a callbackFn for setterFn.
 
       **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. 
       > Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}`.  
