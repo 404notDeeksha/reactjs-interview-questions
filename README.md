@@ -1277,6 +1277,135 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **[⬆ Back to Top](#table-of-contents)**
 
+
+52. ### How to capture Errors in React?
+
+      Ways to handle errors in React:
+
+      **1. Error Boundaries (Rendering Errors)**: Used in class components to catch errors in rendering, lifecycle methods, or constructors of child components.
+
+      ```js
+      // ErrorBoundary.jsx
+      import React from "react";
+
+      class ErrorBoundary extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+      }
+
+      static getDerivedStateFromError(error) {
+      return { hasError: true }; // Update state so fallback UI is shown
+      }
+
+      componentDidCatch(error, info) {
+        console.error("ErrorBoundary caught an error:", error, info);
+        // You can log the error to an external service here
+      }
+
+      render() {
+        if (this.state.hasError) {
+          return <h2>Something went wrong.</h2>;
+        }
+        return this.props.children;
+      }
+    }
+
+    export default ErrorBoundary;
+    ```
+
+    **2. Handling Errors in Event Handlers:** React doesn’t catch errors in event handlers—you handle them with try/catch yourself.
+
+      ```js
+      function Button() {
+      const handleClick = () => {
+      try {
+        throw new Error("Button click failed!");
+        } catch (err) {
+        console.error("Caught error in event:", err);
+          alert("Something went wrong!"); 
+        }
+      };
+
+      return <button onClick={handleClick}>Click Me</button>;
+    }
+    ```
+
+    **3.  Handling Errors in useEffect (Async Operations)**: React doesn’t catch async errors automatically—wrap your async logic in try/catch.
+
+    ```js
+    import { useEffect, useState } from "react";
+
+    function UserProfile() {
+      const [user, setUser] = useState(null);
+
+      useEffect(() => {
+        const fetchUser = async () => {
+          try {
+          let res = await fetch("/api/user");
+          if (!res.ok) throw new Error("User not found");
+          let data = await res.json();
+          setUser(data);
+          } catch (err) {
+            console.error("Error fetching user:", err);
+          }
+        };
+
+      fetchUser();
+      }, []);
+
+      return <div>{user ? user.name : "Loading..."}</div>;
+      }
+  
+    ```
+
+    **4. Form Validation/ Input Errors:**
+
+      ```js
+      import { useState } from "react";
+
+      function LoginForm() {
+      const [email, setEmail] = useState("");
+      const [error, setError] = useState("");
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!email.includes("@")) {
+          setError("Invalid email format");
+        } else {
+          setError("");
+        // submit logic
+        }
+      };
+
+      return (
+        <form onSubmit={handleSubmit}>
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
+          <button type="submit">Submit</button>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+        </form>
+      );
+    }
+    ```
+
+    **5. Using external Library : `react-error-boundary` (for Functional Components):** A library that adds Error Boundary support to functional components with hooks.
+
+    **6. Logging Errors (e.g., to Sentry)**
+
+
+
+
+
+
+
+
+
+
+
 <!-- 52. ### What is workflow of a Browser for React SPA?
 
       | Step           --         | What Happens                                                              |
