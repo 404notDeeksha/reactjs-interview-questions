@@ -210,6 +210,20 @@ Each question is answered briefly and clearly to help with interview prep and re
         return <h1>Hello, {props.name}!</h1>;  // Hello, Alice!
       }
       
+
+      ## 🔁 State vs Props in React (Short Comparison)
+
+| **Basis**       | **Props**                           | **State**                            |
+|----------------|-------------------------------------|--------------------------------------|
+| Definition     | Data passed from parent to child    | Local data managed by component      |
+| Mutability     | Immutable (read-only)               | Mutable (via `useState` / `setState`)|
+| Ownership      | Controlled by parent                | Controlled by the component itself   |
+| Purpose        | Configure child components          | Track dynamic data / UI changes      |
+| Updates        | Can't update inside component       | Can update with hooks / methods      |
+| Triggers Re-render | When parent re-renders          | On internal state change             |
+| Example        | `<Child name="John" />`             | `const [count, setCount] = ...`      |
+
+
       ```
  
       **[⬆ Back to Top](#table-of-contents)**
