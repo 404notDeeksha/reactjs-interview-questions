@@ -201,12 +201,15 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. 
       > Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}`  
+      The properties from props object can be accessed directly using destructing feature from ES6 (ECMAScript 2015). It is also possible to fallback to default value when the prop value is not specified.
       
       ```js 
-     function Welcome(props) {
-      return <h1>Hello, {props.name}!</h1>;
-      }
       // Usage: <Welcome name="Alice" />
+
+      function Welcome(props) {
+        return <h1>Hello, {props.name}!</h1>;  // Hello, Alice!
+      }
+      
       ```
  
       **[⬆ Back to Top](#table-of-contents)**
@@ -225,8 +228,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where *value* is managed by *state*. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves *value* & an *Event Handler* as *prop*, which gets trigerred by user action,which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> It can cause more re-renders, especially with many inputs or frequent updates. <br/>  <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <br/>                       <li> **Uncontrolled Components**: Here, React does not directly control the input's value. These manage its own state internally, with the DOM maintaining the current value. <br/> Here, the input's value can be accessed directly from the DOM, typically using a *ref*. It uses *defaultValue* to set the *initial value of an input field* when the component is *first rendered*. Any further changes are tracked by **DOM** & not by **React**. It has no involvement of React state.<br/>   <br/> ![UnControlledComponent](./images/UncontrolledC.png)   </ol> 
       > This needs fewer re-renders for high frequency inputs. But, it is harder to validate & synchronize with other components. It is also less predictable & state can be changed outside React's knowledge.
-      Usecases: 
-      1. accessing DOM elements for autofocus, scrolling, measuring size/position, animations.
+      Usecases:
+      > 1. accessing DOM elements for autofocus, scrolling, measuring size/position, animations.
       2. storing prev values while comparing between current and previous props/state, analytics tracking.
       3. avoiding re-renders while using timers, intervals, WebSocket refs, caching API response IDs.
       4. integrating with 3rd party libraries like canvas drawings, charts, or video/audio players.
