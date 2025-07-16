@@ -200,8 +200,9 @@ Each question is answered briefly and clearly to help with interview prep and re
       Event Handler Functions expects a callbackFn for setterFn.
 
       **Props** are inputs to a React component, passed from a parent component to a child component. They are **immutable** within the receiving component. They are used to **pass data and event handlers** down the component tree, thus making it *dynamic and reusable*. 
-      > Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}`  
+      > Note: props are objects which can be *Destructured*. To forward all props, use Spread operator `{...props}`.  
       The properties from props object can be accessed directly using destructing feature from ES6 (ECMAScript 2015). It is also possible to fallback to default value when the prop value is not specified.
+      All parent re-renders trigger Child re-renders even if prop passed to them has not been updated in Parent Component. to stop this, React.memo() is used.
       
       ```js 
       // Usage: <Welcome name="Alice" />
