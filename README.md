@@ -209,6 +209,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       function Welcome(props) {
         return <h1>Hello, {props.name}!</h1>;  // Hello, Alice!
       }
+      ```
       
 
       ## 🔁 State vs Props in React (Short Comparison)
@@ -224,7 +225,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 | Example        | `<Child name="John" />`             | `const [count, setCount] = ...`      |
 
 
-      ```
+      
  
       **[⬆ Back to Top](#table-of-contents)**
 
