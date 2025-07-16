@@ -211,9 +211,8 @@ Each question is answered briefly and clearly to help with interview prep and re
         return <h1>Hello, {props.name}!</h1>;  // Hello, Alice!
       }
       ```
-      
 
-      ## 🔁 State vs Props in React (Short Comparison)
+      **State vs Props in React (Short Comparison)**
 
       | **Basis**       | **Props**                           | **State**                            |
       |----------------|-------------------------------------|--------------------------------------|
