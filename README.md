@@ -201,7 +201,7 @@ Each question is answered briefly and clearly to help with interview prep and re
       -when setterFn are called, the state does not update immediately. It is done because,
       - To batch multiple updates together.
       - To avoid unnecessary re-renders.
-      - For performance optimization.
+      - For performance optimization. <br/>
 
       > When state changes, React automatically re-renders the component (& all its child Components) to reflect the new state.
       Event Handler Functions expects a callbackFn for setterFn.
