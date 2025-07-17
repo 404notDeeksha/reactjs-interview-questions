@@ -10,6 +10,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 ---
 | No. | Question                                                                           |
 | --- | ---------------------------------------------------------------------------------- |
+|       | CORE/ BASICS                          |
 | 1   | [What is React?](#what-is-react)                                                   |
 | 2   | [What is Single Page Application (SPA)?](#what-is-single-page-application-spa)     |
 | 3   | [What are features of React?](#what-are-features-of-react)                         |
@@ -1415,6 +1416,34 @@ Each question is answered briefly and clearly to help with interview prep and re
 
     **6. Logging Errors (e.g., to Sentry)**
 
+53. ### What are Pure Components in React?
+
+    PureComponent does a shallow comparison of previous and next props/state, and skips rendering if there are no changes.
+    (These components only re-render when their state or props are actually changed, Thus optimising re-render.)<br/> It does a shallow comparison of props and state: If nothing changed, it skips rendering. If something changed, it re-renders. <br/>
+    ```js
+    { name: "Alice" } === { name: "Alice" } // false (different references)
+    // if you're passing new objects or arrays, PureComponent will still re-render.
+    ```
+    > Used in performance-sensitive applications where re-renders can be avoided safely—especially when the props/state are primitive values or memoized objects.
+    For Functional Components, React.memo() does the work. 
+    React.memo() is a higher-order component.
+
+54. ### What are Synthetic and Native Events in React?
+
+    React handles events differently from plain HTML/JavaScript. It uses something called a **Synthetic Event System**. Synthetic events are React’s cross-browser wrapper around the browser’s native DOM events. **Native Events** are the real events that come directly from the browser’s DOM (Document Object Model).
+
+    Key Properties of Synthetic Events
+
+    | Property             | Description                             |
+    |----------------------|-----------------------------------------|
+    | `e.target`           | The element that triggered the event    |
+    | `e.preventDefault()` | Prevents the default browser behavior   |
+    | `e.stopPropagation()`| Stops the event from bubbling up        |
+    | `e.nativeEvent`      | Accesses the original native DOM event  |
+
+55. ### What is React Fiber?
+
+    React Fiber is the internal rendering engine introduced in React 16. It improves how React updates the UI by making rendering asynchronous, incremental, and interruptible. This allows React to prioritize important updates (like user typing) and pause less important work (like animations or offscreen components). Fiber enables advanced features like concurrent rendering, error boundaries, suspense, and lazy loading.
 
 
 
