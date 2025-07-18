@@ -29,6 +29,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 15  | [What are Synthetic Events in React?](#what-are-synthetic-events-in-react)                       |
 | 16  | [What is Event Bubbling in React?](#what-is-event-bubbling-in-react)                             |
 | 17  | [What is List Rendering in React?](#what-is-list-rendering-in-react)                             |
+|     | Practice Project                                    |
+|  1  | [Counter App](https://github.com/404notDeeksha/practice-feature-greetingsCard)            |   
 |     | REACT ENVIRONMENT                                                                           | 
 | 1   | [What is npm?](#what-is-npm)                                                       |
 | 2   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
