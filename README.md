@@ -323,20 +323,20 @@ Each question is answered briefly and clearly to help with interview prep and re
 
     ```js
     const users = [
-  { id: 1, name: "Alice" },
-  { id: 2, name: "Bob" },
-  ];
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    ];
 
-  function UserList() {
-  return (
-    <div>
-      {users.map((user) => (
-        <p key={user.id}>Hello, {user.name}!</p>
-      ))}
-    </div>
-  );
-  }
-  // Avoid using index as key unless items never reorder or change
+    function UserList() {
+    return (
+      <div>
+        {users.map((user) => (
+            <p key={user.id}>Hello, {user.name}!</p>
+        ))}
+      </div>
+      );
+     }
+     // Avoid using index as key unless items never reorder or change
     ``` 
 
 
