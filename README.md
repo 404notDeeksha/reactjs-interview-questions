@@ -40,10 +40,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 8  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                                        |
 | 9  | [What is Bundle?](#what-is-bundle)                                                                              |
 | 10  | [What is Webpack?](#what-is-webpack)                                                           |
-| --- | ---------------------------------------------------------------------------------- |
 |     |                                                                                   |  
 | 22  | [What is React Composition?](#what-is-react-composition)                                        |
-
 | 26  | [What are Class Components in React? What are different ways to define them?](#what-are-class-components-in-react-what-are-different-ways-to-define-them)                               |
 | 27 | [ What is difference between Class & Functional Component?](#what-is-difference-between-class--functional-component) |
 | 28 | [What is difference between Inheritance & Composition in React?](#what-is-difference-between-inheritance--composition-in-react)                                                          |
@@ -213,7 +211,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 10. ### How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?
 
-      Standard Approach is: <br/> <ol> <li> The parent component defines a *callback function*. <li>The parent *passes* this function to the child component *via props*. <li>The child component *calls this function*, *passing the data as an argument*. <li>The parent *receives the data* and *can update its state* or perform other actions. </ol> <br/> Note: This pattern is called **lifting state up** or **callback props**. <br/> <br/> **Parent Component** <br/><br/>  ![ParentComponent](./images/ParentCDataTransfer.png) <br/><br/>  **Child Component** <br/><br/>  ![ChildComponent](./images/ChildCDataTransfer.png) <br/> Note: This maintains unidirectional flow of data.
+      Standard Approach is: <br/> <ol> <li> The parent component defines a *callback function*. <li>The parent *passes* this function to the child component *via props*. <li>The child component *calls this function*, *passing the data as an argument*. <li>The parent *receives the data* and *can update its state* or perform other actions. </ol> <br/>
+      >This pattern is called **lifting state up** or **callback props**. <br/> <br/> **Parent Component** <br/><br/>  ![ParentComponent](./images/ParentCDataTransfer.png) <br/><br/>  **Child Component** <br/><br/>  ![ChildComponent](./images/ChildCDataTransfer.png) <br/> Note: This maintains unidirectional flow of data.
 
       **[⬆ Back to Top](#table-of-contents)**
 
