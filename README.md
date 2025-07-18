@@ -17,6 +17,18 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 4   | [What is DOM (Document Object Model)](#what-is-dom-document-object-model)          |
 | 5   | [What is Virtual DOM?](#what-is-virtual-dom)                                       |
 | 6   | [What are React Components?](#what-are-react-components)                           |
+| 7   | [How to create Components in React?](#how-to-create-components-in-react)    |
+| 8   | [When to use Function & Class Components?](#when-to-use-function--class-components)    |
+| 9   | [What is state & props in React?](#what-is-state--props-in-react)                                  |
+| 10  | [How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?](#how-is-data-sent-from-child-component-to-parent-component-what-is-lifting-state-up-or-callback-props)    |
+| 11  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                                                   |
+| 12  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)                                            |
+| 13  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
+| 14  | [What is Prop Drilling?](#what-is-prop-drilling)                                                   |
+| 15  | [What-are-Synthetic-Events-in-React?](#what-are-synthetic-events-in-react)         |
+| 16  | [How-to-render-List-in-React?](#how-to-render-list-in-react)                        |
+| --- | ---------------------------------------------------------------------------------- |
+|     | REACT ENVIRONMENT         | 
 | 7   | [What is npm?](#what-is-npm)                                                       |
 | 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
 | 9   | [What is babel?](#what-is-babel)                                                   |
@@ -24,18 +36,13 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 11  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)              |
 | 12  | [What is role of index.html page in React app?](#what-is-role-of-index.html-page-in-react-app)    |
 | 13  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)                      |
-| 14  | [How to create Components in React?](#how-to-create-components-in-react)    |
-| 15  | [When to use Function & Class Components?](#when-to-use-function--class-components)    |
-| 16  | [What is state & props in React?](#what-is-state--props-in-react)                                  |
-| 17  | [How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?](#how-is-data-sent-from-child-component-to-parent-component-what-is-lifting-state-up-or-callback-props)    |
-| 18  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
-| 19  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)    |
-| 20  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
-| 21  | [What is Prop Drilling?](#what-is-prop-drilling)                                                   |
-| 22  | [What is React Composition?](#what-is-react-composition)                                        |
 | 23  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                                        |
 | 24  | [What is Bundle?](#what-is-bundle)                                                                              |
 | 25  | [What is Webpack?](#what-is-webpack)                                                           |
+| --- | ---------------------------------------------------------------------------------- |
+|     |                                                                                   |  
+| 22  | [What is React Composition?](#what-is-react-composition)                                        |
+
 | 26  | [What are Class Components in React? What are different ways to define them?](#what-are-class-components-in-react-what-are-different-ways-to-define-them)                               |
 | 27 | [ What is difference between Class & Functional Component?](#what-is-difference-between-class--functional-component) |
 | 28 | [What is difference between Inheritance & Composition in React?](#what-is-difference-between-inheritance--composition-in-react)                                                          |
@@ -1428,9 +1435,11 @@ Each question is answered briefly and clearly to help with interview prep and re
     For Functional Components, React.memo() does the work. 
     React.memo() is a higher-order component.
 
-54. ### What are Synthetic and Native Events in React?
+54. ### What are Synthetic Events in React?
 
-    React handles events differently from plain HTML/JavaScript. It uses something called a **Synthetic Event System**. Synthetic events are React’s cross-browser wrapper around the browser’s native DOM events. **Native Events** are the real events that come directly from the browser’s DOM (Document Object Model).
+    In React, Synthetic Events are a cross-browser wrapper around native browser events. React uses them to normalize event handling across different browsers and provide a consistent API. They work similarly to native events but include additional React-specific features.<br/>    One key benefit is React’s event delegation model, which attaches a single event listener to the root, improving performance. React also used event pooling to optimize memory, though this was deprecated in React 17. <br/> You can still access the original native DOM event using event.nativeEvent. Overall, Synthetic Events help simplify and standardize event handling in React applications. 
+    > **Native Events** are the real events that come directly from the browser’s DOM (Document Object Model).
+    In React, when you handle events like clicks, form submissions, or key presses, you don’t interact directly with the browser's native events. Instead, React provides a cross-browser wrapper around the browser's native events called Synthetic Event.
 
     Key Properties of Synthetic Events
 
@@ -1440,6 +1449,42 @@ Each question is answered briefly and clearly to help with interview prep and re
     | `e.preventDefault()` | Prevents the default browser behavior   |
     | `e.stopPropagation()`| Stops the event from bubbling up        |
     | `e.nativeEvent`      | Accesses the original native DOM event  |
+
+55. ### What is Event Bubbling in React?
+
+    In React, event bubbling is when an event on a child component propagates up to its parent components in DOM hierarchy. React uses synthetic events that mimic this DOM behavior. You can handle or stop bubbling using `stopPropagation()` on the event object.
+
+    ```js
+    const handleClick = (e) => {
+    e.stopPropagation(); // prevents parent click from firing
+    console.log("Child clicked");
+  };
+
+  //in absence of e. stopPropagation();
+  function Parent() {
+    const handleClick = () => {
+      console.log("Parent clicked");
+  };
+
+  return (
+    <div onClick={handleClick}>
+      <Child />
+    </div>
+    );
+  }
+
+  function Child() {
+    const handleClick = () => {
+      console.log("Child clicked");
+   };
+
+   return <button onClick={handleClick}>Click me</button>;
+  }
+
+  // on Clicking button, output shall be
+    //  Child clicked
+    //  Parent clicked
+    ```
 
 55. ### What is React Fiber?
 
