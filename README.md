@@ -23,14 +23,13 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 10  | [How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?](#how-is-data-sent-from-child-component-to-parent-component-what-is-lifting-state-up-or-callback-props)    |
 | 11  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                                                   |
 | 12  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)                                            |
-| 13    | [What is State, Stateful, Stateless terms?](#what-is-state-stateful-stateless-terms)               |
-| 13  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
-| 14  | [What is Prop Drilling?](#what-is-prop-drilling)                                                   |
-| 15  | [What are Synthetic Events in React?](#what-are-synthetic-events-in-react)                        |
-| 16  | [What is Event Bubbling in React?](#what-is-event-bubbling-in-react)                            |
-| 17  | [What is List Rendering in React?](#what-is-list-rendering-in-react)                        |
-| --- | ---------------------------------------------------------------------------------- |
-|     | REACT ENVIRONMENT         | 
+| 13    | [What is State, Stateful, Stateless terms?](#what-is-state-stateful-stateless-terms)           |
+| 13  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                   |
+| 14  | [What is Prop Drilling?](#what-is-prop-drilling)                                                 |
+| 15  | [What are Synthetic Events in React?](#what-are-synthetic-events-in-react)                       |
+| 16  | [What is Event Bubbling in React?](#what-is-event-bubbling-in-react)                             |
+| 17  | [What is List Rendering in React?](#what-is-list-rendering-in-react)                             |
+|     | REACT ENVIRONMENT                                                                           | 
 | 1   | [What is npm?](#what-is-npm)                                                       |
 | 2   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
 | 3   | [What is babel?](#what-is-babel)                                                   |
