@@ -291,30 +291,30 @@ Each question is answered briefly and clearly to help with interview prep and re
     console.log("Child clicked");
     };
 
-  //in absence of e. stopPropagation();
-  function Parent() {
-    const handleClick = () => {
-      console.log("Parent clicked");
-  };
+    //in absence of e. stopPropagation();
+    function Parent() {
+      const handleClick = () => {
+        console.log("Parent clicked");
+     };
 
-  return (
-    <div onClick={handleClick}>
-      <Child />
-    </div>
-    );
-  }
+    return (
+       <div onClick={handleClick}>
+       <Child />
+       </div>
+       );
+      }
 
-  function Child() {
-    const handleClick = () => {
-      console.log("Child clicked");
-   };
+     function Child() {
+       const handleClick = () => {
+        console.log("Child clicked");
+     };
 
-   return <button onClick={handleClick}>Click me</button>;
-  }
+    return <button onClick={handleClick}>Click me</button>;
+     }
 
-  // on Clicking button, output shall be
-    //  Child clicked
-    //  Parent clicked
+      // on Clicking button, output shall be
+      //  Child clicked
+      //  Parent clicked
     ```
 
 17. ### What is List Rendering in React?
