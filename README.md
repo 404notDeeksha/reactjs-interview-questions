@@ -23,22 +23,24 @@ Each question is answered briefly and clearly to help with interview prep and re
 | 10  | [How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?](#how-is-data-sent-from-child-component-to-parent-component-what-is-lifting-state-up-or-callback-props)    |
 | 11  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                                                   |
 | 12  | [What are Controlled & Uncontrolled Components?](#what-are-controlled--uncontrolled-components)                                            |
+| 13    | [What is State, Stateful, Stateless terms?](#what-is-state-stateful-stateless-terms)               |
 | 13  | [What is Conditional rendering in JSX?](#what-is-conditional-rendering-in-jsx)                     |
 | 14  | [What is Prop Drilling?](#what-is-prop-drilling)                                                   |
-| 15  | [What-are-Synthetic-Events-in-React?](#what-are-synthetic-events-in-react)         |
-| 16  | [How-to-render-List-in-React?](#how-to-render-list-in-react)                        |
+| 15  | [What-are-Synthetic-Events-in-React?](#what-are-synthetic-events-in-react)                        |
+| 16  | [What-is-Event-Bubbling-in-React?](#what-is-event-bubbling-in-react)                            |
+| 17  | [What-is-List-Rendering-in-React?](#what-is-list-rendering-in-react)                        |
 | --- | ---------------------------------------------------------------------------------- |
 |     | REACT ENVIRONMENT         | 
-| 7   | [What is npm?](#what-is-npm)                                                       |
-| 8   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
-| 9   | [What is babel?](#what-is-babel)                                                   |
-| 10  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)        |
-| 11  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)              |
-| 12  | [What is role of index.html page in React app?](#what-is-role-of-index.html-page-in-react-app)    |
-| 13  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)                      |
-| 23  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                                        |
-| 24  | [What is Bundle?](#what-is-bundle)                                                                              |
-| 25  | [What is Webpack?](#what-is-webpack)                                                           |
+| 1   | [What is npm?](#what-is-npm)                                                       |
+| 2   | [What is role of node_modules folder?](#what-is-role-of-node_modules-folder)       |
+| 3   | [What is babel?](#what-is-babel)                                                   |
+| 4  | [What is role of public folder in React app?](#what-is-role-of-public-folder-in-react-app)        |
+| 5  | [What is role of src folder in React app?](#what-is-role-of-src-folder-in-react-app)              |
+| 6  | [What is role of index.html page in React app?](#what-is-role-of-index.html-page-in-react-app)    |
+| 7  | [What is role of App.js in React App?](#what-is-role-of-app.js-in-react-app)                      |
+| 8  | [What dependencies are essential for creating a React app?](#what-dependencies-are-essential-for-creating-a-react-app)                                        |
+| 9  | [What is Bundle?](#what-is-bundle)                                                                              |
+| 10  | [What is Webpack?](#what-is-webpack)                                                           |
 | --- | ---------------------------------------------------------------------------------- |
 |     |                                                                                   |  
 | 22  | [What is React Composition?](#what-is-react-composition)                                        |
@@ -82,6 +84,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 <!-- Creating Form & Handling Errors -->
 -----
 
+### CORE / BASICS
 1. ### What is React?
 
    React is an _open source_ _js library_, developed by facebook(meta). It's used for handling the view layer in web and mobile applications. It is used to build _UI interfaces_ & simplifies creation of _SPA(Single Page Applications)_, using _reusable components_ & _dynamic rendering_. It follows _Component based architecture_.
@@ -90,17 +93,21 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 2. ### What is Single Page Application (SPA)?
 
-   Single Page Application has only one web page. Whenever data is updated by user, it gets _dynamically rendered_ on page without a _full reload_. <br/> Note: Multiple SPAs are SPAs only. eg. react app only has one single HTML file (index.html), whereas multipage apps have multiple HTML files.  <br/> eg: When a page is switched via Navbar section on an app developed by react, page changes without reloading the page. here, `<Link>` doesnt reloads page while `<a>` does.
+   Single Page Application has only one web page. Whenever data is updated by user, it gets _dynamically rendered_ on page without a _full reload_. <br/> 
+   > Multiple SPAs are SPAs only. <br/>
+   eg. react app only has one single HTML file (index.html), whereas multipage apps have multiple HTML files.  <br/> 
+   eg: When a page is switched via Navbar section on an app developed by react, page changes without reloading the page. here, `<Link>` doesnt reloads page while `<a>` does.
 
    **[⬆ Back to Top](#table-of-contents)**
 
 3. ### What are features of React?
+
    They are:    
       1. **High Performance**: React uses Virtual Dom which ensures only part of webpage where data changes gets updated instead of entire page, leading to faster & smoother app. <br/> 
       2. **One way Data Binding**: Data flow in React is unidirectional, it flows from Parent to Child. This makes app predictable & easy to debug. <br/> 
-      3. **JSX (js XML)**: React used js syntax extension which makes code HTML like, thus writing HTML in js, making code more UI friendly & readable. JSX evaluates everything between `{}`<br/> 
+      3. **JSX (js XML)**: React used js syntax extension which makes code HTML like, thus writing HTML in js, making code more UI friendly & readable. JSX evaluates everything between `{}`.<br/> 
       4. **Component Based Architecture**: React uses reusable, independent components for rendering UI & logic, making code resuable & modular. <br/> 
-      5. **Server Side Rendering Support**: react supports server-side rendering components thus improving performance & SEO optimisation for the web apps. <br/> 
+      5. **Server Side Rendering Support**: React supports server-side rendering components thus improving performance & SEO optimisation for the web apps. <br/> 
       6. **Dedicated Developer Tools**: Chrome has specialised Developer Tools which help in simplifying debugging & performance monitoring.
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -110,8 +117,12 @@ Each question is answered briefly and clearly to help with interview prep and re
 
 5. ### What is Virtual DOM? **
 
-   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render dynamic web pages*. <br/> **How it works?** <br/> 1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React (during the commit phase) instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real Dom are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> 
-   > Overheads of Real Browser Rendering are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layoutthrashing etc.
+   Virtual DOM is a *core concept of react* & other *modern Js frameworks*. It is *lightweight representation* of real DOM, created *in memory* used by *Browsers* to *render dynamic web pages*. <br/> **How it works?** <br/> 
+   1. **Representation** : V-DOM is a *js object* which mirrors structure of *real DOM*, is faster to create & update as it lacks overheads of **Real Browser Rendering**<br/> 
+   2. **Change Detection** : Whenever a *component's state or prop changes* in React, a *new V-DOM* is created to *represent updated UI*.<br/> 
+   3. **Diffing** : React compares the new V-Dom with previous V-DOM to find out what has been changed using *Diffing algorithm or Reconcilliation*. Basically it identifies changes between these two trees. <br/> 
+   4. **Efficient Updates** : Only *changed parts* of web page are updated in real DOM by React (during the commit phase) instead of re-rendering entire page which is slower & resource intensive. <br/> 5. **Batching** : Updates to real DOM are batched together to improve performance, & reduce recalculation & repaints.<br/> <br/> 
+   > Overheads of **Real Browser Rendering** are - frequent DOM Manipulation, Large DOM Size, Complex CSS Selectors, Js DOM access, initial render updates, Layout-thrashing etc.
    React's Diffing Algo has Complexity -  O(n) both Time & space where n - no. of elements in tree.
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -120,48 +131,8 @@ Each question is answered briefly and clearly to help with interview prep and re
 
    React Components are reusable building blocks for creating UI. It is a function or class that returns an element (or a tree of elements) to describe part of the UI. Components can accept inputs (called props) and manage their own state (in case of class or function components with hooks).
 
-7. ### What is npm?
 
-   npm - *node package manager* is standard package manager for NodeJs. It is used to *install, manage & share* **Js packages & dependencies** for NodeJs project. <br/> In react, npm does Project initialisation, Running & Building Apps, Dependencies Management, Script Execution (define & run custom scripts), Efficient Package Installation, Version Control (package.json), & Collaboration & Code Sharing.  
-
-   **[⬆ Back to Top](#table-of-contents)**
-
-8. ###  What is role of node_modules folder?
-
-   node_modules folder is a directory *automatically created* at root of your project when you *install packages* using npm. It is *storage location* of all *external dependencies* required by your project.
-
-9. ### What is babel?
-
-   Babel is a free & open source Js compiler which converts *new, modern Js code (ECMA Script 2015/ES6 & newer)* into *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*. It can transpile modern Js as well as supports Typescript & JSX too.<br/> In react, since browser cant directly read JSX file, babel transpiles JSX code into Js. <br/> 
-   ```js
-   function App(){ 
-     return React.createElement(
-     'div', 
-      {className: 'app'}, 
-      React.createElement('h1',null,"Hello"), 
-    )}
-    ```
-    > Transpiler converts source code from one programming language to another.
-
-    **[⬆ Back to Top](#table-of-contents)**
-
-10. ### What is role of public folder in React app?
-
-    It contains all *static assets needed by Browser* & not processed by build tools like **Webpack**.  They are directly accessed by URL, & not processed by build system.
-
-11. ### What is role of src folder in React app?
-
-    It is most important folder in development. It contains all source code & logic of application. It defines structure, behaviour, styling of the app. Only files inside /src are processed by build tools like Webpack.
-
-12. ### What is role of index.html page in React App?
-
-    It is *entry point* of React app. It is the *first page to be loaded* by browser for SPAs. It contains 'root' id element wherein entire React app will be rendered directly.
-
-13. ### What is role of App.js in React App?
-
-    It is present inside /src in React app, & is root of main app's component tree.
-
-14. ###  How to create Components in React?
+7. ###  How to create Components in React?
 
       Components are the *building blocks* of *creating User Interfaces(UI)* in React. There are two ways: <br/> <ol> <li> **Function Component**: This is the simplest way to create a component. Those are *pure JavaScript functions* that accept *props object* as the only parameter and *return React elements (in JSX Format)* to *render the output*:
       
@@ -183,13 +154,13 @@ Each question is answered briefly and clearly to help with interview prep and re
 
        **[⬆ Back to Top](#table-of-contents)**
 
-15. ### When to use Function & Class Components?
+8. ### When to use Function & Class Components?
 
       After addition of Hooks (React v.16.8 onwards) it is recommended to use **Function Components** over **Class** ones, as now with Function C, features which were only available in Class C. like state, lifecycle methods are available here too.<br/> So, use Class Components where a Function Component equivalent is not present yet (like Err Boundaries) or while working in older versions where state or lifecycle methods are needed. <br/> Use Functional C. mostly as they are simple, readable & follow modern code practices like, use of React Hooks for state & side effects.
 
       **[⬆ Back to Top](#table-of-contents)**
 
-16. ###  What is state & props in React?
+9. ###  What is state & props in React?
 
       **State** is a *built-in object* in React components, used to *store data or information of component* which can change over time. They are *mutable*, in reponse to user actions, API responses or other events. It is used for data which needs to be *tracked or updated* within a component. <br/>
       
@@ -241,17 +212,17 @@ Each question is answered briefly and clearly to help with interview prep and re
   
        **[⬆ Back to Top](#table-of-contents)**
 
-17. ### How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?
+10. ### How is Data sent from Child Component to Parent Component? What is Lifting State Up or Callback Props?
 
       Standard Approach is: <br/> <ol> <li> The parent component defines a *callback function*. <li>The parent *passes* this function to the child component *via props*. <li>The child component *calls this function*, *passing the data as an argument*. <li>The parent *receives the data* and *can update its state* or perform other actions. </ol> <br/> Note: This pattern is called **lifting state up** or **callback props**. <br/> <br/> **Parent Component** <br/><br/>  ![ParentComponent](./images/ParentCDataTransfer.png) <br/><br/>  **Child Component** <br/><br/>  ![ChildComponent](./images/ChildCDataTransfer.png) <br/> Note: This maintains unidirectional flow of data.
 
       **[⬆ Back to Top](#table-of-contents)**
 
-18. ### What is Conditional rendering in JSX?
+11. ### What is Conditional rendering in JSX?
 
     It is similiar to syntax in Js but with some changes: <ol><li>**If Statement**: <br/> ![if](./images/IfStatement.png) <li>**Ternary Operator**: <br/> ![if](./images/TernaryOperator.png) <li>**Logical && Operator**: First part of statement has to be true to render second part.<br/> ![if](./images/Logical&&Operator.png)  <li>**Switch Statement**: <br/> ![if](./images/SwitchStatement.png) <li>**Element Variables**: <br/> ![if](./images/ElementVariable.png)</ol>  
 
-19. ### What are Controlled & Uncontrolled Components? **
+12. ### What are Controlled & Uncontrolled Components? **
 
       In React, the main difference lies in how the values of components are managed.<br/> <ol><li>**Controlled Components**: These are React Components where *value* is managed by *state*. React state is *single source of truth* for input's value. e.g.: input in form element.<br/> Here, component recieves *value* & an *Event Handler* as *prop*, which gets trigerred by user action,which may update state & UI will reflect latest state.<br/>React has full control over data, components are predicatable, easy to validate, & it enables real time data sharing between components. <br/> It can cause more re-renders, especially with many inputs or frequent updates. <br/>  <br/> ![ControlledComponent](./images/ControlledC.png) <br/> <br/>                       <li> **Uncontrolled Components**: Here, React does not directly control the input's value. These manage its own state internally, with the DOM maintaining the current value. <br/> Here, the input's value can be accessed directly from the DOM, typically using a *ref*. It uses *defaultValue* to set the *initial value of an input field* when the component is *first rendered*. Any further changes are tracked by **DOM** & not by **React**. It has no involvement of React state.<br/>   <br/> ![UnControlledComponent](./images/UncontrolledC.png)   </ol> 
       > This needs fewer re-renders for high frequency inputs. But, it is harder to validate & synchronize with other components. It is also less predictable & state can be changed outside React's knowledge.
@@ -264,7 +235,7 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **[⬆ Back to Top](#table-of-contents)**
 
-20. ### What is State, Stateful, Stateless terms?
+13. ### What is State, Stateful, Stateless terms?
 
       **StateFul Component**: It manages its own state. This means it *holds data* that can *change over time* and *affect the component’s output*. When the *state changes (using setState in class components* or *hooks like useState in functional components)*, the *component re-renders* to reflect the new state.
 
@@ -287,13 +258,165 @@ Each question is answered briefly and clearly to help with interview prep and re
 
       **[⬆ Back to Top](#table-of-contents)**
 
-21. ### What is Prop Drilling?
+14. ### What is Prop Drilling?
 
       Prop drilling in React is the process of *passing data (props)* from a parent component down through multiple layers of nested components *until it reaches* the component that actually needs it. It means intermediary components *receive and forward props* even if they don't use them themselves.
       It is an issue because it leads to *Code Duplication*, Difficulty in tracking components, props & decreased Maintainability.
       It can be avoided using Global/Shared States.
 
+      **[⬆ Back to Top](#table-of-contents)**   
+
+15. ### What are Synthetic Events in React?
+
+    In React, Synthetic Events are a cross-browser wrapper around native browser events. React uses them to normalize event handling across different browsers and provide a consistent API. They work similarly to native events but include additional React-specific features. <br/>
+    One key benefit is React’s event delegation model, which attaches a single event listener to the root, improving performance. React also used event pooling to optimize memory, though this was deprecated in React 17. <br/> 
+    You can still access the original native DOM event using event.nativeEvent. Overall, Synthetic Events help simplify and standardize event handling in React applications. 
+    > **Native Events** are the real events that come directly from the browser’s DOM (Document Object Model).
+    In React, when you handle events like clicks, form submissions, or key presses, you don’t interact directly with the browser's native events. Instead, React provides a cross-browser wrapper around the browser's native events called Synthetic Event.
+
+    Key Properties of Synthetic Events
+
+    | Property             | Description                             |
+    |----------------------|-----------------------------------------|
+    | `e.target`           | The element that triggered the event    |
+    | `e.preventDefault()` | Prevents the default browser behavior   |
+    | `e.stopPropagation()`| Stops the event from bubbling up        |
+    | `e.nativeEvent`      | Accesses the original native DOM event  |
+
+16. ### What is Event Bubbling in React?
+
+    In React, event bubbling is when an event on a child component propagates up to its parent components in DOM hierarchy. React uses synthetic events that mimic this DOM behavior. You can handle or stop bubbling using `stopPropagation()` on the event object.
+
+    ```js
+    const handleClick = (e) => {
+    e.stopPropagation(); // prevents parent click from firing
+    console.log("Child clicked");
+    };
+
+  //in absence of e. stopPropagation();
+  function Parent() {
+    const handleClick = () => {
+      console.log("Parent clicked");
+  };
+
+  return (
+    <div onClick={handleClick}>
+      <Child />
+    </div>
+    );
+  }
+
+  function Child() {
+    const handleClick = () => {
+      console.log("Child clicked");
+   };
+
+   return <button onClick={handleClick}>Click me</button>;
+  }
+
+  // on Clicking button, output shall be
+    //  Child clicked
+    //  Parent clicked
+    ```
+
+17. ### What is List Rendering in React?
+
+    List rendering in React means using JavaScript’s `.map()` method to dynamically generate UI elements based on an array of data. Each rendered item must have a unique key prop to help React manage updates efficiently.
+
+    ```js
+    const users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  ];
+
+  function UserList() {
+  return (
+    <div>
+      {users.map((user) => (
+        <p key={user.id}>Hello, {user.name}!</p>
+      ))}
+    </div>
+  );
+  }
+  // Avoid using index as key unless items never reorder or change
+    ``` 
+
+
+### React Environment
+
+1. ### What is npm?
+
+   npm - *node package manager* is standard package manager for NodeJs. It is used to *install, manage & share* **Js packages & dependencies** for NodeJs project. <br/> In react, npm does Project initialisation, Running & Building Apps, Dependencies Management, Script Execution (define & run custom scripts), Efficient Package Installation, Version Control (package.json), & Collaboration & Code Sharing.  
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+2. ###  What is role of node_modules folder?
+
+   node_modules folder is a directory *automatically created* at root of your project when you *install packages* using npm. It is *storage location* of all *external dependencies* required by your project.
+
+3. ### What is babel?
+
+   Babel is a free & open source Js compiler which converts *new, modern Js code (ECMA Script 2015/ES6 & newer)* into *older* compatible versions, so that they can run in older browsers or Js engines. This allows developers to use latest language features without worrying about *browser compatibility*. It can transpile modern Js as well as supports Typescript & JSX too.<br/> In react, since browser cant directly read JSX file, babel transpiles JSX code into Js. <br/> 
+   ```js
+   function App(){ 
+     return React.createElement(
+     'div', 
+      {className: 'app'}, 
+      React.createElement('h1',null,"Hello"), 
+    )}
+    ```
+    > Transpiler converts source code from one programming language to another.
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+4. ### What is role of public folder in React app?
+
+    It contains all *static assets needed by Browser* & not processed by build tools like **Webpack**.  They are directly accessed by URL, & not processed by build system.
+
+5. ### What is role of src folder in React app?
+
+    It is most important folder in development. It contains all source code & logic of application. It defines structure, behaviour, styling of the app. Only files inside /src are processed by build tools like Webpack.
+
+6. ### What is role of index.html page in React App?
+
+    It is *entry point* of React app. It is the *first page to be loaded* by browser for SPAs. It contains 'root' id element wherein entire React app will be rendered directly.
+
+7. ### What is role of App.js in React App?
+
+    It is present inside /src in React app, & is root of main app's component tree.
+
+
+8. ### What dependencies are essential for creating a React app?
+
+      1. Node.js & npm/yarn: Node.js is the JavaScript runtime needed to run development tools, while npm or yarn are package managers for installing dependencies.
+      2. React & ReactDOM: The core libraries for building user interfaces (react) and rendering them to the DOM (react-dom).
+      3. Babel: A JavaScript compiler that transforms modern JavaScript (including JSX) into browser-compatible code.
+      4. Webpack: A module bundler that compiles JavaScript, CSS, images, and other assets into optimized bundles for the browser (explained in detail below).
+      5. Create React App (CRA): A popular tool that sets up a React project with sensible defaults, including Webpack and Babel configurations. Other ways of creating react app is by using Vite.
+      6. Development Tools: Tools like ESLint (for code linting), React Developer Tools (for debugging), and testing libraries (e.g., Jest, React Testing Library).
+
       **[⬆ Back to Top](#table-of-contents)**
+
+9. ### What is Bundle?
+
+      A bundle is the output file (or files) **generated by Webpack** or similar bundlers. It contains all the code and assets your application needs, **combined and optimized** for the browser. <br/>
+      Role: The bundle ensures that the browser can **load your React app quickly and efficiently**, with all dependencies resolved.
+
+      **[⬆ Back to Top](#table-of-contents)**
+
+10. ### What is Webpack?
+
+      Webpack is a powerful traditional **module bundler** for JavaScript applications. Its primary role is to:
+      1. **Bundle all your JavaScript files and dependencies** (including CSS, images, fonts, etc.) into one or more optimized files for the browser.
+      2. **Transform code** using **loaders** (e.g., converting JSX to JS with Babel).
+      3. **Optimize assets for production**, such as minifying code and splitting bundles for faster loading.<br/><br/>
+      Webpack **automates** the process of managing dependencies and assets, ensuring your React app runs efficiently in development and production environments.<br/>
+      **During Development**, Webpack uses features like **Hot Module Replacement (HMR)**, allowing you to see changes instantly without a full page reload.<br/>
+      **For Production**, It produces optimised bundles, reduce load times, improve performance By minifing code, removing unused code (tree shaking), splitting code( for faster initial loads).<br/><br/>
+      It is **not available in Vite**. Vite has **Rollup** instead for production buildup & very fast HMR using **native ES modules** for Development phase.
+
+      **[⬆ Back to Top](#table-of-contents)**
+
 
 22. ### What is React Composition?
 
@@ -314,37 +437,6 @@ Each question is answered briefly and clearly to help with interview prep and re
       2. Passing Components as Props: You can pass entire components as props to other components, enabling dynamic rendering and customization.
       3. Compound Components: A pattern where a parent component manages state and shares it with nested child components, via Global States.
       4. Higher-Order Components (HOCs) and Render Props: Advanced composition techniques for sharing logic between components without repeating code.
-
-      **[⬆ Back to Top](#table-of-contents)**
-
-23. ### What dependencies are essential for creating a React app?
-
-      1. Node.js & npm/yarn: Node.js is the JavaScript runtime needed to run development tools, while npm or yarn are package managers for installing dependencies.
-      2. React & ReactDOM: The core libraries for building user interfaces (react) and rendering them to the DOM (react-dom).
-      3. Babel: A JavaScript compiler that transforms modern JavaScript (including JSX) into browser-compatible code.
-      4. Webpack: A module bundler that compiles JavaScript, CSS, images, and other assets into optimized bundles for the browser (explained in detail below).
-      5. Create React App (CRA): A popular tool that sets up a React project with sensible defaults, including Webpack and Babel configurations. Other ways of creating react app is by using Vite.
-      6. Development Tools: Tools like ESLint (for code linting), React Developer Tools (for debugging), and testing libraries (e.g., Jest, React Testing Library).
-
-      **[⬆ Back to Top](#table-of-contents)**
-
-24. ### What is Bundle?
-
-      A bundle is the output file (or files) **generated by Webpack** or similar bundlers. It contains all the code and assets your application needs, **combined and optimized** for the browser. <br/>
-      Role: The bundle ensures that the browser can **load your React app quickly and efficiently**, with all dependencies resolved.
-
-      **[⬆ Back to Top](#table-of-contents)**
-
-25. ### What is Webpack?
-
-      Webpack is a powerful traditional **module bundler** for JavaScript applications. Its primary role is to:
-      1. **Bundle all your JavaScript files and dependencies** (including CSS, images, fonts, etc.) into one or more optimized files for the browser.
-      2. **Transform code** using **loaders** (e.g., converting JSX to JS with Babel).
-      3. **Optimize assets for production**, such as minifying code and splitting bundles for faster loading.<br/><br/>
-      Webpack **automates** the process of managing dependencies and assets, ensuring your React app runs efficiently in development and production environments.<br/>
-      **During Development**, Webpack uses features like **Hot Module Replacement (HMR)**, allowing you to see changes instantly without a full page reload.<br/>
-      **For Production**, It produces optimised bundles, reduce load times, improve performance By minifing code, removing unused code (tree shaking), splitting code( for faster initial loads).<br/><br/>
-      It is **not available in Vite**. Vite has **Rollup** instead for production buildup & very fast HMR using **native ES modules** for Development phase.
 
       **[⬆ Back to Top](#table-of-contents)**
 
@@ -1435,56 +1527,7 @@ Each question is answered briefly and clearly to help with interview prep and re
     For Functional Components, React.memo() does the work. 
     React.memo() is a higher-order component.
 
-54. ### What are Synthetic Events in React?
-
-    In React, Synthetic Events are a cross-browser wrapper around native browser events. React uses them to normalize event handling across different browsers and provide a consistent API. They work similarly to native events but include additional React-specific features.<br/>    One key benefit is React’s event delegation model, which attaches a single event listener to the root, improving performance. React also used event pooling to optimize memory, though this was deprecated in React 17. <br/> You can still access the original native DOM event using event.nativeEvent. Overall, Synthetic Events help simplify and standardize event handling in React applications. 
-    > **Native Events** are the real events that come directly from the browser’s DOM (Document Object Model).
-    In React, when you handle events like clicks, form submissions, or key presses, you don’t interact directly with the browser's native events. Instead, React provides a cross-browser wrapper around the browser's native events called Synthetic Event.
-
-    Key Properties of Synthetic Events
-
-    | Property             | Description                             |
-    |----------------------|-----------------------------------------|
-    | `e.target`           | The element that triggered the event    |
-    | `e.preventDefault()` | Prevents the default browser behavior   |
-    | `e.stopPropagation()`| Stops the event from bubbling up        |
-    | `e.nativeEvent`      | Accesses the original native DOM event  |
-
-55. ### What is Event Bubbling in React?
-
-    In React, event bubbling is when an event on a child component propagates up to its parent components in DOM hierarchy. React uses synthetic events that mimic this DOM behavior. You can handle or stop bubbling using `stopPropagation()` on the event object.
-
-    ```js
-    const handleClick = (e) => {
-    e.stopPropagation(); // prevents parent click from firing
-    console.log("Child clicked");
-  };
-
-  //in absence of e. stopPropagation();
-  function Parent() {
-    const handleClick = () => {
-      console.log("Parent clicked");
-  };
-
-  return (
-    <div onClick={handleClick}>
-      <Child />
-    </div>
-    );
-  }
-
-  function Child() {
-    const handleClick = () => {
-      console.log("Child clicked");
-   };
-
-   return <button onClick={handleClick}>Click me</button>;
-  }
-
-  // on Clicking button, output shall be
-    //  Child clicked
-    //  Parent clicked
-    ```
+ 
 
 55. ### What is React Fiber?
 
